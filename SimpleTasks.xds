@@ -1,0 +1,187 @@
+{
+    "name": "SimpleTasks",
+    "settings": {
+        "urlPrefix": "",
+        "spacesToIndent": 4,
+        "codeGenFormat": "Class",
+        "exportPath": "",
+        "senchaIoKey": "",
+        "senchaIoPath": "http://extjs.cachefly.net/designer/IO/",
+        "lineEnding": "LF",
+        "instantiateStore": true,
+        "genTimestamps": false,
+        "cacheBust": false,
+        "saveOnDeploy": false,
+        "appName": "MyApp"
+    },
+    "xdsVersion": "2.0.0",
+    "xdsBuild": 210000000000,
+    "framework": "ext41",
+    "topInstanceFileMap": {
+        "aa2cebcc-67b8-46f8-810b-3e7944997036": {
+            "paths": [
+                "metadata/view/lists.ContextMenu",
+                "app/view/override/lists/ContextMenu.js",
+                "app/view/lists/ContextMenu.js"
+            ],
+            "className": "lists.ContextMenu"
+        },
+        "d9deec53-5953-4d8a-8e66-26bd889a3628": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        },
+        "b7026768-4497-4e3f-8ac7-e6a1a4bcf87e": {
+            "paths": [
+                "metadata/view/lists.Tree",
+                "app/view/override/lists/Tree.js",
+                "app/view/lists/Tree.js"
+            ],
+            "className": "lists.Tree"
+        },
+        "baecf4a8-8952-4ef2-b576-c481fb6afd7f": {
+            "paths": [
+                "metadata/view/tasks.ContextMenu",
+                "app/view/override/tasks/ContextMenu.js",
+                "app/view/tasks/ContextMenu.js"
+            ],
+            "className": "tasks.ContextMenu"
+        },
+        "420cfca1-e935-4701-9851-4ae3f22706d8": {
+            "paths": [
+                "metadata/view/tasks.DefaultTimeWindow",
+                "app/view/override/tasks/DefaultTimeWindow.js",
+                "app/view/tasks/DefaultTimeWindow.js"
+            ],
+            "className": "tasks.DefaultTimeWindow"
+        },
+        "eaacfb24-106c-4e6d-9dc4-476d5b955fa6": {
+            "paths": [
+                "metadata/view/tasks.EditWindow",
+                "app/view/override/tasks/EditWindow.js",
+                "app/view/tasks/EditWindow.js"
+            ],
+            "className": "tasks.EditWindow"
+        },
+        "96f66c2f-4993-423a-b807-960265efe582": {
+            "paths": [
+                "metadata/view/tasks.Form",
+                "app/view/override/tasks/Form.js",
+                "app/view/tasks/Form.js"
+            ],
+            "className": "tasks.Form"
+        },
+        "6c7b6150-311c-4b87-86ac-d21066952ddd": {
+            "paths": [
+                "metadata/view/tasks.Grid",
+                "app/view/override/tasks/Grid.js",
+                "app/view/tasks/Grid.js"
+            ],
+            "className": "tasks.Grid"
+        },
+        "59a865a6-5399-46da-9f01-4bdc52e32417": {
+            "paths": [
+                "metadata/view/tasks.ReminderWindow",
+                "app/view/override/tasks/ReminderWindow.js",
+                "app/view/tasks/ReminderWindow.js"
+            ],
+            "className": "tasks.ReminderWindow"
+        },
+        "3f506d76-0c98-4bef-aa44-59101df23411": {
+            "paths": [
+                "metadata/view/Toolbar",
+                "app/view/override/Toolbar.js",
+                "app/view/Toolbar.js"
+            ],
+            "className": "Toolbar"
+        },
+        "2936ff37-446d-4e58-a13f-1273612bcae1": {
+            "paths": [
+                "metadata/store/ReminderTimes",
+                "app/store/override/ReminderTimes.js",
+                "app/store/ReminderTimes.js"
+            ],
+            "className": "ReminderTimes"
+        },
+        "5a2f6f03-5c6e-4451-8641-235a35f1ebec": {
+            "paths": [
+                "metadata/store/Lists",
+                "app/store/override/Lists.js",
+                "app/store/Lists.js"
+            ],
+            "className": "Lists"
+        },
+        "ad7f587a-779d-4124-a9aa-b2cec1d6aed9": {
+            "paths": [
+                "metadata/model/List",
+                "app/model/override/List.js",
+                "app/model/List.js"
+            ],
+            "className": "List"
+        },
+        "80ee487a-654d-4704-8b2c-2c3eb83b0106": {
+            "paths": [
+                "metadata/model/Task",
+                "app/model/override/Task.js",
+                "app/model/Task.js"
+            ],
+            "className": "Task"
+        },
+        "1588e410-4173-4aff-ba98-fd13c5b7a13d": {
+            "paths": [
+                "metadata/model/ReminderTime",
+                "app/model/override/ReminderTime.js",
+                "app/model/ReminderTime.js"
+            ],
+            "className": "ReminderTime"
+        },
+        "a53b0e54-48ee-4018-b38e-48d4c13676ad": {
+            "paths": [
+                "metadata/store/Tasks",
+                "app/store/override/Tasks.js",
+                "app/store/Tasks.js"
+            ],
+            "className": "Tasks"
+        },
+        "148fad30-5bda-401d-9a6b-64d5a6a7cb79": {
+            "paths": [
+                "metadata/view/SimpleTasksViewport",
+                "app/view/override/SimpleTasksViewport.js",
+                "app/view/SimpleTasksViewport.js",
+                "app/view/Viewport.js"
+            ],
+            "className": "SimpleTasksViewport"
+        },
+        "b5f0332b-2575-4858-aeab-85fcd8090dfe": {
+            "paths": [
+                "metadata/resource/css"
+            ],
+            "className": "css"
+        },
+        "90adc51a-58f2-4ec3-9007-9dce222c5f6f": {
+            "paths": [
+                "metadata/view/MyComponent3",
+                "app/view/override/MyComponent3.js",
+                "app/view/MyComponent3.js"
+            ],
+            "className": "MyComponent3"
+        },
+        "220264b4-d632-42f5-be7b-0c200a8072cc": {
+            "paths": [
+                "metadata/controller/Lists",
+                "app/controller/override/Lists.js",
+                "app/controller/Lists.js"
+            ],
+            "className": "Lists"
+        },
+        "b94139bd-3865-464a-a8d8-dc7150599f22": {
+            "paths": [
+                "metadata/controller/Tasks",
+                "app/controller/override/Tasks.js",
+                "app/controller/Tasks.js"
+            ],
+            "className": "Tasks"
+        }
+    }
+}

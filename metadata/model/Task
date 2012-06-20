@@ -1,0 +1,154 @@
+{
+    "id": "ExtBox1-ext-gen88379",
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Task",
+        "designer|userAlias": "task"
+    },
+    "customConfigs": [],
+    "designerId": "80ee487a-654d-4704-8b2c-2c3eb83b0106",
+    "$viewOrder": 1,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen88848",
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id",
+                "type": "int",
+                "designer|userClassName": "MyField5"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen88972",
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "title",
+                "designer|userClassName": "MyField6"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen89099",
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "list_id",
+                "type": "int",
+                "designer|userClassName": "MyField7"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen89229",
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "due",
+                "type": "date",
+                "designer|userClassName": "MyField8"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen89362",
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "reminder",
+                "type": "date",
+                "designer|userClassName": "MyField9"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen89498",
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "done",
+                "type": "boolean",
+                "designer|userClassName": "MyField10"
+            },
+            "customConfigs": [],
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen90840",
+                    "type": "object",
+                    "reference": {
+                        "name": "defaultValue",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "implHandler": [
+                            "false"
+                        ],
+                        "designer|displayName": "defaultValue",
+                        "designer|userClassName": "defaultValue"
+                    },
+                    "customConfigs": []
+                }
+            ]
+        },
+        {
+            "id": "ExtBox1-ext-gen89637",
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "note",
+                "designer|userClassName": "MyField11"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen91218",
+            "type": "localstorageproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "SimpleTasks-Task",
+                "designer|userClassName": "MyLocalStorageProxy1"
+            },
+            "customConfigs": []
+        }
+    ]
+}

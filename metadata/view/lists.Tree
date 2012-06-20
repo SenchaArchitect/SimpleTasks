@@ -1,0 +1,471 @@
+{
+    "id": "ExtBox1-ext-gen6130",
+    "type": "treepanel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "title": "Lists",
+        "hideHeaders": true,
+        "store": "Lists",
+        "designer|userClassName": "lists.Tree",
+        "designer|userAlias": "listTree"
+    },
+    "customConfigs": [],
+    "designerId": "b7026768-4497-4e3f-8ac7-e6a1a4bcf87e",
+    "$viewOrder": 1,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen6149",
+            "type": "treeview",
+            "reference": {
+                "name": "viewConfig",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyTreeView"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen7106",
+            "type": "toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "topbar",
+                "designer|userClassName": "MyToolbar",
+                "dock": "bottom"
+            },
+            "customConfigs": [],
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen7873",
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "New List",
+                        "iconCls": "tasks-new-list",
+                        "text": null,
+                        "designer|userClassName": "MyButton",
+                        "layout|flex": null
+                    },
+                    "customConfigs": [],
+                    "cn": [
+                        {
+                            "id": "ExtBox1-ext-gen8957",
+                            "type": "object",
+                            "reference": {
+                                "name": "tooltip",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "implHandler": [
+                                    "'New List'"
+                                ],
+                                "designer|displayName": "tooltip",
+                                "designer|userClassName": "tooltip"
+                            },
+                            "customConfigs": []
+                        }
+                    ]
+                },
+                {
+                    "id": "ExtBox1-ext-gen8126",
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "Delete List",
+                        "id": "delete-list-btn",
+                        "iconCls": "tasks-delete-list",
+                        "text": null,
+                        "designer|userClassName": "MyButton1",
+                        "layout|flex": null
+                    },
+                    "customConfigs": [],
+                    "cn": [
+                        {
+                            "id": "ExtBox1-ext-gen9680",
+                            "type": "object",
+                            "reference": {
+                                "name": "tooltip",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "implHandler": [
+                                    "'Delete List'"
+                                ],
+                                "designer|displayName": "tooltip",
+                                "designer|userClassName": "tooltip"
+                            },
+                            "customConfigs": []
+                        }
+                    ]
+                },
+                {
+                    "id": "ExtBox1-ext-gen8362",
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "New Folder",
+                        "iconCls": "tasks-new-folder",
+                        "text": null,
+                        "designer|userClassName": "MyButton2",
+                        "layout|flex": null
+                    },
+                    "customConfigs": [],
+                    "cn": [
+                        {
+                            "id": "ExtBox1-ext-gen10163",
+                            "type": "object",
+                            "reference": {
+                                "name": "tooltip",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "implHandler": [
+                                    "'New Folder'"
+                                ],
+                                "designer|displayName": "tooltip",
+                                "designer|userClassName": "tooltip"
+                            },
+                            "customConfigs": []
+                        }
+                    ]
+                },
+                {
+                    "id": "ExtBox1-ext-gen8599",
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "Delete Folder",
+                        "id": "delete-folder-btn",
+                        "iconCls": "tasks-delete-folder",
+                        "text": null,
+                        "designer|userClassName": "MyButton3",
+                        "layout|flex": null
+                    },
+                    "customConfigs": [],
+                    "cn": [
+                        {
+                            "id": "ExtBox1-ext-gen10637",
+                            "type": "object",
+                            "reference": {
+                                "name": "tooltip",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "implHandler": [
+                                    "'Delete Folder'"
+                                ],
+                                "designer|displayName": "tooltip",
+                                "designer|userClassName": "tooltip"
+                            },
+                            "customConfigs": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "ExtBox1-ext-gen13051",
+            "type": "customevent",
+            "reference": {
+                "name": "customEvents",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "deleteclick",
+                "name": "deleteclick",
+                "params": [
+                    "gridView",
+                    "rowIndex",
+                    "colIndex",
+                    "column",
+                    "e"
+                ],
+                "designer|userClassName": "CustomEvent"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen13207",
+            "type": "customevent",
+            "reference": {
+                "name": "customEvents",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "taskdrop",
+                "params": [
+                    "list",
+                    "overList",
+                    "position"
+                ],
+                "designer|userClassName": "CustomEvent1"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen13374",
+            "type": "customevent",
+            "reference": {
+                "name": "customEvents",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "listdrop",
+                "designer|userClassName": "CustomEvent2"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen13550",
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "handleBeforeEdit",
+                "designer|params": [
+                    "editingPlugin",
+                    "e"
+                ],
+                "implHandler": [
+                    "return e.record.get('id') !== -1;"
+                ],
+                "name": "beforeedit",
+                "scope": "me",
+                "designer|userClassName": "handleBeforeEdit"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen14443",
+            "type": "treecolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "name",
+                "dataIndex": "name",
+                "flex": 1,
+                "text": null,
+                "designer|userClassName": "MyTreeColumn"
+            },
+            "customConfigs": [],
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen14828",
+                    "type": "object",
+                    "reference": {
+                        "name": "editor",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "implHandler": [
+                            " {",
+                            "                    xtype: 'textfield',",
+                            "                    selectOnFocus: true",
+                            "                }"
+                        ],
+                        "designer|displayName": "editor",
+                        "designer|userClassName": "editor"
+                    },
+                    "customConfigs": []
+                },
+                {
+                    "id": "ExtBox1-ext-gen15197",
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "renderer",
+                        "designer|params": [
+                            "value",
+                            "metaData",
+                            "record",
+                            "rowIndex",
+                            "colIndex",
+                            "store",
+                            "view"
+                        ],
+                        "implHandler": [
+                            "return me.renderName.apply(me, arguments);"
+                        ],
+                        "designer|userClassName": "renderer"
+                    },
+                    "customConfigs": [],
+                    "iconCls": "icon-basic-function"
+                }
+            ]
+        },
+        {
+            "id": "ExtBox1-ext-gen16186",
+            "type": "actioncolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "Delete",
+                "width": 24,
+                "icon": "resources/images/delete.png",
+                "iconCls": "x-hidden",
+                "tooltip": "Delete",
+                "designer|userClassName": "MyActionColumn"
+            },
+            "customConfigs": [],
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen16769",
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "handler",
+                        "designer|params": [
+                            "view",
+                            "rowIndex",
+                            "colIndex",
+                            "item",
+                            "e"
+                        ],
+                        "implHandler": [
+                            "me.handleDeleteClick.call(me, view, rowIndex, colIndex, item, e);"
+                        ],
+                        "designer|userClassName": "handler"
+                    },
+                    "customConfigs": [],
+                    "iconCls": "icon-basic-function"
+                }
+            ]
+        },
+        {
+            "id": "ExtBox1-ext-gen21925",
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "refreshView",
+                "implHandler": [
+                    "// refresh the data in the view.  This will trigger the column renderers to run, making sure the task counts are up to date.",
+                    "this.getView().refresh();"
+                ],
+                "designer|userClassName": "refreshView"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen22408",
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "renderName",
+                "designer|params": [
+                    "value",
+                    "metaData",
+                    "list",
+                    "rowIndex",
+                    "colIndex",
+                    "store",
+                    "view"
+                ],
+                "implHandler": [
+                    "var tasksStore = Ext.StoreMgr.lookup('Tasks'),",
+                    "    count = 0,",
+                    "    ret = '';",
+                    "",
+                    "(function countTasks(list) {",
+                    "    count += tasksStore.queryBy(function(task, id) {",
+                    "        // only show count for tasks that are not done",
+                    "        return task.get('list_id') === list.get('id') && task.get('done') === false;",
+                    "    }).getCount();",
+                    "",
+                    "    list.eachChild(function(child) {",
+                    "        countTasks(child);",
+                    "    });",
+                    "})(list);",
+                    "",
+                    "ret = value + ' (' + count + ')';",
+                    "",
+                    "return ret;"
+                ],
+                "designer|userClassName": "renderName"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen6812",
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "handleDeleteClick",
+                "designer|params": [
+                    "gridView",
+                    "rowIndex",
+                    "colIndex",
+                    "column",
+                    "e"
+                ],
+                "implHandler": [
+                    "  this.fireEvent('deleteclick', gridView, rowIndex, colIndex, column, e);"
+                ],
+                "designer|userClassName": "handleDeleteClick"
+            },
+            "customConfigs": []
+        }
+    ]
+}

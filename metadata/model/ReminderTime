@@ -1,0 +1,45 @@
+{
+    "id": "ExtBox1-ext-gen91528",
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "ReminderTime"
+    },
+    "customConfigs": [],
+    "designerId": "1588e410-4173-4aff-ba98-fd13c5b7a13d",
+    "$viewOrder": 2,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen91728",
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "num",
+                "designer|userClassName": "MyField3"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen91893",
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "timeInWords",
+                "designer|userClassName": "MyField4"
+            },
+            "customConfigs": []
+        }
+    ]
+}

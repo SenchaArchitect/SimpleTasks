@@ -1,0 +1,199 @@
+{
+    "id": "ExtBox1-ext-gen68264",
+    "type": "window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "border": false,
+        "frame": true,
+        "height": null,
+        "width": 400,
+        "title": "My Window",
+        "designer|userClassName": "tasks.ReminderWindow",
+        "designer|userAlias": "reminderWindow"
+    },
+    "customConfigs": [],
+    "designerId": "59a865a6-5399-46da-9f01-4bdc52e32417",
+    "$viewOrder": 7,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen68789",
+            "type": "component",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "box",
+                "cls": "tasks-reminder-details",
+                "designer|userClassName": "MyComponent2"
+            },
+            "customConfigs": [],
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen70889",
+                    "type": "template",
+                    "reference": {
+                        "name": "tpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "implHandler": [
+                            "<div class=\"tasks-reminder-icon\"></div>",
+                            "<p class=\"tasks-reminder-title\">{title}</p>",
+                            "<p class=\"tasks-reminder-due\">Due: {due:date(\"F j, Y\")}</p>"
+                        ],
+                        "designer|displayName": "tpl",
+                        "designer|userClassName": "tpl"
+                    },
+                    "customConfigs": []
+                }
+            ]
+        },
+        {
+            "id": "ExtBox1-ext-gen68955",
+            "type": "combobox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "margin": "10 0 10 20",
+                "name": "snooze_time",
+                "fieldLabel": "Remind me again in",
+                "labelSeparator": "",
+                "labelWidth": 115,
+                "displayField": "timeInWords",
+                "store": "ReminderTimes",
+                "valueField": "num",
+                "designer|userClassName": "MyComboBox2"
+            },
+            "customConfigs": [],
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen72462",
+                    "type": "object",
+                    "reference": {
+                        "name": "value",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "implHandler": [
+                            "'5' "
+                        ],
+                        "designer|displayName": "value",
+                        "designer|userClassName": "value"
+                    },
+                    "customConfigs": []
+                }
+            ]
+        },
+        {
+            "id": "ExtBox1-ext-gen69155",
+            "type": "toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "buttons(workaround)",
+                "designer|userClassName": "MyToolbar4",
+                "dock": "top"
+            },
+            "customConfigs": [],
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen70220",
+                    "type": "tbspacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MySpacer2",
+                        "layout|flex": null
+                    },
+                    "customConfigs": []
+                },
+                {
+                    "id": "ExtBox1-ext-gen69589",
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": "snooze-btn",
+                        "text": "Snooze",
+                        "designer|userClassName": "MyButton11",
+                        "layout|flex": null
+                    },
+                    "customConfigs": []
+                },
+                {
+                    "id": "ExtBox1-ext-gen69388",
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": "dismiss-reminder-btn",
+                        "text": "Dismiss",
+                        "designer|userClassName": "MyButton10",
+                        "layout|flex": null
+                    },
+                    "customConfigs": []
+                }
+            ]
+        },
+        {
+            "id": "ExtBox1-ext-gen74460",
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "setTask",
+                "designer|params": [
+                    "task"
+                ],
+                "implHandler": [
+                    "this.task = task;"
+                ],
+                "designer|userClassName": "setTask"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen74543",
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "getTask",
+                "implHandler": [
+                    "return this.task;"
+                ],
+                "designer|userClassName": "getTask"
+            },
+            "customConfigs": []
+        }
+    ]
+}

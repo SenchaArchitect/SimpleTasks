@@ -1,0 +1,387 @@
+{
+    "id": "ExtBox1-ext-gen30644",
+    "type": "window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "height": 350,
+        "width": 500,
+        "layout": "fit",
+        "closeAction": "hide",
+        "title": null,
+        "modal": true,
+        "designer|userClassName": "tasks.EditWindow",
+        "designer|userAlias": "taskEditWindow"
+    },
+    "customConfigs": [],
+    "designerId": "eaacfb24-106c-4e6d-9dc4-476d5b955fa6",
+    "$viewOrder": 4,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen31319",
+            "type": "toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyToolbar2",
+                "dock": "top"
+            },
+            "customConfigs": [],
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen31602",
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "toggle-complete-btn",
+                        "iconCls": "tasks-mark-complete",
+                        "text": null,
+                        "designer|userClassName": "MyButton6",
+                        "layout|flex": null
+                    },
+                    "customConfigs": []
+                },
+                {
+                    "id": "ExtBox1-ext-gen31856",
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "delete-task-window-btn",
+                        "iconCls": "tasks-delete-task",
+                        "text": "Delete Task",
+                        "designer|userClassName": "MyButton7",
+                        "layout|flex": null
+                    },
+                    "customConfigs": []
+                }
+            ]
+        },
+        {
+            "id": "ExtBox1-ext-gen32501",
+            "type": "form",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "border": false,
+                "frame": true,
+                "bodyPadding": 10,
+                "title": null,
+                "designer|userClassName": "MyForm1"
+            },
+            "customConfigs": [],
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen32971",
+                    "type": "textfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "title",
+                        "fieldLabel": "Task Subject",
+                        "labelWidth": 80,
+                        "designer|userClassName": "MyTextField",
+                        "layout|anchor": "100%"
+                    },
+                    "customConfigs": []
+                },
+                {
+                    "id": "ExtBox1-ext-gen33212",
+                    "type": "fieldset",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "date",
+                        "border": false,
+                        "margin": "0 0 5",
+                        "layout": "hbox",
+                        "title": null,
+                        "designer|userClassName": "MyFieldSet",
+                        "layout|anchor": "100%",
+                        "container|align": "stretch"
+                    },
+                    "customConfigs": [],
+                    "cn": [
+                        {
+                            "id": "ExtBox1-ext-gen33441",
+                            "type": "datefield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "margin": "0 15 0 0",
+                                "width": 185,
+                                "name": "due",
+                                "fieldLabel": "Due Date",
+                                "labelWidth": 80,
+                                "designer|userClassName": "MyDateField"
+                            },
+                            "customConfigs": []
+                        },
+                        {
+                            "id": "ExtBox1-ext-gen41763",
+                            "type": "combobox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Label",
+                                "designer|userClassName": "MyComboBox",
+                                "layout|flex": 1
+                            },
+                            "customConfigs": []
+                        }
+                    ]
+                },
+                {
+                    "id": "ExtBox1-ext-gen33833",
+                    "type": "component",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "box",
+                        "autoRender": null,
+                        "cls": "divider",
+                        "designer|userClassName": "MyComponent"
+                    },
+                    "customConfigs": []
+                },
+                {
+                    "id": "ExtBox1-ext-gen34122",
+                    "type": "fieldset",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "checkboxes",
+                        "border": false,
+                        "margin": "0 0 5",
+                        "layout": "hbox",
+                        "title": null,
+                        "designer|userClassName": "MyFieldSet1",
+                        "layout|anchor": "100%",
+                        "container|align": "stretch"
+                    },
+                    "customConfigs": [],
+                    "cn": [
+                        {
+                            "id": "ExtBox1-ext-gen37650",
+                            "type": "checkboxfield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "margin": "0 5 0 0",
+                                "name": "has_reminder",
+                                "fieldLabel": null,
+                                "boxLabel": "Reminder",
+                                "designer|userClassName": "MyCheckbox",
+                                "layout|flex": null
+                            },
+                            "customConfigs": []
+                        },
+                        {
+                            "id": "ExtBox1-ext-gen38076",
+                            "type": "datefield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "disabled": true,
+                                "margin": "0 5 0 0",
+                                "name": "reminder_date",
+                                "fieldLabel": null,
+                                "editable": false,
+                                "designer|userClassName": "MyDateField1",
+                                "layout|flex": null
+                            },
+                            "customConfigs": []
+                        },
+                        {
+                            "id": "ExtBox1-ext-gen38329",
+                            "type": "timefield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "disabled": true,
+                                "name": "reminder_time",
+                                "fieldLabel": null,
+                                "editable": false,
+                                "designer|userClassName": "MyTimeField1",
+                                "layout|flex": null
+                            },
+                            "customConfigs": []
+                        }
+                    ]
+                },
+                {
+                    "id": "ExtBox1-ext-gen34348",
+                    "type": "htmleditor",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 150,
+                        "name": "note",
+                        "fieldLabel": "Label",
+                        "designer|userClassName": "MyHTMLEditor",
+                        "layout|anchor": "100% -90"
+                    },
+                    "customConfigs": []
+                },
+                {
+                    "id": "ExtBox1-ext-gen34627",
+                    "type": "hiddenfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "reminder",
+                        "fieldLabel": "Label",
+                        "designer|userClassName": "MyHiddenField",
+                        "layout|anchor": "100%"
+                    },
+                    "customConfigs": []
+                },
+                {
+                    "id": "ExtBox1-ext-gen34859",
+                    "type": "hiddenfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "done",
+                        "fieldLabel": "Label",
+                        "designer|userClassName": "MyHiddenField1",
+                        "layout|anchor": "100%"
+                    },
+                    "customConfigs": []
+                },
+                {
+                    "id": "ExtBox1-ext-gen35105",
+                    "type": "toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "buttons(workaround)",
+                        "designer|userClassName": "MyToolbar3",
+                        "dock": "bottom"
+                    },
+                    "customConfigs": [],
+                    "cn": [
+                        {
+                            "id": "ExtBox1-ext-gen43662",
+                            "type": "tbspacer",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MySpacer1",
+                                "layout|flex": 1
+                            },
+                            "customConfigs": []
+                        },
+                        {
+                            "id": "ExtBox1-ext-gen40278",
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "id": "save-task-edit-btn",
+                                "text": "Save",
+                                "designer|userClassName": "MyButton8",
+                                "layout|flex": null
+                            },
+                            "customConfigs": []
+                        },
+                        {
+                            "id": "ExtBox1-ext-gen40817",
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "id": "cancel-task-edit-btn",
+                                "text": "Cancel",
+                                "designer|userClassName": "MyButton9",
+                                "layout|flex": null
+                            },
+                            "customConfigs": []
+                        },
+                        {
+                            "id": "ExtBox1-ext-gen44852",
+                            "type": "object",
+                            "reference": {
+                                "name": "ui",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "implHandler": [
+                                    "'footer'"
+                                ],
+                                "designer|displayName": "ui",
+                                "designer|userClassName": "ui"
+                            },
+                            "customConfigs": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

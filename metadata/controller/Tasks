@@ -1,0 +1,1504 @@
+{
+    "id": "ExtBox1-ext-gen44731",
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "Task"
+        ],
+        "stores": [
+            "Tasks"
+        ],
+        "views": [
+            "tasks.Grid",
+            "tasks.Form",
+            "tasks.EditWindow",
+            "tasks.DefaultTimeWindow",
+            "tasks.ReminderWindow",
+            "tasks.ContextMenu"
+        ],
+        "designer|userClassName": "Tasks"
+    },
+    "customConfigs": [],
+    "designerId": "b94139bd-3865-464a-a8d8-dc7150599f22",
+    "$viewOrder": 1,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen45244",
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "init",
+                "designer|params": [
+                    "application"
+                ],
+                "implHandler": [
+                    " /* Workaround for inablity to add xtype */",
+                    "    var refs = [",
+                    "        {",
+                    "            ref: 'listTree',",
+                    "            selector: 'listTree'",
+                    "        },",
+                    "        {",
+                    "            ref: 'taskForm',",
+                    "            selector: 'taskForm'",
+                    "        },",
+                    "        {",
+                    "            ref: 'taskGrid',",
+                    "            selector: 'taskGrid'",
+                    "        },",
+                    "        {",
+                    "            ref: 'tasksToolbar',",
+                    "            selector: 'tasksToolbar'",
+                    "        },",
+                    "        {",
+                    "            ref: 'taskEditWindow',",
+                    "            selector: 'taskEditWindow',",
+                    "            xtype: 'taskEditWindow',",
+                    "            autoCreate: true",
+                    "        },",
+                    "        {",
+                    "            ref: 'defaultTimeWindow',",
+                    "            selector: 'defaultTimeWindow',",
+                    "            xtype: 'defaultTimeWindow',",
+                    "            autoCreate: true",
+                    "        },",
+                    "        {",
+                    "            ref: 'reminderWindow',",
+                    "            selector: 'reminderWindow',",
+                    "            xtype: 'reminderWindow',",
+                    "            forceCreate: true",
+                    "        },",
+                    "        {",
+                    "            ref: 'contextMenu',",
+                    "            selector: 'tasksContextMenu',",
+                    "            xtype: 'tasksContextMenu',",
+                    "            autoCreate: true",
+                    "        }",
+                    "    ];",
+                    "",
+                    "    this.ref(refs); // internal function",
+                    "/* End workaround */",
+                    "",
+                    "    this.initReminderInterval();"
+                ],
+                "designer|userClassName": "init"
+            },
+            "customConfigs": [],
+            "iconCls": "icon-basic-function"
+        },
+        {
+            "id": "ExtBox1-ext-gen46247",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "handleSpecialKey",
+                "implHandler": [
+                    " if(e.getKey() === e.ENTER) {",
+                    "            this.newTask();",
+                    "        }"
+                ],
+                "name": "specialkey",
+                "scope": "me",
+                "designer|targetType": "Ext.form.field.Text",
+                "designer|controlQuery": "taskForm textfield",
+                "designer|userClassName": "handleSpecialKey"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen46618",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "focusTaskForm",
+                "designer|params": [
+                    "component",
+                    "e"
+                ],
+                "implHandler": [
+                    " this.getTaskForm().query('[name=title]')[0].focus();"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.Component",
+                "designer|controlQuery": "[iconCls=tasks-new]",
+                "designer|userClassName": "focusTaskForm"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen47336",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "handleDeleteClick",
+                "implHandler": [
+                    "        this.deleteTask(this.getTaskGrid().getSelectionModel().getSelection()[0]);",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#delete-task-btn",
+                "designer|userClassName": "handleDeleteClick"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen48151",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "handleDeleteTaskItemClick",
+                "implHandler": [
+                    "this.handleDeleteClick(button, e, options);"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#delete-task-item",
+                "designer|userClassName": "handleDeleteTaskItemClick"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen48799",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "markComplete",
+                "implHandler": [
+                    "   var contextMenu = this.getContextMenu(),",
+                    "            task = contextMenu.isVisible() ? contextMenu.getTask() : this.getTaskGrid().getSelectionModel().getSelection()[0];",
+                    "",
+                    "        task.set('done', true);",
+                    "        task.set('reminder', null);",
+                    "        task.save({",
+                    "            failure: function(task, operation) {",
+                    "                var error = operation.getError(),",
+                    "                    msg = Ext.isObject(error) ? error.status + ' ' + error.statusText : error;",
+                    "",
+                    "                Ext.MessageBox.show({",
+                    "                    title: 'Mark Complete Failed',",
+                    "                    msg: msg,",
+                    "                    icon: Ext.Msg.ERROR,",
+                    "                    buttons: Ext.Msg.OK",
+                    "                });",
+                    "            }",
+                    "        });",
+                    "        this.refreshFiltersAndCount();"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#mark-complete-item",
+                "designer|userClassName": "markComplete"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen49534",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "markCompleteButton",
+                "implHandler": [
+                    "this.markComplete(button, e, options);"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#mark-complete-btn",
+                "designer|userClassName": "markCompleteButton"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen50213",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "markActive",
+                "implHandler": [
+                    "    var contextMenu = this.getContextMenu(),",
+                    "            task = contextMenu.isVisible() ? contextMenu.getTask() : this.getTaskGrid().getSelectionModel().getSelection()[0];",
+                    "",
+                    "        task.set('done', false);",
+                    "        task.save({",
+                    "            failure: function(task, operation) {",
+                    "                var error = operation.getError(),",
+                    "                    msg = Ext.isObject(error) ? error.status + ' ' + error.statusText : error;",
+                    "",
+                    "                Ext.MessageBox.show({",
+                    "                    title: 'Mark Active Failed',",
+                    "                    msg: msg,",
+                    "                    icon: Ext.Msg.ERROR,",
+                    "                    buttons: Ext.Msg.OK",
+                    "                });",
+                    "            }",
+                    "        });",
+                    "        this.refreshFiltersAndCount();"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#mark-active-item",
+                "designer|userClassName": "markActive"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen50790",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "markActiveButton",
+                "implHandler": [
+                    "this.markActive(button, e, options);"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#mark-active-btn",
+                "designer|userClassName": "markActiveButton"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen51365",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "filterAll",
+                "implHandler": [
+                    "var tasksStore = this.getTasksStore(),",
+                    "            filters = tasksStore.filters.getRange(0, tasksStore.filters.getCount() - 1),",
+                    "            filterCount = filters.length,",
+                    "            i = 0;",
+                    "",
+                    "        if(button.pressed) {",
+                    "            tasksStore.clearFilter();",
+                    "            for(; i < filterCount; i++) {",
+                    "                if(filters[i].property === 'done') {",
+                    "                    filters.splice(i, 1);",
+                    "                    filterCount --;",
+                    "                }",
+                    "            }",
+                    "            tasksStore.filter(filters);",
+                    "        } else {",
+                    "            button.toggle();",
+                    "        } "
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#show-all-btn",
+                "designer|userClassName": "filterAll"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen52023",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "filterActive",
+                "implHandler": [
+                    "var tasksStore = this.getTasksStore(),",
+                    "            filters = tasksStore.filters.getRange(0, tasksStore.filters.getCount() - 1),",
+                    "            filterCount = filters.length,",
+                    "            i = 0;",
+                    "",
+                    "        if(button.pressed) {",
+                    "            tasksStore.clearFilter();",
+                    "            for(; i < filterCount; i++) {",
+                    "                if(filters[i].property === 'done') {",
+                    "                    filters.splice(i, 1);",
+                    "                    filterCount --;",
+                    "                }",
+                    "            }",
+                    "            filters.push({ property: 'done', value: false });",
+                    "            this.getTasksStore().filter(filters);",
+                    "        } else {",
+                    "            button.toggle();",
+                    "        } "
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#show-active-btn",
+                "designer|userClassName": "filterActive"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen52574",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "filterComplete",
+                "implHandler": [
+                    "   var tasksStore = this.getTasksStore(),",
+                    "            filters = tasksStore.filters.getRange(0, tasksStore.filters.getCount() - 1),",
+                    "            filterCount = filters.length,",
+                    "            i = 0;",
+                    "",
+                    "        if(button.pressed) {",
+                    "            tasksStore.clearFilter();",
+                    "            for(; i < filterCount; i++) {",
+                    "                if(filters[i].property === 'done') {",
+                    "                    filters.splice(i, 1);",
+                    "                    filterCount --;",
+                    "                }",
+                    "            }",
+                    "            filters.push({ property: 'done', value: true });",
+                    "            this.getTasksStore().filter(filters);",
+                    "        } else {",
+                    "            button.toggle();",
+                    "        } "
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#show-complete-btn",
+                "designer|userClassName": "filterComplete"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen53216",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "handleEditItemClick",
+                "implHandler": [
+                    "   this.showEditWindow(this.getContextMenu().getTask());"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#edit-task-item",
+                "designer|userClassName": "handleEditItemClick"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen54451",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "updateTask",
+                "designer|params": [
+                    "task"
+                ],
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "if(task.modified.done === false) {",
+                    "    task.set('reminder', null);",
+                    "}",
+                    "task.save({",
+                    "    success: function(task, operation) {",
+                    "        me.refreshFiltersAndCount();",
+                    "        me.getTasksStore().sort();",
+                    "    },",
+                    "    failure: function(task, operation) {",
+                    "        var error = operation.getError(),",
+                    "            msg = Ext.isObject(error) ? error.status + ' ' + error.statusText : error;",
+                    "",
+                    "        Ext.MessageBox.show({",
+                    "            title: 'Update Task Failed',",
+                    "            msg: msg,",
+                    "            icon: Ext.Msg.ERROR,",
+                    "            buttons: Ext.Msg.OK",
+                    "        });",
+                    "    }",
+                    "});"
+                ],
+                "name": "recordedit",
+                "scope": "me",
+                "designer|targetType": null,
+                "designer|controlQuery": "taskGrid",
+                "designer|userClassName": "updateTask"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen55061",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "handleDeleteIconClick",
+                "designer|params": [
+                    "view",
+                    "rowIndex",
+                    "colIndex",
+                    "column",
+                    "e"
+                ],
+                "implHandler": [
+                    " this.deleteTask(this.getTasksStore().getAt(rowIndex));"
+                ],
+                "name": "deleteclick",
+                "scope": "me",
+                "designer|targetType": "tasks.Grid",
+                "designer|controlQuery": "taskGrid",
+                "designer|userClassName": "handleDeleteIconClick"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen55214",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "handleEditIconClick",
+                "designer|params": [
+                    "view"
+                ],
+                "implHandler": [
+                    "this.showEditWindow(view.getRecord(view.findTargetByEvent(e)));"
+                ],
+                "name": "editclick",
+                "scope": "me",
+                "designer|controlQuery": "taskGrid",
+                "designer|userClassName": "handleEditIconClick"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen55279",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "setReminder",
+                "designer|params": [
+                    "task",
+                    "value"
+                ],
+                "implHandler": [
+                    "var me = this,",
+                    "            defaultTimeWindow = me.getDefaultTimeWindow(),",
+                    "            defaultTimeField = defaultTimeWindow.down('form').getForm().findField('default_time'),",
+                    "            defaultTimeDate, defaultTimeMilliseconds;",
+                    "",
+                    "        me.getDefaultReminderTime(function(defaultTime) {",
+                    "            if(value === 'set') {",
+                    "                // if the user selected \"Set Default Time\", show the default time window.",
+                    "                defaultTimeField.setValue(defaultTime);",
+                    "                defaultTimeWindow.show();",
+                    "            } else {",
+                    "                if(Ext.isNumber(value)) {",
+                    "                    // if the user selected a reminder time, set the reminder by adding the user selected value to the due date",
+                    "                    defaultTimeDate = Ext.Date.parse(defaultTime, defaultTimeField.format);",
+                    "                    defaultTimeMilliseconds = defaultTimeDate - Ext.Date.clearTime(defaultTimeDate, true);",
+                    "                    task.set('reminder', new Date(task.get('due').getTime() - (value * 86400000) + defaultTimeMilliseconds));",
+                    "                } else {",
+                    "                    // if the user selected \"No Reminder\" set the reminder field to null",
+                    "                    task.set('reminder', null);",
+                    "                }",
+                    "                task.save({",
+                    "                    failure: function(task, operation) {",
+                    "                        var error = operation.getError(),",
+                    "                           msg = Ext.isObject(error) ? error.status + ' ' + error.statusText : error;",
+                    "",
+                    "                        Ext.MessageBox.show({",
+                    "                            title: 'Set Reminder Failed',",
+                    "                            msg: msg,",
+                    "                            icon: Ext.Msg.ERROR,",
+                    "                            buttons: Ext.Msg.OK",
+                    "                        });",
+                    "                    }",
+                    "                });",
+                    "            }",
+                    "        });"
+                ],
+                "name": "reminderselect",
+                "scope": "me",
+                "designer|controlQuery": "taskGrid",
+                "designer|userClassName": "setReminder"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen55344",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "showActions",
+                "designer|params": [
+                    "view",
+                    "task",
+                    "node",
+                    "rowIndex",
+                    "e"
+                ],
+                "implHandler": [
+                    "        var icons = Ext.DomQuery.select('.x-action-col-icon', node);",
+                    "        Ext.each(icons, function(icon){",
+                    "            Ext.get(icon).removeCls('x-hidden');",
+                    "        });"
+                ],
+                "name": "itemmouseenter",
+                "scope": "me",
+                "designer|controlQuery": "taskGrid",
+                "designer|userClassName": "showActions"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen55409",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "hideActions",
+                "designer|params": [
+                    "view",
+                    "task",
+                    "node",
+                    "rowIndex",
+                    "e"
+                ],
+                "implHandler": [
+                    "   var icons = Ext.DomQuery.select('.x-action-col-icon', node);",
+                    "        Ext.each(icons, function(icon){",
+                    "            Ext.get(icon).addCls('x-hidden');",
+                    "        });"
+                ],
+                "name": "itemmouseleave",
+                "scope": "me",
+                "designer|controlQuery": "taskGrid",
+                "designer|userClassName": "hideActions"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen55476",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "toggleButtons",
+                "designer|params": [
+                    "selModel",
+                    "tasks"
+                ],
+                "implHandler": [
+                    "       var deleteTaskBtn = Ext.getCmp('delete-task-btn'),",
+                    "            markCompleteBtn = Ext.getCmp('mark-complete-btn'),",
+                    "            markActiveBtn = Ext.getCmp('mark-active-btn');",
+                    "",
+                    "        if(tasks.length === 0) {",
+                    "            deleteTaskBtn.disable();",
+                    "            markCompleteBtn.disable();",
+                    "            markActiveBtn.disable();",
+                    "        } else {",
+                    "            deleteTaskBtn.enable();",
+                    "            markCompleteBtn.enable();",
+                    "            markActiveBtn.enable();",
+                    "        }"
+                ],
+                "name": "selectionchange",
+                "scope": "me",
+                "designer|controlQuery": "taskGrid",
+                "designer|userClassName": "toggleButtons"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen55547",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "syncTaskFormFieldWidth",
+                "designer|params": [
+                    "headerContainer",
+                    "column",
+                    "width"
+                ],
+                "implHandler": [
+                    "        var field = this.getTaskForm().query('[name=' + column.dataIndex + ']')[0];",
+                    "        if (field) {",
+                    "            field.setWidth(width - 5);",
+                    "        }"
+                ],
+                "name": "columnresize",
+                "scope": "me",
+                "designer|controlQuery": "taskGrid",
+                "designer|userClassName": "syncTaskFormFieldWidth"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen59381",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "showContextMenu",
+                "designer|params": [
+                    "view",
+                    "task",
+                    "node",
+                    "rowIndex",
+                    "e"
+                ],
+                "implHandler": [
+                    "     var contextMenu = this.getContextMenu(),",
+                    "            markCompleteItem = Ext.getCmp('mark-complete-item'),",
+                    "            markActiveItem = Ext.getCmp('mark-active-item');",
+                    "",
+                    "        if(task.get('done')) {",
+                    "            markCompleteItem.hide();",
+                    "            markActiveItem.show();",
+                    "        } else {",
+                    "            markCompleteItem.show();",
+                    "            markActiveItem.hide();",
+                    "        }",
+                    "        contextMenu.setTask(task);",
+                    "        contextMenu.showAt(e.getX(), e.getY());",
+                    "        e.preventDefault();"
+                ],
+                "name": "itemcontextmenu",
+                "scope": "me",
+                "designer|targetType": "Ext.Component",
+                "designer|controlQuery": "taskGrid",
+                "designer|userClassName": "showContextMenu"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen61553",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initShowAll",
+                "designer|params": [
+                    "toolbar"
+                ],
+                "implHandler": [
+                    "  toolbar.getComponent('show-all-btn').toggle();"
+                ],
+                "name": "afterrender",
+                "scope": "me",
+                "designer|targetType": null,
+                "designer|controlQuery": "tasksToolbar",
+                "designer|userClassName": "initShowAll"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen61833",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "toggleReminderFields",
+                "implHandler": [
+                    " var checkbox = field,",
+                    "     taskEditWindow = this.getTaskEditWindow(),",
+                    "            windowEl = taskEditWindow.getEl(),",
+                    "            form = taskEditWindow.down('form').getForm(),",
+                    "            task = form.getRecord(),",
+                    "            dateField = form.findField('reminder_date'),",
+                    "            timeField = form.findField('reminder_time'),",
+                    "            defaultTimeDate, defaultTimeMilliseconds;",
+                    "        ",
+                    "        if(newValue) { // if the \"has reminder\" checkbox was checked",
+                    "            windowEl.mask('loading');",
+                    "            // get the default reminder time from the server or cache",
+                    "            this.getDefaultReminderTime(function(defaultTime) {",
+                    "                // enable the date and time fields",
+                    "                dateField.enable();",
+                    "                timeField.enable();",
+                    "                if(!dateField.getValue()) {",
+                    "                    // if the reminder date has not already been set, default the reminder date to the task's due date",
+                    "                    // or the current date if the task does not have a due date",
+                    "                    dateField.setValue(task.get('due') || Ext.Date.clearTime(new Date()));",
+                    "                    timeField.setValue(defaultTime);",
+                    "                }",
+                    "                // set the form's hidden reminder field by combining the reminder date and time fields",
+                    "                defaultTimeDate = timeField.getValue();",
+                    "                defaultTimeMilliseconds = defaultTimeDate - Ext.Date.clearTime(defaultTimeDate, true);",
+                    "                form.findField('reminder').setValue(new Date(dateField.getValue().getTime() + defaultTimeMilliseconds));",
+                    "                windowEl.unmask();",
+                    "            });",
+                    "        } else { // if the \"has reminder\" checkbox was unchecked",
+                    "            // nullify the form's hidden reminder field and disable the reminder date and time fields",
+                    "            form.findField('reminder').setValue(null);",
+                    "            dateField.disable();",
+                    "            timeField.disable();",
+                    "        }"
+                ],
+                "name": "change",
+                "scope": "me",
+                "designer|targetType": "Ext.form.field.Checkbox",
+                "designer|controlQuery": "taskEditWindow [name=has_reminder]",
+                "designer|userClassName": "toggleReminderFields"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen62152",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "hideEditWindow",
+                "implHandler": [
+                    "  this.getTaskEditWindow().close();"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#cancel-task-edit-btn",
+                "designer|userClassName": "hideEditWindow"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen62473",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "handleSaveTaskClick",
+                "implHandler": [
+                    " this.saveEditWindow();"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#save-task-edit-btn",
+                "designer|userClassName": "handleSaveTaskClick"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen63911",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "syncReminderField",
+                "designer|params": [
+                    "field",
+                    "oldValue",
+                    "newValue"
+                ],
+                "implHandler": [
+                    "var form = this.getTaskEditWindow().down('form').getForm(),",
+                    "            reminderField = form.findField('reminder'),",
+                    "            date = form.findField('reminder_date').getValue(),",
+                    "            timeDate = form.findField('reminder_time').getValue(),",
+                    "            time, reminderDate;",
+                    "",
+                    "        if(date && timeDate) {",
+                    "            time = timeDate - Ext.Date.clearTime(timeDate, true);",
+                    "            reminderDate = new Date(date.getTime() + time);",
+                    "            reminderField.setValue(reminderDate); ",
+                    "        }"
+                ],
+                "name": "change",
+                "scope": "me",
+                "designer|controlQuery": "taskEditWindow [name=reminder_date]",
+                "designer|userClassName": "syncReminderField"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen63979",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "syncReminderFieldAgain",
+                "designer|params": [
+                    "field",
+                    "oldValue",
+                    "newValue"
+                ],
+                "implHandler": [
+                    "this.syncReminderField(field, oldValue, newValue);"
+                ],
+                "name": "change",
+                "scope": "me",
+                "designer|controlQuery": "taskEditWindow [name=reminder_time]",
+                "designer|userClassName": "syncReminderFieldAgain"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen64054",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "toggleCompleteField",
+                "implHandler": [
+                    "   var taskEditWindow = this.getTaskEditWindow(),",
+                    "            doneField = taskEditWindow.down('form').getForm().findField('done');",
+                    "",
+                    "        if(doneField.getValue() === 'true') {",
+                    "            doneField.setValue(false);",
+                    "        } else {",
+                    "            doneField.setValue(true);",
+                    "        }",
+                    "        this.saveEditWindow();"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#toggle-complete-btn",
+                "designer|userClassName": "toggleCompleteField"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen64124",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "deleteTaskAndCloseEditWindow",
+                "implHandler": [
+                    "    var me = this,",
+                    "            taskEditWindow = me.getTaskEditWindow(),",
+                    "            task = taskEditWindow.down('form').getRecord();",
+                    "",
+                    "        me.deleteTask(task, function() {",
+                    "            me.getTaskEditWindow().close();",
+                    "        });"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#delete-task-window-btn",
+                "designer|userClassName": "deleteTaskAndCloseEditWindow"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen64193",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "hideDefaultTimeWindow",
+                "implHandler": [
+                    "   this.getDefaultTimeWindow().close();"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#cancel-default-time-edit-btn",
+                "designer|userClassName": "hideDefaultTimeWindow"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen64263",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "saveDefaultTime",
+                "implHandler": [
+                    "  var me = this,",
+                    "            defaultTimeWindow = me.getDefaultTimeWindow(),",
+                    "            windowEl = defaultTimeWindow.getEl(),",
+                    "            time = defaultTimeWindow.down('form').getForm().findField('default_time').getRawValue();",
+                    "",
+                    "        if (SimpleTasksSettings.useLocalStorage) {",
+                    "            localStorage.setItem('SimpleTasks-defaultReminderTime', time);",
+                    "            me.defaultReminderTime = time;",
+                    "            defaultTimeWindow.close();",
+                    "        } else {",
+                    "            windowEl.mask('saving');",
+                    "            Ext.Ajax.request({",
+                    "                url: 'php/config/update.php',",
+                    "                params: {",
+                    "                    key: 'default.reminder.time',",
+                    "                    value: time",
+                    "                },",
+                    "                success: function(response, options) {",
+                    "                    var responseData = Ext.decode(response.responseText);",
+                    "",
+                    "                    if(responseData.success) {",
+                    "                        me.defaultReminderTime = time;",
+                    "                        defaultTimeWindow.close();",
+                    "                    } else {",
+                    "                        Ext.MessageBox.show({",
+                    "                            title: 'Set Default Time Failed',",
+                    "                            msg: responseData.message,",
+                    "                            icon: Ext.Msg.ERROR,",
+                    "                            buttons: Ext.Msg.OK",
+                    "                        });",
+                    "                    }",
+                    "                    windowEl.unmask();",
+                    "                },",
+                    "                failure: function(response, options) {",
+                    "                    Ext.MessageBox.show({",
+                    "                        title: 'Set Default Time Failed',",
+                    "                        msg: response.status + ' ' + response.statusText,",
+                    "                        icon: Ext.Msg.ERROR,",
+                    "                        buttons: Ext.Msg.OK",
+                    "                    });",
+                    "                    windowEl.unmask();",
+                    "                }",
+                    "            });",
+                    "        }"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#save-default-time-btn",
+                "designer|userClassName": "saveDefaultTime"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen64333",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "snooze",
+                "implHandler": [
+                    " var reminderWindow = button.findParentByType('window'),",
+                    "            task = reminderWindow.getTask(),",
+                    "            snoozeMilliseconds = reminderWindow.down('[name=snooze_time]').getValue() * 60000,",
+                    "            reminderDate = new Date(new Date().getTime() + snoozeMilliseconds);",
+                    "",
+                    "        task.set('reminder', reminderDate);",
+                    "        task.save({",
+                    "            failure: function(task, operation) {",
+                    "                var error = operation.getError(),",
+                    "                   msg = Ext.isObject(error) ? error.status + ' ' + error.statusText : error;",
+                    "",
+                    "                Ext.MessageBox.show({",
+                    "                    title: 'Set Reminder Failed',",
+                    "                    msg: msg,",
+                    "                    icon: Ext.Msg.ERROR,",
+                    "                    buttons: Ext.Msg.OK",
+                    "                });",
+                    "            }",
+                    "        });",
+                    "        reminderWindow.close();"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "[cls=snooze-btn]",
+                "designer|userClassName": "snooze"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen67099",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "dismissReminder",
+                "implHandler": [
+                    "  button.findParentByType('window').close();"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "[cls=dismiss-reminder-btn]",
+                "designer|userClassName": "dismissReminder"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen69344",
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "deleteTask",
+                "designer|params": [
+                    "task",
+                    "successCallback"
+                ],
+                "implHandler": [
+                    "   var me = this;",
+                    "        ",
+                    "        Ext.Msg.show({",
+                    "            title: 'Delete Task?',",
+                    "            msg: 'Are you sure you want to delete this task?',",
+                    "            buttons: Ext.Msg.YESNO,",
+                    "            fn: function(response) {",
+                    "                if(response === 'yes') {",
+                    "                    task.destroy({",
+                    "                        success: function(task, operation) {",
+                    "                            me.getTasksStore().remove(task);",
+                    "                            me.refreshFiltersAndCount();",
+                    "                            if(successCallback) {",
+                    "                                successCallback();",
+                    "                            }",
+                    "                        },",
+                    "                        failure: function(task, operation) {",
+                    "                            var error = operation.getError(),",
+                    "                                msg = Ext.isObject(error) ? error.status + ' ' + error.statusText : error;",
+                    "",
+                    "                            Ext.MessageBox.show({",
+                    "                                title: 'Delete Task Failed',",
+                    "                                msg: msg,",
+                    "                                icon: Ext.Msg.ERROR,",
+                    "                                buttons: Ext.Msg.OK",
+                    "                            });",
+                    "                        }",
+                    "                    });",
+                    "                }",
+                    "            }",
+                    "        });"
+                ],
+                "designer|userClassName": "deleteTask"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen69736",
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "newTask",
+                "implHandler": [
+                    "      var me = this,",
+                    "            form = me.getTaskForm(),",
+                    "            basicForm = form.getForm(),",
+                    "            formEl = form.getEl(),",
+                    "            titleField = form.getForm().findField('title'),",
+                    "            task = Ext.create('SimpleTasks.model.Task');",
+                    "",
+                    "        // require title field to have a value",
+                    "        if(!titleField.getValue()) {",
+                    "            return;",
+                    "        }",
+                    "",
+                    "        // update the new task record with the data from the form.",
+                    "        basicForm.updateRecord(task);",
+                    "",
+                    "        // try to blur all of this form's items to make sure that the user can't type into a field while saving",
+                    "        form.items.each(function(item) {",
+                    "            var inputEl = item.getEl().down('input')",
+                    "            if(inputEl) {",
+                    "                inputEl.blur();",
+                    "            }",
+                    "        });",
+                    "",
+                    "        // mask the form element while saving",
+                    "        formEl.mask('saving . . .');",
+                    "        // save the task to the server",
+                    "        task.save({",
+                    "            success: function(task, operation) {",
+                    "                me.getTasksStore().add(task);",
+                    "                me.refreshFiltersAndCount();",
+                    "                me.getTasksStore().sort();",
+                    "                titleField.reset();",
+                    "                titleField.focus();",
+                    "                formEl.unmask();",
+                    "            },",
+                    "            failure: function(task, operation) {",
+                    "                var error = operation.getError(),",
+                    "                    msg = Ext.isObject(error) ? error.status + ' ' + error.statusText : error;",
+                    "",
+                    "                Ext.MessageBox.show({",
+                    "                    title: 'Add Task Failed',",
+                    "                    msg: msg,",
+                    "                    icon: Ext.Msg.ERROR,",
+                    "                    buttons: Ext.Msg.OK",
+                    "                });",
+                    "                formEl.unmask();",
+                    "            }",
+                    "        });"
+                ],
+                "designer|userClassName": "newTask"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen70070",
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "refreshFiltersAndCount",
+                "implHandler": [
+                    "  // refresh the task filters",
+                    "        this.getTaskGrid().refreshFilters();",
+                    "        // refresh the lists list view so that the task counts will be correct",
+                    "        this.getListTree().refreshView();"
+                ],
+                "designer|userClassName": "refreshFiltersAndCount"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen71026",
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "showEditWindow",
+                "designer|params": [
+                    "task"
+                ],
+                "implHandler": [
+                    " var me = this,",
+                    "            taskEditWindow = me.getTaskEditWindow(),",
+                    "            form =  taskEditWindow.down('form').getForm(),",
+                    "            reminderCheckbox = form.findField('has_reminder'),",
+                    "            dateField = form.findField('reminder_date'),",
+                    "            timeField = form.findField('reminder_time'),",
+                    "            reminder = task.get('reminder');",
+                    "",
+                    "        // Set the tasks title as the title of the edit window",
+                    "        taskEditWindow.setTitle('Edit Task - ' + task.get('title'));",
+                    "        // load the task data into the form",
+                    "        taskEditWindow.down('form').loadRecord(task);",
+                    "        // set the text of the toggle-complete button depending on the tasks \"done\" value",
+                    "        Ext.getCmp('toggle-complete-btn').setText(task.get('done') ? 'Mark Active' : 'Mark Complete');",
+                    "        taskEditWindow.show();",
+                    "",
+                    "        if(task.get('reminder')) {",
+                    "            // if the task already has a reminder set check the reminder checkbox and populate the reminder date and reminder time fields",
+                    "            reminderCheckbox.setValue(true);",
+                    "            dateField.setValue(Ext.Date.clearTime(reminder, true));",
+                    "            timeField.setValue(Ext.Date.format(reminder, timeField.format)); ",
+                    "        } else {",
+                    "            // if the task does not have a reminder set uncheck the reminder checkbox and set the reminder date and time fields to null",
+                    "            reminderCheckbox.setValue(false);",
+                    "            dateField.setValue(null);",
+                    "            timeField.setValue(null); ",
+                    "        }",
+                    "",
+                    "        if(task.get('done')) {",
+                    "            // if the task is done disable the reminder checkbox (reminders cannot be set on completed tasks)",
+                    "            reminderCheckbox.disable();",
+                    "        } else {",
+                    "            reminderCheckbox.enable();",
+                    "        }",
+                    ""
+                ],
+                "designer|userClassName": "showEditWindow"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen71595",
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "saveEditWindow",
+                "implHandler": [
+                    "  var taskEditWindow = this.getTaskEditWindow(),",
+                    "            windowEl = taskEditWindow.getEl(),",
+                    "            form = taskEditWindow.down('form').getForm(),",
+                    "            task = form.getRecord();",
+                    "",
+                    "        if(form.isValid()) {",
+                    "            windowEl.mask('saving');",
+                    "            form.updateRecord(task);",
+                    "            if(task.modified.done === false) {",
+                    "                task.set('reminder', null);",
+                    "            }",
+                    "            task.save({",
+                    "                success: function(task, operation) {",
+                    "                    windowEl.unmask();",
+                    "                    taskEditWindow.close();",
+                    "                },",
+                    "                failure: function(task, operation) {",
+                    "                    var error = operation.getError(),",
+                    "                       msg = Ext.isObject(error) ? error.status + ' ' + error.statusText : error;",
+                    "",
+                    "                    Ext.MessageBox.show({",
+                    "                        title: 'Edit Task Failed',",
+                    "                        msg: msg,",
+                    "                        icon: Ext.Msg.ERROR,",
+                    "                        buttons: Ext.Msg.OK",
+                    "                    });",
+                    "                    windowEl.unmask();",
+                    "                }",
+                    "            })",
+                    "        } else {",
+                    "            Ext.Msg.alert('Invalid Data', 'Please correct form errors');",
+                    "        }"
+                ],
+                "designer|userClassName": "saveEditWindow"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen72631",
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "getDefaultReminderTime",
+                "designer|params": [
+                    "callback"
+                ],
+                "implHandler": [
+                    "  var me = this,",
+                    "            defaultReminderTime;",
+                    "",
+                    "        if(me.defaultReminderTime) {",
+                    "            callback(me.defaultReminderTime);",
+                    "        } else {",
+                    "            me.defaultReminderTime = '8:00 AM'; // the default time if no value can be retrieved from storage",
+                    "            if (SimpleTasksSettings.useLocalStorage) {",
+                    "                defaultReminderTime = localStorage.getItem('SimpleTasks-defaultReminderTime');",
+                    "                if (defaultReminderTime) {",
+                    "                    me.defaultReminderTime = defaultReminderTime;",
+                    "                }",
+                    "                callback(me.defaultReminderTime);",
+                    "            } else {",
+                    "                Ext.Ajax.request({",
+                    "                    url: 'php/config/read.php',",
+                    "                    params: {",
+                    "                        key: 'default.reminder.time'",
+                    "                    },",
+                    "                    success: function(response, options) {",
+                    "                        var responseData = Ext.decode(response.responseText);",
+                    "                        if(responseData.success && responseData.value) {",
+                    "                            me.defaultReminderTime = responseData.value;",
+                    "                        }",
+                    "                        callback(me.defaultReminderTime);",
+                    "                    },",
+                    "                    failure: function(response, options) {",
+                    "                        callback(me.defaultReminderTime);",
+                    "                    }",
+                    "                });",
+                    "            }",
+                    "        }"
+                ],
+                "designer|userClassName": "getDefaultReminderTime"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen73072",
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initReminderInterval",
+                "implHandler": [
+                    "  var me = this,",
+                    "            now, reminderDate;",
+                    "",
+                    "        setInterval(function() {",
+                    "            now = new Date();",
+                    "            me.getTasksStore().each(function(task) {",
+                    "                reminderDate = task.get('reminder');",
+                    "                if(reminderDate && reminderDate < now && !task.get('done')) {",
+                    "                    me.showReminderWindow(task);",
+                    "                }",
+                    "            });",
+                    "        }, 10000);"
+                ],
+                "designer|userClassName": "initReminderInterval"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen73406",
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "showReminderWindow",
+                "designer|params": [
+                    "task"
+                ],
+                "implHandler": [
+                    "  var reminderWindow = this.getReminderWindow(),",
+                    "            reminderDetailsBox = reminderWindow.down('[cls=tasks-reminder-details]'),",
+                    "            title = task.get('title');",
+                    "",
+                    "        task.set('reminder', null);",
+                    "        task.save({",
+                    "            failure: function(task, operation) {",
+                    "                var error = operation.getError(),",
+                    "                   msg = Ext.isObject(error) ? error.status + ' ' + error.statusText : error;",
+                    "",
+                    "                Ext.MessageBox.show({",
+                    "                    title: 'Clear Reminder Failed',",
+                    "                    msg: msg,",
+                    "                    icon: Ext.Msg.ERROR,",
+                    "                    buttons: Ext.Msg.OK",
+                    "                });",
+                    "            }",
+                    "        });",
+                    "        reminderWindow.setTask(task);",
+                    "        reminderWindow.setTitle('Reminder - ' + title);",
+                    "        reminderDetailsBox.update({",
+                    "            title: title,",
+                    "            due: task.get('due')",
+                    "        });",
+                    "        reminderWindow.show();"
+                ],
+                "designer|userClassName": "showReminderWindow"
+            },
+            "customConfigs": []
+        }
+    ]
+}

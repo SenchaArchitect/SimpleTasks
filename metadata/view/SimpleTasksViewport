@@ -1,0 +1,71 @@
+{
+    "id": "ExtBox1-ext-gen93056",
+    "type": "viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "layout": "border",
+        "designer|userClassName": "SimpleTasksViewport"
+    },
+    "customConfigs": [],
+    "designerId": "148fad30-5bda-401d-9a6b-64d5a6a7cb79",
+    "$viewOrder": 9,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen93302",
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "tasksToolbar",
+                "layout|region": "north"
+            },
+            "customConfigs": [],
+            "iconCls": "icon-linkedinstance",
+            "masterInstanceId": "ExtBox1-ext-gen75382"
+        },
+        {
+            "id": "ExtBox1-ext-gen94315",
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "listTree",
+                "width": 300,
+                "collapsible": true,
+                "layout|region": "west",
+                "layout|split": true
+            },
+            "customConfigs": [],
+            "iconCls": "icon-linkedinstance",
+            "masterInstanceId": "ExtBox1-ext-gen6130"
+        },
+        {
+            "id": "ExtBox1-ext-gen95890",
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "taskGrids",
+                "title": "All Lists",
+                "layout|region": "center"
+            },
+            "customConfigs": [],
+            "iconCls": "icon-linkedinstance",
+            "masterInstanceId": "ExtBox1-ext-gen48774"
+        }
+    ]
+}
