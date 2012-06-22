@@ -128,14 +128,6 @@
             ],
             "className": "Task"
         },
-        "1588e410-4173-4aff-ba98-fd13c5b7a13d": {
-            "paths": [
-                "metadata/model/ReminderTime",
-                "app/model/override/ReminderTime.js",
-                "app/model/ReminderTime.js"
-            ],
-            "className": "ReminderTime"
-        },
         "a53b0e54-48ee-4018-b38e-48d4c13676ad": {
             "paths": [
                 "metadata/store/Tasks",
@@ -182,14 +174,6 @@
                 "app/controller/Tasks.js"
             ],
             "className": "Tasks"
-        },
-        "b2a2f4af-43bb-466a-8b17-46d148eb73f1": {
-            "paths": [
-                "metadata/view/tasks.Fields",
-                "app/view/override/tasks/Fields.js",
-                "app/view/tasks/Fields.js"
-            ],
-            "className": "tasks.Fields"
         },
         "478a2143-be66-47c2-a102-4d3d54af9692": {
             "paths": [

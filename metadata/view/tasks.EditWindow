@@ -113,8 +113,8 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "layout|anchor": "100%",
-                        "designer|displayName": "tasksfield"
+                        "designer|displayName": "tasksfield",
+                        "layout|anchor": "100%"
                     },
                     "customConfigs": [],
                     "iconCls": "icon-linkedinstance",

@@ -16,86 +16,96 @@
 Ext.define('SimpleTasks.store.ReminderTimes', {
     extend: 'Ext.data.Store',
 
-    requires: [
-        'SimpleTasks.model.ReminderTime'
-    ],
-
     constructor: function(cfg) {
         var me = this;
         cfg = cfg || {};
         me.callParent([Ext.apply({
+            autoLoad: true,
             storeId: 'ReminderTimes',
-            model: 'SimpleTasks.model.ReminderTime',
-            data: [
+            fields: [
                 {
-                    num: 5,
-                    timeInWords: '5 minutes'
+                    name: 'num'
                 },
                 {
-                    num: 10,
-                    timeInWords: '10 minutes'
-                },
-                {
-                    num: 15,
-                    timeInWords: '15 minutes'
-                },
-                {
-                    num: 30,
-                    timeInWords: '30 minutes'
-                },
-                {
-                    num: 60,
-                    timeInWords: '1 hour'
-                },
-                {
-                    num: 120,
-                    timeInWords: '2 hours'
-                },
-                {
-                    num: 240,
-                    timeInWords: '4 hours'
-                },
-                {
-                    num: 480,
-                    timeInWords: '8 hours'
-                },
-                {
-                    num: 720,
-                    timeInWords: '12 hours'
-                },
-                {
-                    num: 1440,
-                    timeInWords: '1 day'
-                },
-                {
-                    num: 2880,
-                    timeInWords: '2 days'
-                },
-                {
-                    num: 4320,
-                    timeInWords: '3 days'
-                },
-                {
-                    num: 5760,
-                    timeInWords: '4 days'
-                },
-                {
-                    num: 10080,
-                    timeInWords: '1 week'
-                },
-                {
-                    num: 20160,
-                    timeInWords: '2 weeks'
-                },
-                {
-                    num: 30240,
-                    timeInWords: '3 weeeks'
-                },
-                {
-                    num: 40320,
-                    timeInWords: '4 weeks'
+                    name: 'timeInWords'
                 }
-            ]
+            ],
+            proxy: {
+                type: 'memory',
+                data: [
+                    [
+                        5,
+                        '5 minutes'
+                    ],
+                    [
+                        10,
+                        '10 minutes'
+                    ],
+                    [
+                        15,
+                        '15 minutes'
+                    ],
+                    [
+                        30,
+                        '30 minutes'
+                    ],
+                    [
+                        60,
+                        '1 hour'
+                    ],
+                    [
+                        120,
+                        '2 hours'
+                    ],
+                    [
+                        240,
+                        '4 hours'
+                    ],
+                    [
+                        480,
+                        '8 hours'
+                    ],
+                    [
+                        720,
+                        '12 hours'
+                    ],
+                    [
+                        1440,
+                        '1 day'
+                    ],
+                    [
+                        2880,
+                        '2 days'
+                    ],
+                    [
+                        4320,
+                        '3 days'
+                    ],
+                    [
+                        5760,
+                        '4 days'
+                    ],
+                    [
+                        10080,
+                        '1 week'
+                    ],
+                    [
+                        20160,
+                        '2 weeks'
+                    ],
+                    [
+                        30240,
+                        '3 weeeks'
+                    ],
+                    [
+                        40320,
+                        '4 weeks'
+                    ]
+                ],
+                reader: {
+                    type: 'array'
+                }
+            }
         }, cfg)]);
     }
 });

@@ -24,8 +24,7 @@ Ext.Loader.setConfig({
 Ext.application({
     models: [
         'List',
-        'Task',
-        'ReminderTime'
+        'Task'
     ],
     stores: [
         'ReminderTimes',

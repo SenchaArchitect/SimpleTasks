@@ -7,14 +7,109 @@
     },
     "codeClass": null,
     "userConfig": {
+        "autoLoad": true,
         "filterOnLoad": null,
         "sortOnLoad": null,
         "storeId": "ReminderTimes",
-        "model": "ReminderTime",
-        "data": "\n[{num: 5, timeInWords: '5 minutes'},\n{num: 10, timeInWords: '10 minutes'},\n{num: 15, timeInWords: '15 minutes'},\n{num: 30, timeInWords: '30 minutes'},\n{num: 60, timeInWords: '1 hour'},\n{num: 120, timeInWords: '2 hours'},\n{num: 240, timeInWords: '4 hours'},\n{num: 480, timeInWords: '8 hours'},\n{num: 720, timeInWords: '12 hours'},\n{num: 1440, timeInWords: '1 day'},\n{num: 2880, timeInWords: '2 days'},\n{num: 4320, timeInWords: '3 days'},\n{num: 5760, timeInWords: '4 days'},\n{num: 10080, timeInWords: '1 week'},\n{num: 20160, timeInWords: '2 weeks'},\n{num: 30240, timeInWords: '3 weeeks'},\n{num: 40320, timeInWords: '4 weeks'}]\n",
+        "model": null,
+        "data": null,
         "designer|userClassName": "ReminderTimes"
     },
     "customConfigs": [],
     "designerId": "2936ff37-446d-4e58-a13f-1273612bcae1",
-    "$viewOrder": 0
+    "$viewOrder": 0,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen6000",
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "num",
+                "designer|userClassName": "MyField10"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen6163",
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "timeInWords",
+                "designer|userClassName": "MyField11"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen6353",
+            "type": "memoryproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyMemoryProxy"
+            },
+            "customConfigs": [],
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen6486",
+                    "type": "arrayreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyArrayReader"
+                    },
+                    "customConfigs": []
+                },
+                {
+                    "id": "ExtBox1-ext-gen6649",
+                    "type": "object",
+                    "reference": {
+                        "name": "data",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "implHandler": [
+                            "[",
+                            "                        [5, '5 minutes'],",
+                            "                        [10, '10 minutes'],",
+                            "                        [15, '15 minutes'],",
+                            "                        [30, '30 minutes'],",
+                            "                        [60, '1 hour'],",
+                            "                        [120, '2 hours'],",
+                            "                        [240, '4 hours'],",
+                            "                        [480, '8 hours'],",
+                            "                        [720, '12 hours'],",
+                            "                        [1440, '1 day'],",
+                            "                        [2880, '2 days'],",
+                            "                        [4320, '3 days'],",
+                            "                        [5760, '4 days'],",
+                            "                        [10080, '1 week'],",
+                            "                        [20160, '2 weeks'],",
+                            "                        [30240, '3 weeeks'],",
+                            "                        [40320, '4 weeks']",
+                            "                    ]",
+                            ""
+                        ],
+                        "designer|displayName": "data",
+                        "designer|userClassName": "data"
+                    },
+                    "customConfigs": []
+                }
+            ]
+        }
+    ]
 }

@@ -9,8 +9,7 @@
     "userConfig": {
         "models": [
             "List",
-            "Task",
-            "ReminderTime"
+            "Task"
         ],
         "stores": [
             "ReminderTimes",
