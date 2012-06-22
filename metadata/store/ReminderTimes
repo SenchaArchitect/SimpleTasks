@@ -7,6 +7,8 @@
     },
     "codeClass": null,
     "userConfig": {
+        "filterOnLoad": null,
+        "sortOnLoad": null,
         "storeId": "ReminderTimes",
         "model": "ReminderTime",
         "data": "\n[{num: 5, timeInWords: '5 minutes'},\n{num: 10, timeInWords: '10 minutes'},\n{num: 15, timeInWords: '15 minutes'},\n{num: 30, timeInWords: '30 minutes'},\n{num: 60, timeInWords: '1 hour'},\n{num: 120, timeInWords: '2 hours'},\n{num: 240, timeInWords: '4 hours'},\n{num: 480, timeInWords: '8 hours'},\n{num: 720, timeInWords: '12 hours'},\n{num: 1440, timeInWords: '1 day'},\n{num: 2880, timeInWords: '2 days'},\n{num: 4320, timeInWords: '3 days'},\n{num: 5760, timeInWords: '4 days'},\n{num: 10080, timeInWords: '1 week'},\n{num: 20160, timeInWords: '2 weeks'},\n{num: 30240, timeInWords: '3 weeeks'},\n{num: 40320, timeInWords: '4 weeks'}]\n",

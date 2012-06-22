@@ -43,7 +43,8 @@ Ext.application({
         'Toolbar',
         'SimpleTasksViewport',
         'MyComponent3',
-        'tasks.Fields'
+        'tasks.Fields',
+        'MyForm3'
     ],
     autoCreateViewport: true,
     name: 'SimpleTasks',

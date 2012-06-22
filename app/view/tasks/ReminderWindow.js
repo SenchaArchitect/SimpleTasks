@@ -18,9 +18,8 @@ Ext.define('SimpleTasks.view.tasks.ReminderWindow', {
     alias: 'widget.reminderWindow',
 
     border: false,
-    frame: true,
+    frame: false,
     width: 400,
-    title: 'My Window',
 
     initComponent: function() {
         var me = this;
@@ -29,6 +28,7 @@ Ext.define('SimpleTasks.view.tasks.ReminderWindow', {
             items: [
                 {
                     xtype: 'component',
+                    border: false,
                     cls: 'tasks-reminder-details',
                     tpl: [
                         '<div class="tasks-reminder-icon"></div>',
@@ -38,6 +38,7 @@ Ext.define('SimpleTasks.view.tasks.ReminderWindow', {
                 },
                 {
                     xtype: 'combobox',
+                    border: false,
                     margin: '10 0 10 20',
                     name: 'snooze_time',
                     value: '5',
@@ -47,25 +48,31 @@ Ext.define('SimpleTasks.view.tasks.ReminderWindow', {
                     displayField: 'timeInWords',
                     store: 'ReminderTimes',
                     valueField: 'num'
-                }
-            ],
-            dockedItems: [
+                },
                 {
-                    xtype: 'toolbar',
-                    dock: 'top',
-                    items: [
+                    xtype: 'form',
+                    dockedItems: [
                         {
-                            xtype: 'tbspacer'
-                        },
-                        {
-                            xtype: 'button',
-                            cls: 'snooze-btn',
-                            text: 'Snooze'
-                        },
-                        {
-                            xtype: 'button',
-                            cls: 'dismiss-reminder-btn',
-                            text: 'Dismiss'
+                            xtype: 'toolbar',
+                            ui: 'footer',
+                            dock: 'bottom',
+                            items: [
+                                {
+                                    xtype: 'tbspacer',
+                                    border: false,
+                                    flex: 1
+                                },
+                                {
+                                    xtype: 'button',
+                                    cls: 'snooze-btn',
+                                    text: 'Snooze'
+                                },
+                                {
+                                    xtype: 'button',
+                                    cls: 'dismiss-reminder-btn',
+                                    text: 'Dismiss'
+                                }
+                            ]
                         }
                     ]
                 }

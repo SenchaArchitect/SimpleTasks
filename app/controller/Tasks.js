@@ -775,6 +775,7 @@ Ext.define('SimpleTasks.controller.Tasks', {
                 }
                 callback(me.defaultReminderTime);
             } else {
+                console.log('not supposed to be here');
                 Ext.Ajax.request({
                     url: 'php/config/read.php',
                     params: {
