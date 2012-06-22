@@ -1,0 +1,136 @@
+{
+    "id": "ExtBox1-ext-gen2020",
+    "type": "menu",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "width": null,
+        "designer|userClassName": "lists.ContextMenu",
+        "designer|userAlias": "listsContextMenu"
+    },
+    "customConfigs": [],
+    "designerId": "aa2cebcc-67b8-46f8-810b-3e7944997036",
+    "$viewOrder": 0,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen2031",
+            "type": "menuitem",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "new-list-item",
+                "iconCls": "tasks-new-list",
+                "text": "New List",
+                "designer|userClassName": "MyMenuItem"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen2050",
+            "type": "menuitem",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "new-folder-item",
+                "iconCls": "tasks-new-folder",
+                "text": "New Folder",
+                "designer|userClassName": "MyMenuItem1"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen2069",
+            "type": "menuitem",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "new-task-item",
+                "iconCls": "tasks-new",
+                "text": "New Task",
+                "designer|userClassName": "MyMenuItem2"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen3270",
+            "type": "menuitem",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "delete-folder-item",
+                "iconCls": "tasks-delete-folder",
+                "text": "Delete",
+                "designer|userClassName": "MyMenuItem3"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen3450",
+            "type": "menuitem",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "delete-list-item",
+                "iconCls": "tasks-delete-list",
+                "text": "Delete",
+                "designer|userClassName": "MyMenuItem4"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen4968",
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "setList",
+                "designer|params": [
+                    "list"
+                ],
+                "implHandler": [
+                    "this.list = list;"
+                ],
+                "designer|userClassName": "setList"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen5429",
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "getList",
+                "implHandler": [
+                    "return this.list;"
+                ],
+                "designer|userClassName": "getList"
+            },
+            "customConfigs": []
+        }
+    ]
+}

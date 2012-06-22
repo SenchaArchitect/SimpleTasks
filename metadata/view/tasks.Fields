@@ -1,0 +1,57 @@
+{
+    "id": "ExtBox1-ext-gen33212",
+    "type": "fieldset",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|displayName": "date",
+        "border": false,
+        "margin": "0 0 5",
+        "layout": "hbox",
+        "title": null,
+        "designer|userClassName": "tasks.Fields",
+        "designer|userAlias": "tasksfields",
+        "container|align": "stretch"
+    },
+    "customConfigs": [],
+    "designerId": "478a2143-be66-47c2-a102-4d3d54af9692",
+    "$viewOrder": 7,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen33441",
+            "type": "datefield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "margin": "0 15 0 0",
+                "width": 185,
+                "name": "due",
+                "fieldLabel": "Due Date",
+                "labelWidth": 80,
+                "designer|userClassName": "MyDateField"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen41763",
+            "type": "combobox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Label",
+                "designer|userClassName": "MyComboBox",
+                "layout|flex": 1
+            },
+            "customConfigs": []
+        }
+    ]
+}

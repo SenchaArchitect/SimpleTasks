@@ -1,0 +1,139 @@
+{
+    "id": "ExtBox1-ext-gen26426",
+    "type": "window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "height": null,
+        "width": 300,
+        "layout": "fit",
+        "closeAction": "hide",
+        "title": "Set Default Reminder Time",
+        "designer|userClassName": "tasks.DefaultTimeWindow",
+        "designer|userAlias": "defaultTimeWindow"
+    },
+    "customConfigs": [],
+    "designerId": "420cfca1-e935-4701-9851-4ae3f22706d8",
+    "$viewOrder": 3,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen27101",
+            "type": "form",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "border": false,
+                "frame": true,
+                "bodyPadding": 10,
+                "title": null,
+                "designer|userClassName": "MyForm"
+            },
+            "customConfigs": [],
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen27490",
+                    "type": "timefield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "default_time",
+                        "fieldLabel": "When setting quick reminders, default the time to",
+                        "labelAlign": "top",
+                        "designer|userClassName": "MyTimeField",
+                        "layout|anchor": "100%"
+                    },
+                    "customConfigs": []
+                },
+                {
+                    "id": "ExtBox1-ext-gen28143",
+                    "type": "toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "buttons(workaround)",
+                        "designer|userClassName": "MyToolbar1",
+                        "dock": "bottom"
+                    },
+                    "customConfigs": [],
+                    "cn": [
+                        {
+                            "id": "ExtBox1-ext-gen28453",
+                            "type": "object",
+                            "reference": {
+                                "name": "ui",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "implHandler": [
+                                    "'footer'"
+                                ],
+                                "designer|displayName": "ui",
+                                "designer|userClassName": "ui"
+                            },
+                            "customConfigs": []
+                        },
+                        {
+                            "id": "ExtBox1-ext-gen29835",
+                            "type": "tbspacer",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MySpacer",
+                                "layout|flex": null
+                            },
+                            "customConfigs": []
+                        },
+                        {
+                            "id": "ExtBox1-ext-gen28814",
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "id": "save-default-time-btn",
+                                "text": "OK",
+                                "designer|userClassName": "MyButton4",
+                                "layout|flex": null
+                            },
+                            "customConfigs": []
+                        },
+                        {
+                            "id": "ExtBox1-ext-gen29080",
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "id": "cancel-default-time-edit-btn",
+                                "text": "Cancel",
+                                "designer|userClassName": "MyButton5",
+                                "layout|flex": null
+                            },
+                            "customConfigs": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
