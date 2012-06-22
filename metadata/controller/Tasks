@@ -429,7 +429,7 @@
             "userConfig": {
                 "fn": "handleEditItemClick",
                 "implHandler": [
-                    "   this.showEditWindow(this.getContextMenu().getTask());"
+                    "this.showEditWindow(this.getContextMenu().getTask());"
                 ],
                 "name": "click",
                 "scope": "me",
@@ -523,7 +523,11 @@
             "userConfig": {
                 "fn": "handleEditIconClick",
                 "designer|params": [
-                    "view"
+                    "view",
+                    "rowIndex",
+                    "colIndex",
+                    "column",
+                    "e"
                 ],
                 "implHandler": [
                     "this.showEditWindow(view.getRecord(view.findTargetByEvent(e)));"

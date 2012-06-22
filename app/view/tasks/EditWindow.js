@@ -17,6 +17,10 @@ Ext.define('SimpleTasks.view.tasks.EditWindow', {
     extend: 'Ext.window.Window',
     alias: 'widget.taskEditWindow',
 
+    requires: [
+        'SimpleTasks.view.tasks.Fields'
+    ],
+
     height: 350,
     width: 500,
     layout: {
@@ -63,29 +67,8 @@ Ext.define('SimpleTasks.view.tasks.EditWindow', {
                             anchor: '100%'
                         },
                         {
-                            xtype: 'fieldset',
-                            border: false,
-                            margin: '0 0 5',
-                            layout: {
-                                align: 'stretch',
-                                type: 'hbox'
-                            },
-                            anchor: '100%',
-                            items: [
-                                {
-                                    xtype: 'datefield',
-                                    margin: '0 15 0 0',
-                                    width: 185,
-                                    name: 'due',
-                                    fieldLabel: 'Due Date',
-                                    labelWidth: 80
-                                },
-                                {
-                                    xtype: 'combobox',
-                                    fieldLabel: 'Label',
-                                    flex: 1
-                                }
-                            ]
+                            xtype: 'tasksfields',
+                            anchor: '100%'
                         },
                         {
                             xtype: 'component',
@@ -126,7 +109,6 @@ Ext.define('SimpleTasks.view.tasks.EditWindow', {
                             xtype: 'htmleditor',
                             height: 150,
                             name: 'note',
-                            fieldLabel: 'Label',
                             anchor: '100% -90'
                         },
                         {

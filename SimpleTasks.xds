@@ -182,6 +182,22 @@
                 "app/controller/Tasks.js"
             ],
             "className": "Tasks"
+        },
+        "b2a2f4af-43bb-466a-8b17-46d148eb73f1": {
+            "paths": [
+                "metadata/view/tasks.Fields",
+                "app/view/override/tasks/Fields.js",
+                "app/view/tasks/Fields.js"
+            ],
+            "className": "tasks.Fields"
+        },
+        "478a2143-be66-47c2-a102-4d3d54af9692": {
+            "paths": [
+                "metadata/view/tasks.Fields",
+                "app/view/override/tasks/Fields.js",
+                "app/view/tasks/Fields.js"
+            ],
+            "className": "tasks.Fields"
         }
     }
 }

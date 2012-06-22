@@ -42,7 +42,8 @@ Ext.application({
         'tasks.ReminderWindow',
         'Toolbar',
         'SimpleTasksViewport',
-        'MyComponent3'
+        'MyComponent3',
+        'tasks.Fields'
     ],
     autoCreateViewport: true,
     name: 'SimpleTasks',

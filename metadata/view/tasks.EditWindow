@@ -105,59 +105,20 @@
                     "customConfigs": []
                 },
                 {
-                    "id": "ExtBox1-ext-gen33212",
-                    "type": "fieldset",
+                    "id": "ExtBox1-ext-gen11079",
+                    "type": "linkedinstance",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|displayName": "date",
-                        "border": false,
-                        "margin": "0 0 5",
-                        "layout": "hbox",
-                        "title": null,
-                        "designer|userClassName": "MyFieldSet",
                         "layout|anchor": "100%",
-                        "container|align": "stretch"
+                        "designer|displayName": "tasksfield"
                     },
                     "customConfigs": [],
-                    "cn": [
-                        {
-                            "id": "ExtBox1-ext-gen33441",
-                            "type": "datefield",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "margin": "0 15 0 0",
-                                "width": 185,
-                                "name": "due",
-                                "fieldLabel": "Due Date",
-                                "labelWidth": 80,
-                                "designer|userClassName": "MyDateField"
-                            },
-                            "customConfigs": []
-                        },
-                        {
-                            "id": "ExtBox1-ext-gen41763",
-                            "type": "combobox",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "fieldLabel": "Label",
-                                "designer|userClassName": "MyComboBox",
-                                "layout|flex": 1
-                            },
-                            "customConfigs": []
-                        }
-                    ]
+                    "iconCls": "icon-linkedinstance",
+                    "masterInstanceId": "ExtBox1-ext-gen33212"
                 },
                 {
                     "id": "ExtBox1-ext-gen33833",
@@ -263,7 +224,7 @@
                     "userConfig": {
                         "height": 150,
                         "name": "note",
-                        "fieldLabel": "Label",
+                        "fieldLabel": null,
                         "designer|userClassName": "MyHTMLEditor",
                         "layout|anchor": "100% -90"
                     },

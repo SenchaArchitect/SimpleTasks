@@ -22,6 +22,7 @@ Ext.define('SimpleTasks.view.Viewport', {
         'SimpleTasks.view.tasks.DefaultTimeWindow',
         'SimpleTasks.view.tasks.EditWindow',
         'SimpleTasks.view.tasks.Form',
+        'SimpleTasks.view.tasks.Fields',
         'SimpleTasks.view.tasks.ReminderWindow',
         'SimpleTasks.view.SimpleTasksViewport',
         'SimpleTasks.view.MyComponent3'

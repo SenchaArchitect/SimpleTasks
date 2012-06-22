@@ -196,7 +196,7 @@ Ext.define('SimpleTasks.controller.Tasks', {
         this.deleteTask(this.getTasksStore().getAt(rowIndex));
     },
 
-    handleEditIconClick: function(view) {
+    handleEditIconClick: function(view, rowIndex, colIndex, column, e) {
         this.showEditWindow(view.getRecord(view.findTargetByEvent(e)));
     },
 
