@@ -1,0 +1,104 @@
+{
+    "id": "ExtBox1-ext-gen1669",
+    "type": "application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "List",
+            "Task"
+        ],
+        "stores": [
+            "ReminderTimes",
+            "Lists",
+            "Tasks"
+        ],
+        "views": [
+            "lists.ContextMenu",
+            "lists.Tree",
+            "tasks.ContextMenu",
+            "tasks.DefaultTimeWindow",
+            "tasks.EditWindow",
+            "tasks.Form",
+            "tasks.ReminderWindow",
+            "Toolbar",
+            "SimpleTasksViewport",
+            "MyComponent3",
+            "tasks.Fields",
+            "MyForm3"
+        ],
+        "autoCreateViewport": true,
+        "name": "SimpleTasks",
+        "controllers": [
+            "Lists",
+            "Tasks"
+        ]
+    },
+    "customConfigs": [],
+    "designerId": "application",
+    "$viewOrder": 0,
+    "iconCls": "icon-application",
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen98692",
+            "type": "loader",
+            "reference": {
+                "name": "loader",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "enabled": true,
+                "designer|userClassName": "Loader"
+            },
+            "customConfigs": [],
+            "iconCls": "icon-loader",
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen98813",
+                    "type": "object",
+                    "reference": {
+                        "name": "paths",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "implHandler": [
+                            "{",
+                            "    'SimpleTasks.ux': 'app/ux',",
+                            "    'Ext.ux': 'ux'",
+                            "}"
+                        ],
+                        "designer|displayName": "paths",
+                        "designer|userClassName": "paths"
+                    },
+                    "customConfigs": []
+                }
+            ]
+        },
+        {
+            "id": "ExtBox1-ext-gen8517",
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "launch",
+                "implHandler": [
+                    "SimpleTasksSettings = {",
+                    "    // This property is used to turn on local storage.  If set to false the php backend will be used.",
+                    "    useLocalStorage: true",
+                    "};"
+                ],
+                "designer|userClassName": "launch"
+            },
+            "customConfigs": [],
+            "iconCls": "icon-basic-function"
+        }
+    ]
+}

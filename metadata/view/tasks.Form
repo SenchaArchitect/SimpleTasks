@@ -1,0 +1,23 @@
+{
+    "id": "ExtBox1-ext-gen45172",
+    "type": "form",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": "tasks-new-form",
+        "height": null,
+        "width": null,
+        "layout": "hbox",
+        "bodyPadding": null,
+        "title": null,
+        "designer|userClassName": "tasks.Form",
+        "designer|userAlias": "taskForm",
+        "container|align": "stretch"
+    },
+    "customConfigs": [],
+    "designerId": "96f66c2f-4993-423a-b807-960265efe582",
+    "$viewOrder": 5
+}

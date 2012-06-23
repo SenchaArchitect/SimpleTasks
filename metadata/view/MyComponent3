@@ -1,0 +1,17 @@
+{
+    "id": "ExtBox1-ext-gen14613",
+    "type": "component",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "height": 250,
+        "width": 400,
+        "designer|userClassName": "MyComponent3"
+    },
+    "customConfigs": [],
+    "designerId": "90adc51a-58f2-4ec3-9007-9dce222c5f6f",
+    "$viewOrder": 11
+}
