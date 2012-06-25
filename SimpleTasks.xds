@@ -15,7 +15,7 @@
         "appName": "MyApp"
     },
     "xdsVersion": "2.0.0",
-    "xdsBuild": 210000000000,
+    "xdsBuild": 210000000502,
     "framework": "ext41",
     "topInstanceFileMap": {
         "aa2cebcc-67b8-46f8-810b-3e7944997036": {
