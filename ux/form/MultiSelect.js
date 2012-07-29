@@ -41,7 +41,7 @@ Ext.define('Ext.ux.form.MultiSelect', {
      */
 
     /**
-     * @cfg {String} [appendOnly=false] True if the list should only allow append drops when drag/drop is enabled.
+     * @cfg {boolean} [appendOnly=false] True if the list should only allow append drops when drag/drop is enabled.
      * This is useful for lists which are sorted.
      */
     appendOnly: false,
