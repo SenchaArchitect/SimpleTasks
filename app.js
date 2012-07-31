@@ -41,7 +41,6 @@ Ext.application({
         'tasks.ReminderWindow',
         'Toolbar',
         'SimpleTasksViewport',
-        'MyComponent3',
         'tasks.Fields',
         'MyForm3'
     ],
@@ -55,6 +54,7 @@ Ext.application({
     launch: function() {
         SimpleTasksSettings = {
             // This property is used to turn on local storage.  If set to false the php backend will be used.
+            // For the purpose of this sample app, only local storage is used.
             useLocalStorage: true
         };
     }

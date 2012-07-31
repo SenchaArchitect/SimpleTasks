@@ -22,6 +22,76 @@ Ext.define('SimpleTasks.store.ReminderTimes', {
         me.callParent([Ext.apply({
             autoLoad: true,
             storeId: 'ReminderTimes',
+            data: [
+                [
+                    5,
+                    '5 minutes'
+                ],
+                [
+                    10,
+                    '10 minutes'
+                ],
+                [
+                    15,
+                    '15 minutes'
+                ],
+                [
+                    30,
+                    '30 minutes'
+                ],
+                [
+                    60,
+                    '1 hour'
+                ],
+                [
+                    120,
+                    '2 hours'
+                ],
+                [
+                    240,
+                    '4 hours'
+                ],
+                [
+                    480,
+                    '8 hours'
+                ],
+                [
+                    720,
+                    '12 hours'
+                ],
+                [
+                    1440,
+                    '1 day'
+                ],
+                [
+                    2880,
+                    '2 days'
+                ],
+                [
+                    4320,
+                    '3 days'
+                ],
+                [
+                    5760,
+                    '4 days'
+                ],
+                [
+                    10080,
+                    '1 week'
+                ],
+                [
+                    20160,
+                    '2 weeks'
+                ],
+                [
+                    30240,
+                    '3 weeeks'
+                ],
+                [
+                    40320,
+                    '4 weeks'
+                ]
+            ],
             fields: [
                 {
                     name: 'num'

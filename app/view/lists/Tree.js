@@ -35,9 +35,6 @@ Ext.define('SimpleTasks.view.lists.Tree', {
         );
 
         Ext.applyIf(me, {
-            viewConfig: {
-
-            },
             dockedItems: [
                 {
                     xtype: 'toolbar',
@@ -77,6 +74,10 @@ Ext.define('SimpleTasks.view.lists.Tree', {
                         return me.renderName.apply(me, arguments);
                     },
                     dataIndex: 'name',
+                    editor: {
+                        xtype: 'textfield',
+                        selectOnFocus: true
+                    },
                     flex: 1
                 },
                 {

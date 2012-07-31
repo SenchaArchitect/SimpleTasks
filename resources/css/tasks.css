@@ -1,6 +1,6 @@
 /*
- * Row styles
- */
+* Row styles
+*/
 .tasks-completed-task .x-grid-cell {
     text-decoration: line-through;
     color: gray;
@@ -10,24 +10,24 @@
 }
 
 /*
- * Action Icons
- */
+* Action Icons
+*/
 .x-action-col-icon {
     cursor: pointer;
 }
 
 /*
- * Divider
- */
+* Divider
+*/
 .divider {
-	height: 1px;
-	background: #a3bad9;
-	margin-bottom: 8px;
+    height: 1px;
+    background: #a3bad9;
+    margin-bottom: 8px;
 }
 
 /*
- * Column Headers
- */
+* Column Headers
+*/
 .tasks-icon-column-header .x-column-header-text {
     display: block;
     height: 22px;
@@ -55,8 +55,8 @@
 }
 
 /*
- * Icon styles
- */
+* Icon styles
+*/
 .tasks-new {
     background: url('../images/new.png') no-repeat;
 }
@@ -92,8 +92,8 @@
 }
 
 /*
- * New Task Form
- */
+* New Task Form
+*/
 .tasks-new-form .x-form-item {
     margin: 2px 3px 2px 2px;
 }
@@ -105,8 +105,8 @@
 }
 
 /*
- * Reminder Window
- */
+* Reminder Window
+*/
 .tasks-reminder-icon {
     width: 16px;
     height: 16px;
@@ -122,8 +122,8 @@
 }
 
 /*
- * CheckColumn styles
- */
+* CheckColumn styles
+*/
 .x-grid-cell-checkcolumn .x-grid-cell-inner {
     line-height: 0;
     padding: 2px 4px;
@@ -152,8 +152,8 @@
 }
 
 /*
- * ReminderColumn styles
- */
+* ReminderColumn styles
+*/
 .x-grid-cell-remindercolumn .x-grid-cell-inner {
     line-height: 0;
     padding: 2px;

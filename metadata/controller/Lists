@@ -37,32 +37,6 @@
                     "application"
                 ],
                 "implHandler": [
-                    "/* Workaround for inability to add xtype in refs*/ ",
-                    "var refs= [",
-                    "{",
-                    "    ref: 'listTree',",
-                    "    selector: 'listTree'",
-                    "},",
-                    "{",
-                    "    ref: 'taskGrid',",
-                    "    selector: 'taskGrid'",
-                    "},",
-                    "{",
-                    "    ref: 'taskForm',",
-                    "    selector: 'taskForm'",
-                    "},",
-                    "{",
-                    "    ref: 'contextMenu',",
-                    "    selector: 'listsContextMenu',",
-                    "    xtype: 'listsContextMenu',",
-                    "    autoCreate: true",
-                    "}",
-                    "];",
-                    "",
-                    "this.ref(refs); // undocumented internal function",
-                    "/* end workaround */",
-                    "",
-                    "",
                     "var me = this,",
                     "    listsStore = me.getListsStore(),",
                     "    tasksStore = me.getTasksStore();",
@@ -363,43 +337,14 @@
                     "position"
                 ],
                 "implHandler": [
-                    "        var listsStore = this.getListsStore();",
+                    "var listsStore = this.getListsStore();",
                     "",
-                    "        if(listsStore.getProxy().type === 'localstorage') {",
-                    "            listsStore.sync();",
-                    "        } else {",
-                    "            Ext.Ajax.request({",
-                    "                url: 'php/list/move.php',",
-                    "                jsonData: {",
-                    "                    id: list.get('id'),",
-                    "                    relatedId: overList.get('id'),",
-                    "                    position: position",
-                    "                },",
-                    "                success: function(response, options) {",
-                    "                    var responseData = Ext.decode(response.responseText);",
+                    "if(listsStore.getProxy().type === 'localstorage') {",
+                    "    listsStore.sync();",
+                    "}",
                     "",
-                    "                    if(!responseData.success) {",
-                    "                        Ext.MessageBox.show({",
-                    "                            title: 'Move Task Failed',",
-                    "                            msg: responseData.message,",
-                    "                            icon: Ext.Msg.ERROR,",
-                    "                            buttons: Ext.Msg.OK",
-                    "                        });",
-                    "                    }",
-                    "                },",
-                    "                failure: function(response, options) {",
-                    "                    Ext.MessageBox.show({",
-                    "                        title: 'Move Task Failed',",
-                    "                        msg: response.status + ' ' + response.statusText,",
-                    "                        icon: Ext.Msg.ERROR,",
-                    "                        buttons: Ext.Msg.OK",
-                    "                    });",
-                    "                }",
-                    "            });",
-                    "        }",
-                    "        ",
-                    "        // refresh the lists view so the task counts will be updated.",
-                    "        this.getListTree().refreshView();"
+                    "// refresh the lists view so the task counts will be updated.",
+                    "this.getListTree().refreshView();"
                 ],
                 "name": "listdrop",
                 "scope": "me",
@@ -828,6 +773,7 @@
                     "Ext.each(operation.getRecords(), function(list) {",
                     "    Ext.each(stores, function(store) {",
                     "        if(store) {",
+                    "            console.log(store);",
                     "            listToSync = store.getNodeById(list.getId());",
                     "            switch(operation.action) {",
                     "                case 'create':",
@@ -850,6 +796,64 @@
                 ]
             },
             "designerId": "4fb0607f-dbd5-4694-9e01-4bdd88eced20"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "listTree",
+                "ref": "listTree",
+                "selector": "listTree"
+            },
+            "designerId": "487fcb07-1925-4c45-b037-83932e6ad876"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "taskGrid",
+                "ref": "taskGrid",
+                "selector": "taskGrid"
+            },
+            "designerId": "b2da6358-ea39-44bf-82ec-cf2c993ca8be"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "taskForm",
+                "ref": "taskForm",
+                "selector": "taskForm"
+            },
+            "designerId": "fe60d55a-bb99-4e38-a7da-9269519e29cf"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "contextMenu",
+                "autoCreate": true,
+                "ref": "contextMenu",
+                "selector": "listsContextMenu",
+                "xtype": "listsContextMenu"
+            },
+            "designerId": "9a6830c3-a5e6-4ee1-baa5-321b7dad3ae2"
         }
     ]
 }

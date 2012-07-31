@@ -29,6 +29,27 @@ Ext.define('SimpleTasks.controller.Lists', {
         'Toolbar'
     ],
 
+    refs: [
+        {
+            ref: 'listTree',
+            selector: 'listTree'
+        },
+        {
+            ref: 'taskGrid',
+            selector: 'taskGrid'
+        },
+        {
+            ref: 'taskForm',
+            selector: 'taskForm'
+        },
+        {
+            autoCreate: true,
+            ref: 'contextMenu',
+            selector: 'listsContextMenu',
+            xtype: 'listsContextMenu'
+        }
+    ],
+
     handleNewListCLick: function(component, e) {
         this.addList(true);
     },
@@ -125,35 +146,6 @@ Ext.define('SimpleTasks.controller.Lists', {
 
         if(listsStore.getProxy().type === 'localstorage') {
             listsStore.sync();
-        } else {
-            Ext.Ajax.request({
-                url: 'php/list/move.php',
-                jsonData: {
-                    id: list.get('id'),
-                    relatedId: overList.get('id'),
-                    position: position
-                },
-                success: function(response, options) {
-                    var responseData = Ext.decode(response.responseText);
-
-                    if(!responseData.success) {
-                        Ext.MessageBox.show({
-                            title: 'Move Task Failed',
-                            msg: responseData.message,
-                            icon: Ext.Msg.ERROR,
-                            buttons: Ext.Msg.OK
-                        });
-                    }
-                },
-                failure: function(response, options) {
-                    Ext.MessageBox.show({
-                        title: 'Move Task Failed',
-                        msg: response.status + ' ' + response.statusText,
-                        icon: Ext.Msg.ERROR,
-                        buttons: Ext.Msg.OK
-                    });
-                }
-            });
         }
 
         // refresh the lists view so the task counts will be updated.
@@ -255,32 +247,6 @@ Ext.define('SimpleTasks.controller.Lists', {
     },
 
     init: function(application) {
-        /* Workaround for inability to add xtype in refs*/ 
-        var refs= [
-        {
-            ref: 'listTree',
-            selector: 'listTree'
-        },
-        {
-            ref: 'taskGrid',
-            selector: 'taskGrid'
-        },
-        {
-            ref: 'taskForm',
-            selector: 'taskForm'
-        },
-        {
-            ref: 'contextMenu',
-            selector: 'listsContextMenu',
-            xtype: 'listsContextMenu',
-            autoCreate: true
-        }
-        ];
-
-        this.ref(refs); // undocumented internal function
-        /* end workaround */
-
-
         var me = this,
             listsStore = me.getListsStore(),
             tasksStore = me.getTasksStore();
@@ -477,6 +443,7 @@ Ext.define('SimpleTasks.controller.Lists', {
         Ext.each(operation.getRecords(), function(list) {
             Ext.each(stores, function(store) {
                 if(store) {
+                    console.log(store);
                     listToSync = store.getNodeById(list.getId());
                     switch(operation.action) {
                         case 'create':

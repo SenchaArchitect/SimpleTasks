@@ -16,18 +16,6 @@
     "designerId": "b7026768-4497-4e3f-8ac7-e6a1a4bcf87e",
     "cn": [
         {
-            "type": "treeview",
-            "reference": {
-                "name": "viewConfig",
-                "type": "object"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "designer|userClassName": "MyTreeView"
-            },
-            "designerId": "b8f38153-4c34-408d-879c-808a823f8e59"
-        },
-        {
             "type": "toolbar",
             "reference": {
                 "name": "dockedItems",
@@ -194,6 +182,7 @@
                 "designer|userClassName": "MyTreeColumn",
                 "designer|displayName": "name",
                 "dataIndex": "name",
+                "editor": "{\n                        xtype: 'textfield',\n                        selectOnFocus: true\n                    }",
                 "flex": 1,
                 "text": null
             },
@@ -345,7 +334,7 @@
                     "e"
                 ],
                 "implHandler": [
-                    "  this.fireEvent('deleteclick', gridView, rowIndex, colIndex, column, e);"
+                    "this.fireEvent('deleteclick', gridView, rowIndex, colIndex, column, e);"
                 ]
             },
             "designerId": "7b334a92-d4e4-4b83-aa28-a682fc546d26"

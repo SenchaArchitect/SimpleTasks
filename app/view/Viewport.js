@@ -17,7 +17,6 @@ Ext.define('SimpleTasks.view.Viewport', {
     extend: 'SimpleTasks.view.SimpleTasksViewport',
     renderTo: Ext.getBody(),
     requires: [
-        'SimpleTasks.view.MyComponent3',
         'SimpleTasks.view.SimpleTasksViewport',
         'SimpleTasks.view.lists.ContextMenu',
         'SimpleTasks.view.tasks.ContextMenu',

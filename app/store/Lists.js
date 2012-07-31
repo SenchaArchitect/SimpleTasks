@@ -25,8 +25,14 @@ Ext.define('SimpleTasks.store.Lists', {
         var me = this;
         cfg = cfg || {};
         me.callParent([Ext.apply({
+            autoLoad: false,
             storeId: 'Lists',
-            model: 'SimpleTasks.model.List'
+            model: 'SimpleTasks.model.List',
+            root: {
+                expanded: true,
+                id: -1,
+                name: 'All Lists'
+            }
         }, cfg)]);
     }
 });

@@ -153,14 +153,6 @@
             ],
             "className": "css"
         },
-        "90adc51a-58f2-4ec3-9007-9dce222c5f6f": {
-            "paths": [
-                "metadata/view/MyComponent3",
-                "app/view/override/MyComponent3.js",
-                "app/view/MyComponent3.js"
-            ],
-            "className": "MyComponent3"
-        },
         "220264b4-d632-42f5-be7b-0c200a8072cc": {
             "paths": [
                 "metadata/controller/Lists",
@@ -188,7 +180,6 @@
     },
     "viewOrderMap": {
         "view": [
-            "90adc51a-58f2-4ec3-9007-9dce222c5f6f",
             "3f506d76-0c98-4bef-aa44-59101df23411",
             "b7026768-4497-4e3f-8ac7-e6a1a4bcf87e",
             "6c7b6150-311c-4b87-86ac-d21066952ddd",
