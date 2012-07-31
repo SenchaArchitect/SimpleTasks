@@ -16,38 +16,5 @@
         "title": null
     },
     "id": "ExtBox1-ext-gen33212",
-    "designerId": "478a2143-be66-47c2-a102-4d3d54af9692",
-    "cn": [
-        {
-            "type": "datefield",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "designer|userClassName": "MyDateField",
-                "margin": "0 15 0 0",
-                "width": 185,
-                "name": "due",
-                "fieldLabel": "Due Date",
-                "labelWidth": 80
-            },
-            "designerId": "dee74eac-c38d-411f-83f2-4c19d2f6543f"
-        },
-        {
-            "type": "combobox",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "layout|flex": 1,
-                "designer|userClassName": "MyComboBox",
-                "fieldLabel": "Label"
-            },
-            "designerId": "d6692797-3bfa-469b-ac64-55495543a959"
-        }
-    ]
+    "designerId": "478a2143-be66-47c2-a102-4d3d54af9692"
 }

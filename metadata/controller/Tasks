@@ -128,7 +128,7 @@
                     "e"
                 ],
                 "implHandler": [
-                    " this.getTaskForm().query('[name=title]')[0].focus();"
+                    "this.getTaskForm().query('[name=title]')[0].focus();"
                 ],
                 "name": "click",
                 "scope": "me",
@@ -478,18 +478,18 @@
                 "designer|userClassName": "handleDeleteIconClick",
                 "fn": "handleDeleteIconClick",
                 "designer|params": [
-                    "view",
+                    "gridView",
                     "rowIndex",
                     "colIndex",
                     "column",
                     "e"
                 ],
                 "implHandler": [
-                    " this.deleteTask(this.getTasksStore().getAt(rowIndex));"
+                    "this.deleteTask(this.getTasksStore().getAt(rowIndex));"
                 ],
                 "name": "deleteclick",
                 "scope": "me",
-                "designer|targetType": "tasks.Grid",
+                "designer|targetType": null,
                 "designer|controlQuery": "taskGrid"
             },
             "designerId": "18c779a6-013e-4ac7-a362-fda47658bf05"

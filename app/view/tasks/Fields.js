@@ -31,24 +31,6 @@ Ext.define('SimpleTasks.view.tasks.Fields', {
     initComponent: function() {
         var me = this;
 
-        Ext.applyIf(me, {
-            items: [
-                {
-                    xtype: 'datefield',
-                    margin: '0 15 0 0',
-                    width: 185,
-                    name: 'due',
-                    fieldLabel: 'Due Date',
-                    labelWidth: 80
-                },
-                {
-                    xtype: 'combobox',
-                    flex: 1,
-                    fieldLabel: 'Label'
-                }
-            ]
-        });
-
         me.callParent(arguments);
     }
 
