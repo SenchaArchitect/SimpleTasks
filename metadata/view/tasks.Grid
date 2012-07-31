@@ -8,30 +8,377 @@
     "userConfig": {
         "designer|userClassName": "tasks.Grid",
         "designer|userAlias": "taskGrid",
-        "height": 250,
-        "width": 400,
+        "draggable": null,
+        "height": null,
+        "width": null,
         "title": null,
         "columnLines": null,
-        "enableColumnHide": false,
         "enableColumnMove": false,
-        "enableColumnResize": false,
         "store": "Tasks"
     },
     "id": "ExtBox1-ext-gen48774",
     "designerId": "6c7b6150-311c-4b87-86ac-d21066952ddd",
     "cn": [
         {
-            "type": "datecolumn",
+            "type": "linkedinstance",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "top",
+                "weight": 101,
+                "bodyStyle": "{\n                'background-color': '#E4E5E7'\n            }"
+            },
+            "designerId": "8bfeaa09-ba44-4b21-9606-85e16cc0aa65",
+            "masterInstanceId": "ExtBox1-ext-gen45172"
+        },
+        {
+            "type": "gridcelleditingplugin",
+            "reference": {
+                "name": "plugins",
+                "type": "array"
+            },
+            "codeClass": "Ext.grid.plugin.CellEditing",
+            "userConfig": {
+                "designer|userClassName": "MyCellEditingPlugin"
+            },
+            "designerId": "1d5ef501-8058-47a9-b0ca-5b7afd99e7ae",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "onGridcelleditingpluginEdit",
+                        "fn": "onGridcelleditingpluginEdit",
+                        "implHandler": [
+                            "this.fireEvent('recordedit', e.record);"
+                        ],
+                        "name": "edit",
+                        "scope": "me"
+                    },
+                    "designerId": "6a0413ef-e45a-4d0a-b9c1-4d3d28406583"
+                }
+            ]
+        },
+        {
+            "type": "groupinggridfeature",
+            "reference": {
+                "name": "features",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyGroupingFeature"
+            },
+            "designerId": "898e3be0-4c05-4228-8502-93ee0d5aff0f",
+            "cn": [
+                {
+                    "type": "template",
+                    "reference": {
+                        "name": "groupHeaderTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "groupHeaderTpl",
+                        "implHandler": [
+                            "{groupValue:this.renderDueDate}"
+                        ],
+                        "designer|displayName": "groupHeaderTpl"
+                    },
+                    "designerId": "5f05bc36-55cf-4136-9a8d-6cb51cf8c638",
+                    "cn": [
+                        {
+                            "type": "templatefunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "renderDueDate",
+                                "fn": "renderDueDate",
+                                "designer|params": [
+                                    "date"
+                                ],
+                                "implHandler": [
+                                    "var today = Ext.Date.clearTime(new Date()),",
+                                    "            todayTime = today.getTime(),",
+                                    "            dueDateTime;",
+                                    "",
+                                    "        if(!date) {",
+                                    "            return '(No Date)';",
+                                    "        }",
+                                    "        dueDateTime = Ext.Date.clearTime(date).getTime();",
+                                    "        if(dueDateTime === todayTime) {",
+                                    "            return 'Today';",
+                                    "        }",
+                                    "        if(dueDateTime > todayTime) {",
+                                    "            if(dueDateTime === Ext.Date.add(today, Ext.Date.DAY, 1).getTime()) {",
+                                    "                // due date is current date + 1 day",
+                                    "                return 'Tomorrow';",
+                                    "            }",
+                                    "            if(dueDateTime < Ext.Date.add(today, Ext.Date.DAY, 7).getTime()) {",
+                                    "                // if the due date is less than one week in the future, return the day of the week.",
+                                    "                return Ext.Date.format(date, 'l');",
+                                    "            }",
+                                    "        } else {",
+                                    "            if(dueDateTime === Ext.Date.add(today, Ext.Date.DAY, -1).getTime()) {",
+                                    "                // due date is current date - 1 day.",
+                                    "                return 'Yesterday';",
+                                    "            }",
+                                    "            if(dueDateTime > Ext.Date.add(today, Ext.Date.DAY, -7).getTime()) {",
+                                    "                // if the due date is less than one week past, return 'Last' + the day of the week.",
+                                    "                return 'Last '+ Ext.Date.format(date, 'l');",
+                                    "            }",
+                                    "        }",
+                                    "        return date.getFullYear() === today.getFullYear() ? Ext.Date.format(date, 'D m/d') : Ext.Date.format(date, 'D m/d/Y');"
+                                ]
+                            },
+                            "designerId": "d1805216-38dc-4b82-84b9-d7e3d7c372a5"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "gridcolumn",
             "reference": {
                 "name": "columns",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyDateColumn",
-                "text": "SomeColumns"
+                "designer|userClassName": "MyColumn",
+                "cls": null,
+                "width": null,
+                "sortable": null,
+                "dataIndex": "done",
+                "menuDisabled": null,
+                "text": null
             },
-            "designerId": "2fa03829-07c4-4ea2-b210-7cd2cec0af93"
+            "designerId": "09859fed-63dd-4ead-8342-028d76e69b2c"
+        },
+        {
+            "type": "customevent",
+            "reference": {
+                "name": "customEvents",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "CustomEvent",
+                "name": "editclick"
+            },
+            "designerId": "675a0ff6-d5df-4cdb-bb75-929f8178f620"
+        },
+        {
+            "type": "customevent",
+            "reference": {
+                "name": "customEvents",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "CustomEvent1",
+                "name": "deleteclick"
+            },
+            "designerId": "d0d5b028-31d1-4ea9-b9c7-0cd958da55c2"
+        },
+        {
+            "type": "customevent",
+            "reference": {
+                "name": "customEvents",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "CustomEvent2",
+                "name": "recordedit"
+            },
+            "designerId": "136b71cd-407e-4620-8f8f-1345f91e24fb"
+        },
+        {
+            "type": "customevent",
+            "reference": {
+                "name": "customEvents",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "CustomEvent3",
+                "name": "reminderselect"
+            },
+            "designerId": "5dc05935-d83e-4a09-91d0-1dece5e8bd1f"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "handleEditClick",
+                "fn": "handleEditClick",
+                "designer|params": [
+                    "gridView",
+                    "rowIndex",
+                    "colIndex",
+                    "column",
+                    "e"
+                ],
+                "implHandler": [
+                    "this.fireEvent('editclick', gridView, rowIndex, colIndex, column, e);"
+                ]
+            },
+            "designerId": "73b6a28d-0c05-4bb0-b48c-c0e94bbe2106"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "handleCheckChange",
+                "fn": "handleCheckChange",
+                "designer|params": [
+                    "column",
+                    "rowIndex",
+                    "checked"
+                ],
+                "implHandler": [
+                    "this.fireEvent('recordedit', this.store.getAt(rowIndex));"
+                ]
+            },
+            "designerId": "e3c854e8-3aff-4bd5-acba-06f35218edaf"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "handleReminderSelect",
+                "fn": "handleReminderSelect",
+                "designer|params": [
+                    "task",
+                    "value"
+                ],
+                "implHandler": [
+                    "this.fireEvent('reminderselect', task, value);"
+                ]
+            },
+            "designerId": "44ad1b9d-552b-4022-88a8-cda172b7f4cc"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "handleCellEdit",
+                "fn": "handleCellEdit",
+                "designer|params": [
+                    "editor",
+                    "e"
+                ],
+                "implHandler": [
+                    "this.fireEvent('recordedit', e.record);"
+                ]
+            },
+            "designerId": "23b771c7-ad36-4033-8193-9b016f990464"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "refreshFilters",
+                "fn": "refreshFilters",
+                "implHandler": [
+                    "        var store = this.store,",
+                    "            filters = store.filters;",
+                    "",
+                    "        // save a reference to the existing task filters before clearing them",
+                    "        filters = filters.getRange(0, filters.getCount() - 1);",
+                    "",
+                    "        // clear the tasks store's filters and reapply them.",
+                    "        store.clearFilter();",
+                    "        store.filter(filters);"
+                ]
+            },
+            "designerId": "3b1cad01-21dd-4cfd-ae0d-599dd2fa2ee4"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "renderList",
+                "fn": "renderList",
+                "designer|params": [
+                    "value",
+                    "metaData",
+                    "task",
+                    "rowIndex",
+                    "colIndex",
+                    "store",
+                    "view"
+                ],
+                "implHandler": [
+                    "        var listsStore = Ext.getStore('Lists'),",
+                    "            node = value ? listsStore.getNodeById(value) : listsStore.getRootNode();",
+                    "        ",
+                    "        if (node) {",
+                    "            return node.get('name');",
+                    "        }",
+                    "        ",
+                    "        return null;"
+                ]
+            },
+            "designerId": "9352ab0b-0b5e-43fc-93b5-cdf3024bdb29"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "handleDeleteClick",
+                "fn": "handleDeleteClick",
+                "designer|params": [
+                    "gridView",
+                    "rowIndex",
+                    "colIndex",
+                    "column",
+                    "e"
+                ],
+                "implHandler": [
+                    "this.fireEvent('deleteclick', gridView, rowIndex, colIndex, column, e);"
+                ]
+            },
+            "designerId": "1818d0a6-8ac9-444f-8f00-29d2214c32ba"
         }
     ]
 }

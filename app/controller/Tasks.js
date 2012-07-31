@@ -192,7 +192,7 @@ Ext.define('SimpleTasks.controller.Tasks', {
         });
     },
 
-    handleDeleteIconClick: function(view, rowIndex, colIndex, column, e) {
+    handleDeleteIconClick: function(eventOptions) {
         this.deleteTask(this.getTasksStore().getAt(rowIndex));
     },
 

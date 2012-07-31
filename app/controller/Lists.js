@@ -443,7 +443,6 @@ Ext.define('SimpleTasks.controller.Lists', {
         Ext.each(operation.getRecords(), function(list) {
             Ext.each(stores, function(store) {
                 if(store) {
-                    console.log(store);
                     listToSync = store.getNodeById(list.getId());
                     switch(operation.action) {
                         case 'create':

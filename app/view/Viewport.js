@@ -22,7 +22,6 @@ Ext.define('SimpleTasks.view.Viewport', {
         'SimpleTasks.view.tasks.ContextMenu',
         'SimpleTasks.view.tasks.DefaultTimeWindow',
         'SimpleTasks.view.tasks.EditWindow',
-        'SimpleTasks.view.tasks.Form',
         'SimpleTasks.view.tasks.ReminderWindow'
     ]
 });
