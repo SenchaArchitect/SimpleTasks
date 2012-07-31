@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen1669",
     "type": "application",
     "reference": {
         "name": "items",
@@ -37,13 +36,10 @@
             "Tasks"
         ]
     },
-    "customConfigs": [],
+    "id": "ExtBox1-ext-gen1669",
     "designerId": "application",
-    "$viewOrder": 0,
-    "iconCls": "icon-application",
     "cn": [
         {
-            "id": "ExtBox1-ext-gen98692",
             "type": "loader",
             "reference": {
                 "name": "loader",
@@ -51,36 +47,13 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "Loader",
                 "enabled": true,
-                "designer|userClassName": "Loader"
+                "paths": "{\n        'SimpleTasks.ux': 'app/ux',\n        'Ext.ux': 'ux'\n}"
             },
-            "customConfigs": [],
-            "iconCls": "icon-loader",
-            "cn": [
-                {
-                    "id": "ExtBox1-ext-gen98813",
-                    "type": "object",
-                    "reference": {
-                        "name": "paths",
-                        "type": "object"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "implHandler": [
-                            "{",
-                            "    'SimpleTasks.ux': 'app/ux',",
-                            "    'Ext.ux': 'ux'",
-                            "}"
-                        ],
-                        "designer|displayName": "paths",
-                        "designer|userClassName": "paths"
-                    },
-                    "customConfigs": []
-                }
-            ]
+            "designerId": "b0be3ae2-ed3c-4ace-9d72-1c0b62094594"
         },
         {
-            "id": "ExtBox1-ext-gen8517",
             "type": "fixedfunction",
             "reference": {
                 "name": "items",
@@ -88,17 +61,16 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "launch",
                 "fn": "launch",
                 "implHandler": [
                     "SimpleTasksSettings = {",
                     "    // This property is used to turn on local storage.  If set to false the php backend will be used.",
                     "    useLocalStorage: true",
                     "};"
-                ],
-                "designer|userClassName": "launch"
+                ]
             },
-            "customConfigs": [],
-            "iconCls": "icon-basic-function"
+            "designerId": "173f6bec-6052-4012-b49c-24b89bb043b9"
         }
     ]
 }

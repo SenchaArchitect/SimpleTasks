@@ -43,8 +43,8 @@ Ext.define('SimpleTasks.view.tasks.Fields', {
                 },
                 {
                     xtype: 'combobox',
-                    fieldLabel: 'Label',
-                    flex: 1
+                    flex: 1,
+                    fieldLabel: 'Label'
                 }
             ]
         });

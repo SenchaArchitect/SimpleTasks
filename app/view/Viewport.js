@@ -17,13 +17,13 @@ Ext.define('SimpleTasks.view.Viewport', {
     extend: 'SimpleTasks.view.SimpleTasksViewport',
     renderTo: Ext.getBody(),
     requires: [
+        'SimpleTasks.view.MyComponent3',
+        'SimpleTasks.view.SimpleTasksViewport',
         'SimpleTasks.view.lists.ContextMenu',
         'SimpleTasks.view.tasks.ContextMenu',
         'SimpleTasks.view.tasks.DefaultTimeWindow',
         'SimpleTasks.view.tasks.EditWindow',
         'SimpleTasks.view.tasks.Form',
-        'SimpleTasks.view.tasks.ReminderWindow',
-        'SimpleTasks.view.SimpleTasksViewport',
-        'SimpleTasks.view.MyComponent3'
+        'SimpleTasks.view.tasks.ReminderWindow'
     ]
 });

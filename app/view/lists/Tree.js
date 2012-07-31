@@ -45,25 +45,21 @@ Ext.define('SimpleTasks.view.lists.Tree', {
                     items: [
                         {
                             xtype: 'button',
-                            iconCls: 'tasks-new-list',
-                            tooltip: 'New List'
+                            iconCls: 'tasks-new-list'
                         },
                         {
                             xtype: 'button',
                             id: 'delete-list-btn',
-                            iconCls: 'tasks-delete-list',
-                            tooltip: 'Delete List'
+                            iconCls: 'tasks-delete-list'
                         },
                         {
                             xtype: 'button',
-                            iconCls: 'tasks-new-folder',
-                            tooltip: 'New Folder'
+                            iconCls: 'tasks-new-folder'
                         },
                         {
                             xtype: 'button',
                             id: 'delete-folder-btn',
-                            iconCls: 'tasks-delete-folder',
-                            tooltip: 'Delete Folder'
+                            iconCls: 'tasks-delete-folder'
                         }
                     ]
                 }
@@ -81,10 +77,6 @@ Ext.define('SimpleTasks.view.lists.Tree', {
                         return me.renderName.apply(me, arguments);
                     },
                     dataIndex: 'name',
-                    editor: {
-                        xtype: 'textfield',
-                        selectOnFocus: true
-                    },
                     flex: 1
                 },
                 {
@@ -93,9 +85,9 @@ Ext.define('SimpleTasks.view.lists.Tree', {
                         me.handleDeleteClick.call(me, view, rowIndex, colIndex, item, e);
                     },
                     width: 24,
+                    tooltip: 'Delete',
                     icon: 'resources/images/delete.png',
-                    iconCls: 'x-hidden',
-                    tooltip: 'Delete'
+                    iconCls: 'x-hidden'
                 }
             ]
         });

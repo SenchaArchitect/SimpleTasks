@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen1677",
     "type": "libraryresource",
     "reference": {
         "name": "items",
@@ -9,7 +8,6 @@
     "userConfig": {
         "debug": true
     },
-    "customConfigs": [],
-    "designerId": "d9deec53-5953-4d8a-8e66-26bd889a3628",
-    "$viewOrder": 0
+    "id": "ExtBox1-ext-gen1677",
+    "designerId": "d9deec53-5953-4d8a-8e66-26bd889a3628"
 }

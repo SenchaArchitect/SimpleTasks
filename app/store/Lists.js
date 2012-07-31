@@ -26,12 +26,7 @@ Ext.define('SimpleTasks.store.Lists', {
         cfg = cfg || {};
         me.callParent([Ext.apply({
             storeId: 'Lists',
-            model: 'SimpleTasks.model.List',
-            root: {
-                expanded: true,
-                id: -1,
-                name: 'All Lists'
-            }
+            model: 'SimpleTasks.model.List'
         }, cfg)]);
     }
 });

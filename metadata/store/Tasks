@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen92440",
     "type": "arraystore",
     "reference": {
         "name": "items",
@@ -7,12 +6,11 @@
     },
     "codeClass": null,
     "userConfig": {
+        "designer|userClassName": "Tasks",
         "storeId": "MyArrayStore1",
         "model": "Task",
-        "groupField": "due",
-        "designer|userClassName": "Tasks"
+        "groupField": "due"
     },
-    "customConfigs": [],
-    "designerId": "a53b0e54-48ee-4018-b38e-48d4c13676ad",
-    "$viewOrder": 2
+    "id": "ExtBox1-ext-gen92440",
+    "designerId": "a53b0e54-48ee-4018-b38e-48d4c13676ad"
 }

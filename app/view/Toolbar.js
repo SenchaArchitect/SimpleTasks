@@ -53,22 +53,19 @@ Ext.define('SimpleTasks.view.Toolbar', {
                     xtype: 'button',
                     disabled: true,
                     id: 'delete-task-btn',
-                    iconCls: 'tasks-delete-task',
-                    tooltip: 'Delete Task'
+                    iconCls: 'tasks-delete-task'
                 },
                 {
                     xtype: 'button',
                     disabled: true,
                     id: 'mark-complete-btn',
-                    iconCls: 'tasks-mark-complete',
-                    tooltip: 'Mark Complete'
+                    iconCls: 'tasks-mark-complete'
                 },
                 {
                     xtype: 'button',
                     disabled: true,
                     id: 'mark-active-btn',
-                    iconCls: 'tasks-mark-active',
-                    tooltip: 'Mark Active'
+                    iconCls: 'tasks-mark-active'
                 },
                 {
                     xtype: 'tbspacer',
@@ -79,24 +76,21 @@ Ext.define('SimpleTasks.view.Toolbar', {
                     id: 'show-all-btn',
                     enableToggle: true,
                     iconCls: 'tasks-show-all',
-                    toggleGroup: 'status',
-                    tooltip: 'All Tasks'
+                    toggleGroup: 'status'
                 },
                 {
                     xtype: 'button',
                     id: 'show-active-btn',
                     enableToggle: true,
                     iconCls: 'tasks-show-active',
-                    toggleGroup: 'status',
-                    tooltip: 'Active Tasks'
+                    toggleGroup: 'status'
                 },
                 {
                     xtype: 'button',
                     id: 'show-complete-btn',
                     enableToggle: true,
                     iconCls: 'tasks-show-complete',
-                    toggleGroup: 'status',
-                    tooltip: 'Completed Tasks'
+                    toggleGroup: 'status'
                 }
             ]
         });

@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen73062",
     "type": "arraystore",
     "reference": {
         "name": "items",
@@ -7,20 +6,18 @@
     },
     "codeClass": null,
     "userConfig": {
+        "designer|userClassName": "ReminderTimes",
         "autoLoad": true,
         "filterOnLoad": null,
         "sortOnLoad": null,
         "storeId": "ReminderTimes",
         "model": null,
-        "data": null,
-        "designer|userClassName": "ReminderTimes"
+        "data": null
     },
-    "customConfigs": [],
+    "id": "ExtBox1-ext-gen73062",
     "designerId": "2936ff37-446d-4e58-a13f-1273612bcae1",
-    "$viewOrder": 0,
     "cn": [
         {
-            "id": "ExtBox1-ext-gen6000",
             "type": "datafield",
             "reference": {
                 "name": "fields",
@@ -28,13 +25,12 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "num",
-                "designer|userClassName": "MyField10"
+                "designer|userClassName": "MyField10",
+                "name": "num"
             },
-            "customConfigs": []
+            "designerId": "84738b57-cc38-4b6a-9463-e6b4ec9897b9"
         },
         {
-            "id": "ExtBox1-ext-gen6163",
             "type": "datafield",
             "reference": {
                 "name": "fields",
@@ -42,13 +38,12 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "timeInWords",
-                "designer|userClassName": "MyField11"
+                "designer|userClassName": "MyField11",
+                "name": "timeInWords"
             },
-            "customConfigs": []
+            "designerId": "f10a4015-3bb8-4b9e-a57e-7999d10df5d3"
         },
         {
-            "id": "ExtBox1-ext-gen6353",
             "type": "memoryproxy",
             "reference": {
                 "name": "proxy",
@@ -58,10 +53,9 @@
             "userConfig": {
                 "designer|userClassName": "MyMemoryProxy"
             },
-            "customConfigs": [],
+            "designerId": "95fe8f66-3cf8-4ed8-896f-a5f814cad139",
             "cn": [
                 {
-                    "id": "ExtBox1-ext-gen6486",
                     "type": "arrayreader",
                     "reference": {
                         "name": "reader",
@@ -71,43 +65,7 @@
                     "userConfig": {
                         "designer|userClassName": "MyArrayReader"
                     },
-                    "customConfigs": []
-                },
-                {
-                    "id": "ExtBox1-ext-gen6649",
-                    "type": "object",
-                    "reference": {
-                        "name": "data",
-                        "type": "object"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "implHandler": [
-                            "[",
-                            "                        [5, '5 minutes'],",
-                            "                        [10, '10 minutes'],",
-                            "                        [15, '15 minutes'],",
-                            "                        [30, '30 minutes'],",
-                            "                        [60, '1 hour'],",
-                            "                        [120, '2 hours'],",
-                            "                        [240, '4 hours'],",
-                            "                        [480, '8 hours'],",
-                            "                        [720, '12 hours'],",
-                            "                        [1440, '1 day'],",
-                            "                        [2880, '2 days'],",
-                            "                        [4320, '3 days'],",
-                            "                        [5760, '4 days'],",
-                            "                        [10080, '1 week'],",
-                            "                        [20160, '2 weeks'],",
-                            "                        [30240, '3 weeeks'],",
-                            "                        [40320, '4 weeks']",
-                            "                    ]",
-                            ""
-                        ],
-                        "designer|displayName": "data",
-                        "designer|userClassName": "data"
-                    },
-                    "customConfigs": []
+                    "designerId": "8cabf306-141b-401d-9a85-385835ff5eb6"
                 }
             ]
         }

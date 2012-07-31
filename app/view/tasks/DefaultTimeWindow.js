@@ -37,16 +37,15 @@ Ext.define('SimpleTasks.view.tasks.DefaultTimeWindow', {
                     items: [
                         {
                             xtype: 'timefield',
+                            anchor: '100%',
                             name: 'default_time',
                             fieldLabel: 'When setting quick reminders, default the time to',
-                            labelAlign: 'top',
-                            anchor: '100%'
+                            labelAlign: 'top'
                         }
                     ],
                     dockedItems: [
                         {
                             xtype: 'toolbar',
-                            ui: 'footer',
                             dock: 'bottom',
                             items: [
                                 {

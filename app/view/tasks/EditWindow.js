@@ -61,10 +61,10 @@ Ext.define('SimpleTasks.view.tasks.EditWindow', {
                     items: [
                         {
                             xtype: 'textfield',
+                            anchor: '100%',
                             name: 'title',
                             fieldLabel: 'Task Subject',
-                            labelWidth: 80,
-                            anchor: '100%'
+                            labelWidth: 80
                         },
                         {
                             xtype: 'tasksfields',
@@ -76,13 +76,13 @@ Ext.define('SimpleTasks.view.tasks.EditWindow', {
                         },
                         {
                             xtype: 'fieldset',
+                            anchor: '100%',
                             border: false,
                             margin: '0 0 5',
                             layout: {
                                 align: 'stretch',
                                 type: 'hbox'
                             },
-                            anchor: '100%',
                             items: [
                                 {
                                     xtype: 'checkboxfield',
@@ -107,27 +107,26 @@ Ext.define('SimpleTasks.view.tasks.EditWindow', {
                         },
                         {
                             xtype: 'htmleditor',
+                            anchor: '100% -90',
                             height: 150,
-                            name: 'note',
-                            anchor: '100% -90'
+                            name: 'note'
                         },
                         {
                             xtype: 'hiddenfield',
+                            anchor: '100%',
                             name: 'reminder',
-                            fieldLabel: 'Label',
-                            anchor: '100%'
+                            fieldLabel: 'Label'
                         },
                         {
                             xtype: 'hiddenfield',
+                            anchor: '100%',
                             name: 'done',
-                            fieldLabel: 'Label',
-                            anchor: '100%'
+                            fieldLabel: 'Label'
                         }
                     ],
                     dockedItems: [
                         {
                             xtype: 'toolbar',
-                            ui: 'footer',
                             dock: 'bottom',
                             items: [
                                 {

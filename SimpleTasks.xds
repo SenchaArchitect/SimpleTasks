@@ -3,19 +3,21 @@
     "settings": {
         "urlPrefix": "",
         "spacesToIndent": 4,
-        "codeGenFormat": "Class",
         "exportPath": "",
-        "senchaIoKey": "",
-        "senchaIoPath": "http://extjs.cachefly.net/designer/IO/",
         "lineEnding": "LF",
-        "instantiateStore": true,
         "genTimestamps": false,
         "cacheBust": false,
+        "codeGenFormat": "Class",
+        "senchaIoKey": "",
+        "senchaIoPath": "http://extjs.cachefly.net/designer/IO/",
+        "instantiateStore": true,
         "saveOnDeploy": false,
         "appName": "MyApp"
     },
     "xdsVersion": "2.0.0",
-    "xdsBuild": 210000000502,
+    "xdsBuild": 0,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000495,
     "framework": "ext41",
     "topInstanceFileMap": {
         "aa2cebcc-67b8-46f8-810b-3e7944997036": {
@@ -183,5 +185,41 @@
             ],
             "className": "tasks.Fields"
         }
+    },
+    "viewOrderMap": {
+        "view": [
+            "90adc51a-58f2-4ec3-9007-9dce222c5f6f",
+            "3f506d76-0c98-4bef-aa44-59101df23411",
+            "b7026768-4497-4e3f-8ac7-e6a1a4bcf87e",
+            "6c7b6150-311c-4b87-86ac-d21066952ddd",
+            "148fad30-5bda-401d-9a6b-64d5a6a7cb79",
+            "aa2cebcc-67b8-46f8-810b-3e7944997036",
+            "baecf4a8-8952-4ef2-b576-c481fb6afd7f",
+            "420cfca1-e935-4701-9851-4ae3f22706d8",
+            "478a2143-be66-47c2-a102-4d3d54af9692",
+            "eaacfb24-106c-4e6d-9dc4-476d5b955fa6",
+            "96f66c2f-4993-423a-b807-960265efe582",
+            "59a865a6-5399-46da-9f01-4bdc52e32417"
+        ],
+        "store": [
+            "2936ff37-446d-4e58-a13f-1273612bcae1",
+            "5a2f6f03-5c6e-4451-8641-235a35f1ebec",
+            "a53b0e54-48ee-4018-b38e-48d4c13676ad"
+        ],
+        "controller": [
+            "220264b4-d632-42f5-be7b-0c200a8072cc",
+            "b94139bd-3865-464a-a8d8-dc7150599f22"
+        ],
+        "model": [
+            "ad7f587a-779d-4124-a9aa-b2cec1d6aed9",
+            "80ee487a-654d-4704-8b2c-2c3eb83b0106"
+        ],
+        "resource": [
+            "d9deec53-5953-4d8a-8e66-26bd889a3628",
+            "b5f0332b-2575-4858-aeab-85fcd8090dfe"
+        ],
+        "app": [
+            "application"
+        ]
     }
 }

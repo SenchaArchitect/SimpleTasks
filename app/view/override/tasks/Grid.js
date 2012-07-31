@@ -284,8 +284,12 @@ Ext.define('SimpleTasks.view.override.tasks.Grid', {
     renderList: function(value, metaData, task, rowIndex, colIndex, store, view) {
         var listsStore = Ext.getStore('Lists'),
             node = value ? listsStore.getNodeById(value) : listsStore.getRootNode();
-
-        return node.get('name');
+        
+        if (node) {
+            return node.get('name');
+        }
+        
+        return null;
     },
 
     /**

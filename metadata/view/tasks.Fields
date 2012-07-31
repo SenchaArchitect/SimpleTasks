@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen33212",
     "type": "fieldset",
     "reference": {
         "name": "items",
@@ -7,21 +6,19 @@
     },
     "codeClass": null,
     "userConfig": {
+        "container|align": "stretch",
+        "designer|userClassName": "tasks.Fields",
+        "designer|userAlias": "tasksfields",
         "designer|displayName": "date",
         "border": false,
         "margin": "0 0 5",
         "layout": "hbox",
-        "title": null,
-        "designer|userClassName": "tasks.Fields",
-        "designer|userAlias": "tasksfields",
-        "container|align": "stretch"
+        "title": null
     },
-    "customConfigs": [],
+    "id": "ExtBox1-ext-gen33212",
     "designerId": "478a2143-be66-47c2-a102-4d3d54af9692",
-    "$viewOrder": 7,
     "cn": [
         {
-            "id": "ExtBox1-ext-gen33441",
             "type": "datefield",
             "reference": {
                 "name": "items",
@@ -29,17 +26,16 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "MyDateField",
                 "margin": "0 15 0 0",
                 "width": 185,
                 "name": "due",
                 "fieldLabel": "Due Date",
-                "labelWidth": 80,
-                "designer|userClassName": "MyDateField"
+                "labelWidth": 80
             },
-            "customConfigs": []
+            "designerId": "dee74eac-c38d-411f-83f2-4c19d2f6543f"
         },
         {
-            "id": "ExtBox1-ext-gen41763",
             "type": "combobox",
             "reference": {
                 "name": "items",
@@ -47,11 +43,11 @@
             },
             "codeClass": null,
             "userConfig": {
-                "fieldLabel": "Label",
+                "layout|flex": 1,
                 "designer|userClassName": "MyComboBox",
-                "layout|flex": 1
+                "fieldLabel": "Label"
             },
-            "customConfigs": []
+            "designerId": "d6692797-3bfa-469b-ac64-55495543a959"
         }
     ]
 }

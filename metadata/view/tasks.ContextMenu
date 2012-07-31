@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen23419",
     "type": "menu",
     "reference": {
         "name": "items",
@@ -7,16 +6,14 @@
     },
     "codeClass": null,
     "userConfig": {
-        "width": null,
         "designer|userClassName": "tasks.ContextMenu",
-        "designer|userAlias": "tasksContextMenu"
+        "designer|userAlias": "tasksContextMenu",
+        "width": null
     },
-    "customConfigs": [],
+    "id": "ExtBox1-ext-gen23419",
     "designerId": "baecf4a8-8952-4ef2-b576-c481fb6afd7f",
-    "$viewOrder": 2,
     "cn": [
         {
-            "id": "ExtBox1-ext-gen23426",
             "type": "menuitem",
             "reference": {
                 "name": "items",
@@ -24,14 +21,13 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "MyMenuItem5",
                 "id": "edit-task-item",
-                "text": "Edit",
-                "designer|userClassName": "MyMenuItem5"
+                "text": "Edit"
             },
-            "customConfigs": []
+            "designerId": "6fb2e8c2-f5f1-4d5a-87ad-78d8f4e4e380"
         },
         {
-            "id": "ExtBox1-ext-gen23445",
             "type": "menuitem",
             "reference": {
                 "name": "items",
@@ -39,15 +35,14 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "MyMenuItem6",
                 "id": "mark-complete-item",
                 "iconCls": "tasks-mark-complete",
-                "text": "Mark Complete",
-                "designer|userClassName": "MyMenuItem6"
+                "text": "Mark Complete"
             },
-            "customConfigs": []
+            "designerId": "e8f93bff-d1d6-4d9e-bdb5-190826296e44"
         },
         {
-            "id": "ExtBox1-ext-gen23464",
             "type": "menuitem",
             "reference": {
                 "name": "items",
@@ -55,15 +50,14 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "MyMenuItem7",
                 "id": "mark-active-item",
                 "iconCls": "tasks-mark-active",
-                "text": "Mark Active",
-                "designer|userClassName": "MyMenuItem7"
+                "text": "Mark Active"
             },
-            "customConfigs": []
+            "designerId": "c9c2d12c-7307-4df7-9caf-37030dde8622"
         },
         {
-            "id": "ExtBox1-ext-gen24559",
             "type": "menuitem",
             "reference": {
                 "name": "items",
@@ -71,15 +65,14 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "MyMenuItem8",
                 "id": "delete-task-item",
                 "iconCls": "tasks-delete-task",
-                "text": "Delete",
-                "designer|userClassName": "MyMenuItem8"
+                "text": "Delete"
             },
-            "customConfigs": []
+            "designerId": "f8f8f145-6328-4a02-b206-0e90b97c46c1"
         },
         {
-            "id": "ExtBox1-ext-gen25579",
             "type": "basicfunction",
             "reference": {
                 "name": "items",
@@ -87,19 +80,18 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "setTask",
                 "fn": "setTask",
                 "designer|params": [
                     "task"
                 ],
                 "implHandler": [
                     "this.task = task;"
-                ],
-                "designer|userClassName": "setTask"
+                ]
             },
-            "customConfigs": []
+            "designerId": "6dbb5aea-e8ee-4e87-a0a3-2807bfeaa0b1"
         },
         {
-            "id": "ExtBox1-ext-gen26039",
             "type": "basicfunction",
             "reference": {
                 "name": "items",
@@ -107,13 +99,13 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "getTask",
                 "fn": "getTask",
                 "implHandler": [
                     "return this.task;"
-                ],
-                "designer|userClassName": "getTask"
+                ]
             },
-            "customConfigs": []
+            "designerId": "05bea0e3-a36e-4b5c-b9e3-bf52566f4922"
         }
     ]
 }

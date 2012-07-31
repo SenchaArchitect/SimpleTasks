@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen68264",
     "type": "window",
     "reference": {
         "name": "items",
@@ -7,20 +6,18 @@
     },
     "codeClass": null,
     "userConfig": {
+        "designer|userClassName": "tasks.ReminderWindow",
+        "designer|userAlias": "reminderWindow",
         "border": false,
         "frame": false,
         "height": null,
         "width": 400,
-        "title": null,
-        "designer|userClassName": "tasks.ReminderWindow",
-        "designer|userAlias": "reminderWindow"
+        "title": null
     },
-    "customConfigs": [],
+    "id": "ExtBox1-ext-gen68264",
     "designerId": "59a865a6-5399-46da-9f01-4bdc52e32417",
-    "$viewOrder": 8,
     "cn": [
         {
-            "id": "ExtBox1-ext-gen74460",
             "type": "basicfunction",
             "reference": {
                 "name": "items",
@@ -28,19 +25,18 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "setTask",
                 "fn": "setTask",
                 "designer|params": [
                     "task"
                 ],
                 "implHandler": [
                     "this.task = task;"
-                ],
-                "designer|userClassName": "setTask"
+                ]
             },
-            "customConfigs": []
+            "designerId": "f7459541-5ed1-453a-bdc9-b4752eecd150"
         },
         {
-            "id": "ExtBox1-ext-gen74543",
             "type": "basicfunction",
             "reference": {
                 "name": "items",
@@ -48,16 +44,15 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "getTask",
                 "fn": "getTask",
                 "implHandler": [
                     "return this.task;"
-                ],
-                "designer|userClassName": "getTask"
+                ]
             },
-            "customConfigs": []
+            "designerId": "98ac934e-ea7e-4e95-8ef6-667326229164"
         },
         {
-            "id": "ExtBox1-ext-gen68789",
             "type": "component",
             "reference": {
                 "name": "items",
@@ -65,15 +60,14 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "MyComponent2",
                 "designer|displayName": "box",
                 "border": false,
-                "cls": "tasks-reminder-details",
-                "designer|userClassName": "MyComponent2"
+                "cls": "tasks-reminder-details"
             },
-            "customConfigs": [],
+            "designerId": "9327b6a7-a654-4e97-8586-c5cd2dd6a849",
             "cn": [
                 {
-                    "id": "ExtBox1-ext-gen70889",
                     "type": "template",
                     "reference": {
                         "name": "tpl",
@@ -81,20 +75,19 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "designer|userClassName": "tpl",
                         "implHandler": [
                             "<div class=\"tasks-reminder-icon\"></div>",
                             "<p class=\"tasks-reminder-title\">{title}</p>",
                             "<p class=\"tasks-reminder-due\">Due: {due:date(\"F j, Y\")}</p>"
                         ],
-                        "designer|displayName": "tpl",
-                        "designer|userClassName": "tpl"
+                        "designer|displayName": "tpl"
                     },
-                    "customConfigs": []
+                    "designerId": "7adf57ce-c4b5-4555-a7c1-fa6a0282d104"
                 }
             ]
         },
         {
-            "id": "ExtBox1-ext-gen68955",
             "type": "combobox",
             "reference": {
                 "name": "items",
@@ -102,6 +95,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "MyComboBox2",
                 "border": false,
                 "margin": "10 0 10 20",
                 "name": "snooze_time",
@@ -110,32 +104,11 @@
                 "labelWidth": 115,
                 "displayField": "timeInWords",
                 "store": "ReminderTimes",
-                "valueField": "num",
-                "designer|userClassName": "MyComboBox2"
+                "valueField": "num"
             },
-            "customConfigs": [],
-            "cn": [
-                {
-                    "id": "ExtBox1-ext-gen72462",
-                    "type": "object",
-                    "reference": {
-                        "name": "value",
-                        "type": "object"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "implHandler": [
-                            "'5' "
-                        ],
-                        "designer|displayName": "value",
-                        "designer|userClassName": "value"
-                    },
-                    "customConfigs": []
-                }
-            ]
+            "designerId": "18e6f33b-a4e4-4768-8349-6564a67ae233"
         },
         {
-            "id": "ExtBox1-ext-gen17870",
             "type": "form",
             "reference": {
                 "name": "items",
@@ -143,14 +116,13 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "MyForm3",
                 "bodyPadding": null,
-                "title": null,
-                "designer|userClassName": "MyForm3"
+                "title": null
             },
-            "customConfigs": [],
+            "designerId": "b090244d-302e-42bd-84dd-e9f01df373f5",
             "cn": [
                 {
-                    "id": "ExtBox1-ext-gen69155",
                     "type": "toolbar",
                     "reference": {
                         "name": "dockedItems",
@@ -158,14 +130,13 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|displayName": "buttons(workaround)",
+                        "dock": "bottom",
                         "designer|userClassName": "MyToolbar4",
-                        "dock": "bottom"
+                        "designer|displayName": "buttons(workaround)"
                     },
-                    "customConfigs": [],
+                    "designerId": "98b5b00c-a38e-4243-8e2b-22e84d4a70b6",
                     "cn": [
                         {
-                            "id": "ExtBox1-ext-gen21428",
                             "type": "tbspacer",
                             "reference": {
                                 "name": "items",
@@ -173,14 +144,13 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "border": false,
+                                "layout|flex": 1,
                                 "designer|userClassName": "MySpacer3",
-                                "layout|flex": 1
+                                "border": false
                             },
-                            "customConfigs": []
+                            "designerId": "f3fb6b13-a4c6-4485-970d-d8ca284db203"
                         },
                         {
-                            "id": "ExtBox1-ext-gen69589",
                             "type": "button",
                             "reference": {
                                 "name": "items",
@@ -188,15 +158,14 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "cls": "snooze-btn",
-                                "text": "Snooze",
+                                "layout|flex": null,
                                 "designer|userClassName": "MyButton11",
-                                "layout|flex": null
+                                "cls": "snooze-btn",
+                                "text": "Snooze"
                             },
-                            "customConfigs": []
+                            "designerId": "203b7343-15fe-4388-8a1b-6f40da5c9fb9"
                         },
                         {
-                            "id": "ExtBox1-ext-gen69388",
                             "type": "button",
                             "reference": {
                                 "name": "items",
@@ -204,29 +173,12 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "cls": "dismiss-reminder-btn",
-                                "text": "Dismiss",
+                                "layout|flex": null,
                                 "designer|userClassName": "MyButton10",
-                                "layout|flex": null
+                                "cls": "dismiss-reminder-btn",
+                                "text": "Dismiss"
                             },
-                            "customConfigs": []
-                        },
-                        {
-                            "id": "ExtBox1-ext-gen14854",
-                            "type": "object",
-                            "reference": {
-                                "name": "ui",
-                                "type": "object"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "implHandler": [
-                                    "'footer'"
-                                ],
-                                "designer|displayName": "ui",
-                                "designer|userClassName": "ui"
-                            },
-                            "customConfigs": []
+                            "designerId": "e54dee48-6302-48bf-abfc-a33b510ffec6"
                         }
                     ]
                 }

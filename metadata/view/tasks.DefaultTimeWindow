@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen26426",
     "type": "window",
     "reference": {
         "name": "items",
@@ -7,20 +6,18 @@
     },
     "codeClass": null,
     "userConfig": {
+        "designer|userClassName": "tasks.DefaultTimeWindow",
+        "designer|userAlias": "defaultTimeWindow",
         "height": null,
         "width": 300,
         "layout": "fit",
         "closeAction": "hide",
-        "title": "Set Default Reminder Time",
-        "designer|userClassName": "tasks.DefaultTimeWindow",
-        "designer|userAlias": "defaultTimeWindow"
+        "title": "Set Default Reminder Time"
     },
-    "customConfigs": [],
+    "id": "ExtBox1-ext-gen26426",
     "designerId": "420cfca1-e935-4701-9851-4ae3f22706d8",
-    "$viewOrder": 3,
     "cn": [
         {
-            "id": "ExtBox1-ext-gen27101",
             "type": "form",
             "reference": {
                 "name": "items",
@@ -28,16 +25,15 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "MyForm",
                 "border": false,
                 "frame": true,
                 "bodyPadding": 10,
-                "title": null,
-                "designer|userClassName": "MyForm"
+                "title": null
             },
-            "customConfigs": [],
+            "designerId": "76cf29e5-a71f-4488-b5f7-542749c4ec9b",
             "cn": [
                 {
-                    "id": "ExtBox1-ext-gen27490",
                     "type": "timefield",
                     "reference": {
                         "name": "items",
@@ -45,16 +41,15 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "layout|anchor": "100%",
+                        "designer|userClassName": "MyTimeField",
                         "name": "default_time",
                         "fieldLabel": "When setting quick reminders, default the time to",
-                        "labelAlign": "top",
-                        "designer|userClassName": "MyTimeField",
-                        "layout|anchor": "100%"
+                        "labelAlign": "top"
                     },
-                    "customConfigs": []
+                    "designerId": "60e7a557-e091-44cb-b733-7200fda30ee0"
                 },
                 {
-                    "id": "ExtBox1-ext-gen28143",
                     "type": "toolbar",
                     "reference": {
                         "name": "dockedItems",
@@ -62,31 +57,13 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|displayName": "buttons(workaround)",
+                        "dock": "bottom",
                         "designer|userClassName": "MyToolbar1",
-                        "dock": "bottom"
+                        "designer|displayName": "buttons(workaround)"
                     },
-                    "customConfigs": [],
+                    "designerId": "96a27822-8ef3-4b33-a44a-0d55aa80f600",
                     "cn": [
                         {
-                            "id": "ExtBox1-ext-gen28453",
-                            "type": "object",
-                            "reference": {
-                                "name": "ui",
-                                "type": "object"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "implHandler": [
-                                    "'footer'"
-                                ],
-                                "designer|displayName": "ui",
-                                "designer|userClassName": "ui"
-                            },
-                            "customConfigs": []
-                        },
-                        {
-                            "id": "ExtBox1-ext-gen29835",
                             "type": "tbspacer",
                             "reference": {
                                 "name": "items",
@@ -94,13 +71,12 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "MySpacer",
-                                "layout|flex": null
+                                "layout|flex": null,
+                                "designer|userClassName": "MySpacer"
                             },
-                            "customConfigs": []
+                            "designerId": "30a161c1-3134-48e8-9ac7-92bbe37180bf"
                         },
                         {
-                            "id": "ExtBox1-ext-gen28814",
                             "type": "button",
                             "reference": {
                                 "name": "items",
@@ -108,15 +84,14 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "id": "save-default-time-btn",
-                                "text": "OK",
+                                "layout|flex": null,
                                 "designer|userClassName": "MyButton4",
-                                "layout|flex": null
+                                "id": "save-default-time-btn",
+                                "text": "OK"
                             },
-                            "customConfigs": []
+                            "designerId": "246755ce-eda0-4730-aaba-eb9fa4c0ca0b"
                         },
                         {
-                            "id": "ExtBox1-ext-gen29080",
                             "type": "button",
                             "reference": {
                                 "name": "items",
@@ -124,12 +99,12 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "id": "cancel-default-time-edit-btn",
-                                "text": "Cancel",
+                                "layout|flex": null,
                                 "designer|userClassName": "MyButton5",
-                                "layout|flex": null
+                                "id": "cancel-default-time-edit-btn",
+                                "text": "Cancel"
                             },
-                            "customConfigs": []
+                            "designerId": "3544d6af-04d4-4251-b0d7-c4810445e674"
                         }
                     ]
                 }

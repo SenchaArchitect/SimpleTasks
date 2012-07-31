@@ -25,7 +25,6 @@ Ext.define('SimpleTasks.model.List', {
             name: 'name'
         },
         {
-            defaultValue: null,
             name: 'index'
         }
     ],

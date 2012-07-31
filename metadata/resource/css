@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen97661",
     "type": "cssresource",
     "reference": {
         "name": "items",
@@ -9,7 +8,6 @@
     "userConfig": {
         "url": "resources/css/tasks.css"
     },
-    "customConfigs": [],
-    "designerId": "b5f0332b-2575-4858-aeab-85fcd8090dfe",
-    "$viewOrder": 1
+    "id": "ExtBox1-ext-gen97661",
+    "designerId": "b5f0332b-2575-4858-aeab-85fcd8090dfe"
 }

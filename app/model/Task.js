@@ -38,7 +38,6 @@ Ext.define('SimpleTasks.model.Task', {
             type: 'date'
         },
         {
-            defaultValue: false,
             name: 'done',
             type: 'boolean'
         },

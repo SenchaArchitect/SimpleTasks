@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen19208",
     "type": "controller",
     "reference": {
         "name": "items",
@@ -7,6 +6,7 @@
     },
     "codeClass": null,
     "userConfig": {
+        "designer|userClassName": "Lists",
         "models": [
             "List"
         ],
@@ -18,15 +18,12 @@
             "lists.Tree",
             "lists.ContextMenu",
             "Toolbar"
-        ],
-        "designer|userClassName": "Lists"
+        ]
     },
-    "customConfigs": [],
+    "id": "ExtBox1-ext-gen19208",
     "designerId": "220264b4-d632-42f5-be7b-0c200a8072cc",
-    "$viewOrder": 0,
     "cn": [
         {
-            "id": "ExtBox1-ext-gen22464",
             "type": "fixedfunction",
             "reference": {
                 "name": "items",
@@ -34,6 +31,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "init",
                 "fn": "init",
                 "designer|params": [
                     "application"
@@ -41,48 +39,45 @@
                 "implHandler": [
                     "/* Workaround for inability to add xtype in refs*/ ",
                     "var refs= [",
-                    "        {",
-                    "            ref: 'listTree',",
-                    "            selector: 'listTree'",
-                    "        },",
-                    "        {",
-                    "            ref: 'taskGrid',",
-                    "            selector: 'taskGrid'",
-                    "        },",
-                    "        {",
-                    "            ref: 'taskForm',",
-                    "            selector: 'taskForm'",
-                    "        },",
-                    "        {",
-                    "            ref: 'contextMenu',",
-                    "            selector: 'listsContextMenu',",
-                    "            xtype: 'listsContextMenu',",
-                    "            autoCreate: true",
-                    "        }",
-                    "    ];",
+                    "{",
+                    "    ref: 'listTree',",
+                    "    selector: 'listTree'",
+                    "},",
+                    "{",
+                    "    ref: 'taskGrid',",
+                    "    selector: 'taskGrid'",
+                    "},",
+                    "{",
+                    "    ref: 'taskForm',",
+                    "    selector: 'taskForm'",
+                    "},",
+                    "{",
+                    "    ref: 'contextMenu',",
+                    "    selector: 'listsContextMenu',",
+                    "    xtype: 'listsContextMenu',",
+                    "    autoCreate: true",
+                    "}",
+                    "];",
                     "",
                     "this.ref(refs); // undocumented internal function",
                     "/* end workaround */",
                     "",
                     "",
-                    " var me = this,",
-                    "            listsStore = me.getListsStore(),",
-                    "            tasksStore = me.getTasksStore();",
+                    "var me = this,",
+                    "    listsStore = me.getListsStore(),",
+                    "    tasksStore = me.getTasksStore();",
                     "",
-                    "        if(listsStore.isLoading()) {",
-                    "            listsStore.on('load', me.handleListsLoad, me);",
-                    "        } else {",
-                    "            me.handleListsLoad(listsStore);",
-                    "        }",
-                    "        listsStore.on('write', me.syncListsStores, me);"
-                ],
-                "designer|userClassName": "init"
+                    "if(listsStore.isLoading()) {",
+                    "    listsStore.on('load', me.handleListsLoad, me);",
+                    "} else {",
+                    "    me.handleListsLoad(listsStore);",
+                    "}",
+                    "listsStore.on('write', me.syncListsStores, me);"
+                ]
             },
-            "customConfigs": [],
-            "iconCls": "icon-basic-function"
+            "designerId": "b8ed3e4e-0b53-446f-a19b-f9bde459bc0d"
         },
         {
-            "id": "ExtBox1-ext-gen28194",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -90,6 +85,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "handleNewListCLick",
                 "fn": "handleNewListCLick",
                 "designer|params": [
                     "component",
@@ -101,13 +97,11 @@
                 "name": "click",
                 "scope": "me",
                 "designer|targetType": "Ext.Component",
-                "designer|controlQuery": "[iconCls=tasks-new-list]",
-                "designer|userClassName": "handleNewListCLick"
+                "designer|controlQuery": "[iconCls=tasks-new-list]"
             },
-            "customConfigs": []
+            "designerId": "eed4b305-6d6a-4040-8595-d982bd59876b"
         },
         {
-            "id": "ExtBox1-ext-gen28912",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -115,6 +109,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "handleNewFolderClick",
                 "fn": "handleNewFolderClick",
                 "designer|params": [
                     "component",
@@ -126,13 +121,11 @@
                 "name": "click",
                 "scope": "me",
                 "designer|targetType": "Ext.Component",
-                "designer|controlQuery": "[iconCls=tasks-new-folder]",
-                "designer|userClassName": "handleNewFolderClick"
+                "designer|controlQuery": "[iconCls=tasks-new-folder]"
             },
-            "customConfigs": []
+            "designerId": "46e8d5ce-7df5-44f7-91e2-9373c9ff8c9e"
         },
         {
-            "id": "ExtBox1-ext-gen29558",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -140,6 +133,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "handleDeleteClick",
                 "fn": "handleDeleteClick",
                 "designer|params": [
                     "component",
@@ -151,13 +145,11 @@
                 "name": "click",
                 "scope": "me",
                 "designer|targetType": "Ext.Component",
-                "designer|controlQuery": "[iconCls=tasks-delete-list]",
-                "designer|userClassName": "handleDeleteClick"
+                "designer|controlQuery": "[iconCls=tasks-delete-list]"
             },
-            "customConfigs": []
+            "designerId": "0e435109-46ba-4e7b-ba07-aea159a5ab0f"
         },
         {
-            "id": "ExtBox1-ext-gen30313",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -165,6 +157,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "handleDeleteFolderClick",
                 "fn": "handleDeleteFolderClick",
                 "designer|params": [
                     "component",
@@ -177,13 +170,11 @@
                 "name": "click",
                 "scope": "me",
                 "designer|targetType": "Ext.Component",
-                "designer|controlQuery": "[iconCls=tasks-delete-folder]",
-                "designer|userClassName": "handleDeleteFolderClick"
+                "designer|controlQuery": "[iconCls=tasks-delete-folder]"
             },
-            "customConfigs": []
+            "designerId": "e7374b67-493f-4323-b0e0-2a3ab0ec005c"
         },
         {
-            "id": "ExtBox1-ext-gen32996",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -191,21 +182,23 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "handleAfterListTreeRender",
                 "fn": "handleAfterListTreeRender",
                 "implHandler": [
-                    "var listTree = abstractcomponent;",
-                    "listTree.getSelectionModel().select(0);"
+                    "var selModel = abstractcomponent.getSelectionModel();",
+                    "",
+                    "if (selModel.getCount() > 0){",
+                    "    selModel.select(0);",
+                    "}"
                 ],
                 "name": "afterrender",
                 "scope": "me",
                 "designer|targetType": "Ext.tree.Panel",
-                "designer|controlQuery": "listTree",
-                "designer|userClassName": "handleAfterListTreeRender"
+                "designer|controlQuery": "listTree"
             },
-            "customConfigs": []
+            "designerId": "3ea4a57c-a952-4096-b797-3bfa8e969beb"
         },
         {
-            "id": "ExtBox1-ext-gen33291",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -213,45 +206,44 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "updateList",
                 "fn": "updateList",
                 "designer|params": [
                     "editor",
                     "e"
                 ],
                 "implHandler": [
-                    " var me = this,",
-                    "            list = e.record;",
+                    "var me = this,",
+                    "    list = e.record;",
                     "",
-                    "        list.save({",
-                    "            success: function(list, operation) {",
-                    "                // filter the task list by the currently selected list.  This is necessary for newly added lists",
-                    "                // since this is the first point at which we have a primary key \"id\" from the server.",
-                    "                // If we don't filter here then any new tasks that are added will not appear until the filter is triggered by a selection change.",
-                    "                me.filterTaskGrid(me.getListTree().getSelectionModel(), [list]);",
-                    "            },",
-                    "            failure: function(list, operation) {",
-                    "                var error = operation.getError(),",
-                    "                    msg = Ext.isObject(error) ? error.status + ' ' + error.statusText : error;",
+                    "list.save({",
+                    "    success: function(list, operation) {",
+                    "        // filter the task list by the currently selected list.  This is necessary for newly added lists",
+                    "        // since this is the first point at which we have a primary key \"id\" from the server.",
+                    "        // If we don't filter here then any new tasks that are added will not appear until the filter is triggered by a selection change.",
+                    "        me.filterTaskGrid(me.getListTree().getSelectionModel(), [list]);",
+                    "    },",
+                    "    failure: function(list, operation) {",
+                    "        var error = operation.getError(),",
+                    "            msg = Ext.isObject(error) ? error.status + ' ' + error.statusText : error;",
                     "",
-                    "                Ext.MessageBox.show({",
-                    "                    title: 'Update List Failed',",
-                    "                    msg: msg,",
-                    "                    icon: Ext.Msg.ERROR,",
-                    "                    buttons: Ext.Msg.OK",
-                    "                });",
-                    "            }",
-                    "        });"
+                    "        Ext.MessageBox.show({",
+                    "            title: 'Update List Failed',",
+                    "            msg: msg,",
+                    "            icon: Ext.Msg.ERROR,",
+                    "            buttons: Ext.Msg.OK",
+                    "        });",
+                    "    }",
+                    "});"
                 ],
                 "name": "edit",
                 "scope": "me",
                 "designer|targetType": "Ext.tree.Panel",
-                "designer|controlQuery": "listTree",
-                "designer|userClassName": "updateList"
+                "designer|controlQuery": "listTree"
             },
-            "customConfigs": []
+            "designerId": "546d0d08-3070-4e7a-a843-85995eebe790"
         },
         {
-            "id": "ExtBox1-ext-gen33604",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -259,6 +251,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "handleCancelEdit",
                 "fn": "handleCancelEdit",
                 "designer|params": [
                     "editor",
@@ -274,13 +267,11 @@
                 "name": "canceledit",
                 "scope": "me",
                 "designer|targetType": "Ext.tree.Panel",
-                "designer|controlQuery": "listTree",
-                "designer|userClassName": "handleCancelEdit"
+                "designer|controlQuery": "listTree"
             },
-            "customConfigs": []
+            "designerId": "301d2fca-a1c2-4bda-81b5-20bc3089ff4d"
         },
         {
-            "id": "ExtBox1-ext-gen33899",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -288,6 +279,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "handleDeleteIconClick",
                 "fn": "handleDeleteIconClick",
                 "designer|params": [
                     "view",
@@ -303,13 +295,11 @@
                 "name": "deleteclick",
                 "scope": "me",
                 "designer|targetType": "Ext.tree.Panel",
-                "designer|controlQuery": "listTree",
-                "designer|userClassName": "handleDeleteIconClick"
+                "designer|controlQuery": "listTree"
             },
-            "customConfigs": []
+            "designerId": "93824dad-000b-4e55-950e-20f7e72b7eff"
         },
         {
-            "id": "ExtBox1-ext-gen34547",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -317,6 +307,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "updateTaskList",
                 "fn": "updateTaskList",
                 "designer|params": [
                     "task",
@@ -352,13 +343,11 @@
                 "name": "taskdrop",
                 "scope": "me",
                 "designer|targetType": "Ext.tree.Panel",
-                "designer|controlQuery": "listTree",
-                "designer|userClassName": "updateTaskList"
+                "designer|controlQuery": "listTree"
             },
-            "customConfigs": []
+            "designerId": "96dd9af8-7f8c-40d0-9a60-0aec0ae3d978"
         },
         {
-            "id": "ExtBox1-ext-gen34820",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -366,6 +355,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "reorderList",
                 "fn": "reorderList",
                 "designer|params": [
                     "list",
@@ -414,13 +404,11 @@
                 "name": "listdrop",
                 "scope": "me",
                 "designer|targetType": "Ext.Component",
-                "designer|controlQuery": "listTree",
-                "designer|userClassName": "reorderList"
+                "designer|controlQuery": "listTree"
             },
-            "customConfigs": []
+            "designerId": "6ad0aa3c-ba59-4c67-a0be-025dff81f614"
         },
         {
-            "id": "ExtBox1-ext-gen35099",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -428,6 +416,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "showActions",
                 "fn": "showActions",
                 "designer|params": [
                     "view",
@@ -447,13 +436,11 @@
                 "name": "itemmouseenter",
                 "scope": "me",
                 "designer|targetType": "Ext.Component",
-                "designer|controlQuery": "listTree",
-                "designer|userClassName": "showActions"
+                "designer|controlQuery": "listTree"
             },
-            "customConfigs": []
+            "designerId": "2e9deb15-a1a8-4842-9e7b-f97f4d146ac8"
         },
         {
-            "id": "ExtBox1-ext-gen35381",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -461,6 +448,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "hideActions",
                 "fn": "hideActions",
                 "designer|params": [
                     "view",
@@ -478,13 +466,11 @@
                 "name": "itemmouseleave",
                 "scope": "me",
                 "designer|targetType": "Ext.Component",
-                "designer|controlQuery": "listTree",
-                "designer|userClassName": "hideActions"
+                "designer|controlQuery": "listTree"
             },
-            "customConfigs": []
+            "designerId": "1ee4b19d-4572-4c00-9eec-4c819deda075"
         },
         {
-            "id": "ExtBox1-ext-gen35660",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -492,6 +478,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "showContextMenu",
                 "fn": "showContextMenu",
                 "designer|params": [
                     "view",
@@ -529,13 +516,11 @@
                 "name": "itemcontextmenu",
                 "scope": "me",
                 "designer|targetType": "Ext.Component",
-                "designer|controlQuery": "listTree",
-                "designer|userClassName": "showContextMenu"
+                "designer|controlQuery": "listTree"
             },
-            "customConfigs": []
+            "designerId": "7f33d589-f36a-4f1a-934e-7e9c18d77369"
         },
         {
-            "id": "ExtBox1-ext-gen41243",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -543,71 +528,70 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "filterTaskGrid",
                 "fn": "filterTaskGrid",
                 "designer|params": [
                     "selModel",
                     "lists"
                 ],
                 "implHandler": [
-                    " var list = lists[0],",
-                    "            tasksStore = this.getTasksStore(),",
-                    "            listIds = [],",
-                    "            deleteListBtn = Ext.getCmp('delete-list-btn'),",
-                    "            deleteFolderBtn = Ext.getCmp('delete-folder-btn'),",
-                    "            filters = tasksStore.filters.getRange(0, tasksStore.filters.getCount() - 1),",
-                    "            filterCount = filters.length,",
-                    "            i = 0;",
+                    "var list = lists[0],",
+                    "    tasksStore = this.getTasksStore(),",
+                    "    listIds = [],",
+                    "    deleteListBtn = Ext.getCmp('delete-list-btn'),",
+                    "    deleteFolderBtn = Ext.getCmp('delete-folder-btn'),",
+                    "    filters = tasksStore.filters.getRange(0, tasksStore.filters.getCount() - 1),",
+                    "    filterCount = filters.length,",
+                    "    i = 0;",
                     "",
-                    "        // first clear any existing filter",
-                    "        tasksStore.clearFilter();",
+                    "// first clear any existing filter",
+                    "tasksStore.clearFilter();",
                     "",
-                    "        // build an array of all the list_id's in the hierarchy of the selected list",
-                    "        list.cascadeBy(function(list) {",
-                    "            listIds.push(list.get('id'));",
-                    "        });",
+                    "// build an array of all the list_id's in the hierarchy of the selected list",
+                    "list.cascadeBy(function(list) {",
+                    "    listIds.push(list.get('id'));",
+                    "});",
                     "",
-                    "        // remove any existing \"list_id\" filter from the filters array",
-                    "        for(; i < filterCount; i++) {",
-                    "            if(filters[i].property === 'list_id') {",
-                    "                filters.splice(i, 1);",
-                    "                filterCount --;",
-                    "            }",
-                    "        }",
+                    "// remove any existing \"list_id\" filter from the filters array",
+                    "for(; i < filterCount; i++) {",
+                    "    if(filters[i].property === 'list_id') {",
+                    "        filters.splice(i, 1);",
+                    "        filterCount --;",
+                    "    }",
+                    "}",
                     "",
-                    "        // add the new list_ids to the filters array",
-                    "        filters.push({ property: \"list_id\", value: new RegExp('^' + listIds.join('$|^') + '$') });",
+                    "// add the new list_ids to the filters array",
+                    "filters.push({ property: \"list_id\", value: new RegExp('^' + listIds.join('$|^') + '$') });",
                     "",
-                    "        // apply the filters",
-                    "        tasksStore.filter(filters);",
+                    "// apply the filters",
+                    "tasksStore.filter(filters);",
                     "",
-                    "        // set the center panel's title to the name of the currently selected list",
-                    "        this.getTaskGrid().setTitle(list.get('name'));",
+                    "// set the center panel's title to the name of the currently selected list",
+                    "this.getTaskGrid().setTitle(list.get('name'));",
                     "",
-                    "        // enable or disable the \"delete list\" and \"delete folder\" buttons depending on what type of node is selected",
-                    "        if(list.get('id') === -1) {",
-                    "            deleteListBtn.disable();",
-                    "            deleteFolderBtn.disable();",
-                    "        } else if(list.isLeaf()) {",
-                    "            deleteListBtn.enable();",
-                    "            deleteFolderBtn.disable();",
-                    "        } else {",
-                    "            deleteListBtn.disable();",
-                    "            deleteFolderBtn.enable();",
-                    "        }",
+                    "// enable or disable the \"delete list\" and \"delete folder\" buttons depending on what type of node is selected",
+                    "if(list.get('id') === -1) {",
+                    "    deleteListBtn.disable();",
+                    "    deleteFolderBtn.disable();",
+                    "} else if(list.isLeaf()) {",
+                    "    deleteListBtn.enable();",
+                    "    deleteFolderBtn.disable();",
+                    "} else {",
+                    "    deleteListBtn.disable();",
+                    "    deleteFolderBtn.enable();",
+                    "}",
                     "",
-                    "        // make the currently selected list the default value for the list field on the new task form",
-                    "        this.getTaskForm().query('[name=list_id]')[0].setValue(list.get('id'));"
+                    "// make the currently selected list the default value for the list field on the new task form",
+                    "this.getTaskForm().query('[name=list_id]')[0].setValue(list.get('id'));"
                 ],
                 "name": "selectionchange",
                 "scope": "me",
                 "designer|targetType": "Ext.Component",
-                "designer|controlQuery": "listTree",
-                "designer|userClassName": "filterTaskGrid"
+                "designer|controlQuery": "listTree"
             },
-            "customConfigs": []
+            "designerId": "37654e7d-786d-49a9-b771-043284884b93"
         },
         {
-            "id": "ExtBox1-ext-gen42009",
             "type": "basicfunction",
             "reference": {
                 "name": "items",
@@ -615,6 +599,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "handleListsLoad",
                 "fn": "handleListsLoad",
                 "designer|params": [
                     "listsStore",
@@ -643,13 +628,11 @@
                     "}",
                     "// remove the event listener after the first run",
                     "listsStore.un('load', me.handleListsLoad, me);"
-                ],
-                "designer|userClassName": "handleListsLoad"
+                ]
             },
-            "customConfigs": []
+            "designerId": "6496b8ee-7f98-4d7e-b143-026378a5b3ac"
         },
         {
-            "id": "ExtBox1-ext-gen42561",
             "type": "basicfunction",
             "reference": {
                 "name": "items",
@@ -657,6 +640,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "addList",
                 "fn": "addList",
                 "designer|params": [
                     "leaf"
@@ -699,13 +683,11 @@
                     "    });",
                     "    listTree.expand();",
                     "}"
-                ],
-                "designer|userClassName": "addList"
+                ]
             },
-            "customConfigs": []
+            "designerId": "625c6a3e-1e84-4be9-97a3-2126f507152d"
         },
         {
-            "id": "ExtBox1-ext-gen43161",
             "type": "basicfunction",
             "reference": {
                 "name": "items",
@@ -713,6 +695,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "deleteList",
                 "fn": "deleteList",
                 "designer|params": [
                     "list"
@@ -784,13 +767,11 @@
                     "                }",
                     "            }",
                     "        });"
-                ],
-                "designer|userClassName": "deleteList"
+                ]
             },
-            "customConfigs": []
+            "designerId": "7295d6c8-04cb-4d12-ade5-6a906f47949f"
         },
         {
-            "id": "ExtBox1-ext-gen43680",
             "type": "basicfunction",
             "reference": {
                 "name": "items",
@@ -798,6 +779,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "handleTasksLoad",
                 "fn": "handleTasksLoad",
                 "designer|params": [
                     "tasksStore",
@@ -816,13 +798,11 @@
                     "me.filterTaskGrid(selectionModel, selectionModel.getSelection());",
                     "// remove the event listener after the first run",
                     "tasksStore.un('load', this.handleTasksLoad, this);"
-                ],
-                "designer|userClassName": "handleTasksLoad"
+                ]
             },
-            "customConfigs": []
+            "designerId": "d330e5e9-e7ed-4b02-8755-398217a30ad7"
         },
         {
-            "id": "ExtBox1-ext-gen44194",
             "type": "basicfunction",
             "reference": {
                 "name": "items",
@@ -830,46 +810,46 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "syncListsStores",
                 "fn": "syncListsStores",
                 "designer|params": [
                     "listsStore",
                     "operation"
                 ],
                 "implHandler": [
-                    " var me = this,",
-                    "            stores = [",
-                    "                Ext.getStore('Lists-TaskGrid'),",
-                    "                Ext.getStore('Lists-TaskEditWindow'),",
-                    "                Ext.getStore('Lists-TaskForm')",
-                    "            ], ",
-                    "            listToSync;",
-                    "            ",
-                    "        Ext.each(operation.getRecords(), function(list) {",
-                    "            Ext.each(stores, function(store) {",
-                    "                if(store) {",
-                    "                    listToSync = store.getNodeById(list.getId());",
-                    "                    switch(operation.action) {",
-                    "                        case 'create':",
-                    "                            (store.getNodeById(list.parentNode.getId()) || store.getRootNode()).appendChild(list.copy());",
-                    "                            break;",
-                    "                        case 'update':",
-                    "                            if(listToSync) {",
-                    "                                listToSync.set(list.data);",
-                    "                                listToSync.commit();",
-                    "                            }",
-                    "                            break;",
-                    "                        case 'destroy':",
-                    "                            if(listToSync) {",
-                    "                                listToSync.remove(false);",
-                    "                            }",
-                    "                    }",
+                    "var me = this,",
+                    "    stores = [",
+                    "    Ext.getStore('Lists-TaskGrid'),",
+                    "    Ext.getStore('Lists-TaskEditWindow'),",
+                    "    Ext.getStore('Lists-TaskForm')",
+                    "    ], ",
+                    "    listToSync;",
+                    "",
+                    "Ext.each(operation.getRecords(), function(list) {",
+                    "    Ext.each(stores, function(store) {",
+                    "        if(store) {",
+                    "            listToSync = store.getNodeById(list.getId());",
+                    "            switch(operation.action) {",
+                    "                case 'create':",
+                    "                (store.getNodeById(list.parentNode.getId()) || store.getRootNode()).appendChild(list.copy());",
+                    "                break;",
+                    "                case 'update':",
+                    "                if(listToSync) {",
+                    "                    listToSync.set(list.data);",
+                    "                    listToSync.commit();",
                     "                }",
-                    "            });",
-                    "        });"
-                ],
-                "designer|userClassName": "syncListsStores"
+                    "                break;",
+                    "                case 'destroy':",
+                    "                if(listToSync) {",
+                    "                    listToSync.remove(false);",
+                    "                }",
+                    "            }",
+                    "        }",
+                    "    });",
+                    "});"
+                ]
             },
-            "customConfigs": []
+            "designerId": "4fb0607f-dbd5-4694-9e01-4bdd88eced20"
         }
     ]
 }

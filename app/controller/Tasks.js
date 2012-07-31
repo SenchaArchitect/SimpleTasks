@@ -460,6 +460,55 @@ Ext.define('SimpleTasks.controller.Tasks', {
     },
 
     init: function(application) {
+        /* Workaround for inablity to add xtype */
+        var refs = [
+        {
+            ref: 'listTree',
+            selector: 'listTree'
+        },
+        {
+            ref: 'taskForm',
+            selector: 'taskForm'
+        },
+        {
+            ref: 'taskGrid',
+            selector: 'taskGrid'
+        },
+        {
+            ref: 'tasksToolbar',
+            selector: 'tasksToolbar'
+        },
+        {
+            ref: 'taskEditWindow',
+            selector: 'taskEditWindow',
+            xtype: 'taskEditWindow',
+            autoCreate: true
+        },
+        {
+            ref: 'defaultTimeWindow',
+            selector: 'defaultTimeWindow',
+            xtype: 'defaultTimeWindow',
+            autoCreate: true
+        },
+        {
+            ref: 'reminderWindow',
+            selector: 'reminderWindow',
+            xtype: 'reminderWindow',
+            forceCreate: true
+        },
+        {
+            ref: 'contextMenu',
+            selector: 'tasksContextMenu',
+            xtype: 'tasksContextMenu',
+            autoCreate: true
+        }
+        ];
+
+        this.ref(refs); // internal function
+        /* End workaround */
+
+        this.initReminderInterval();
+
         this.control({
             "taskForm textfield": {
                 specialkey: this.handleSpecialKey
@@ -545,54 +594,6 @@ Ext.define('SimpleTasks.controller.Tasks', {
                 click: this.dismissReminder
             }
         });
-        /* Workaround for inablity to add xtype */
-        var refs = [
-        {
-            ref: 'listTree',
-            selector: 'listTree'
-        },
-        {
-            ref: 'taskForm',
-            selector: 'taskForm'
-        },
-        {
-            ref: 'taskGrid',
-            selector: 'taskGrid'
-        },
-        {
-            ref: 'tasksToolbar',
-            selector: 'tasksToolbar'
-        },
-        {
-            ref: 'taskEditWindow',
-            selector: 'taskEditWindow',
-            xtype: 'taskEditWindow',
-            autoCreate: true
-        },
-        {
-            ref: 'defaultTimeWindow',
-            selector: 'defaultTimeWindow',
-            xtype: 'defaultTimeWindow',
-            autoCreate: true
-        },
-        {
-            ref: 'reminderWindow',
-            selector: 'reminderWindow',
-            xtype: 'reminderWindow',
-            forceCreate: true
-        },
-        {
-            ref: 'contextMenu',
-            selector: 'tasksContextMenu',
-            xtype: 'tasksContextMenu',
-            autoCreate: true
-        }
-        ];
-
-        this.ref(refs); // internal function
-        /* End workaround */
-
-        this.initReminderInterval();
     },
 
     deleteTask: function(task, successCallback) {

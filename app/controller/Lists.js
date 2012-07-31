@@ -47,8 +47,11 @@ Ext.define('SimpleTasks.controller.Lists', {
     },
 
     handleAfterListTreeRender: function(abstractcomponent, options) {
-        var listTree = abstractcomponent;
-        listTree.getSelectionModel().select(0);
+        var selModel = abstractcomponent.getSelectionModel();
+
+        if (selModel.getCount() > 0){
+            selModel.select(0);
+        }
     },
 
     updateList: function(editor, e) {
@@ -252,32 +255,6 @@ Ext.define('SimpleTasks.controller.Lists', {
     },
 
     init: function(application) {
-        this.control({
-            "[iconCls=tasks-new-list]": {
-                click: this.handleNewListCLick
-            },
-            "[iconCls=tasks-new-folder]": {
-                click: this.handleNewFolderClick
-            },
-            "[iconCls=tasks-delete-list]": {
-                click: this.handleDeleteClick
-            },
-            "[iconCls=tasks-delete-folder]": {
-                click: this.handleDeleteFolderClick
-            },
-            "listTree": {
-                afterrender: this.handleAfterListTreeRender,
-                edit: this.updateList,
-                canceledit: this.handleCancelEdit,
-                deleteclick: this.handleDeleteIconClick,
-                taskdrop: this.updateTaskList,
-                listdrop: this.reorderList,
-                itemmouseenter: this.showActions,
-                itemmouseleave: this.hideActions,
-                itemcontextmenu: this.showContextMenu,
-                selectionchange: this.filterTaskGrid
-            }
-        });
         /* Workaround for inability to add xtype in refs*/ 
         var refs= [
         {
@@ -314,6 +291,33 @@ Ext.define('SimpleTasks.controller.Lists', {
             me.handleListsLoad(listsStore);
         }
         listsStore.on('write', me.syncListsStores, me);
+
+        this.control({
+            "[iconCls=tasks-new-list]": {
+                click: this.handleNewListCLick
+            },
+            "[iconCls=tasks-new-folder]": {
+                click: this.handleNewFolderClick
+            },
+            "[iconCls=tasks-delete-list]": {
+                click: this.handleDeleteClick
+            },
+            "[iconCls=tasks-delete-folder]": {
+                click: this.handleDeleteFolderClick
+            },
+            "listTree": {
+                afterrender: this.handleAfterListTreeRender,
+                edit: this.updateList,
+                canceledit: this.handleCancelEdit,
+                deleteclick: this.handleDeleteIconClick,
+                taskdrop: this.updateTaskList,
+                listdrop: this.reorderList,
+                itemmouseenter: this.showActions,
+                itemmouseleave: this.hideActions,
+                itemcontextmenu: this.showContextMenu,
+                selectionchange: this.filterTaskGrid
+            }
+        });
     },
 
     handleListsLoad: function(listsStore, lists, success, operation) {

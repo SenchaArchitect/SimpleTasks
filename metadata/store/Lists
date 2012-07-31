@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen85543",
     "type": "treestore",
     "reference": {
         "name": "items",
@@ -7,35 +6,11 @@
     },
     "codeClass": null,
     "userConfig": {
-        "storeId": "Lists",
-        "model": "List",
         "designer|userClassName": "Lists",
-        "designer|userAlias": "lists"
+        "designer|userAlias": "lists",
+        "storeId": "Lists",
+        "model": "List"
     },
-    "customConfigs": [],
-    "designerId": "5a2f6f03-5c6e-4451-8641-235a35f1ebec",
-    "$viewOrder": 1,
-    "cn": [
-        {
-            "id": "ExtBox1-ext-gen86003",
-            "type": "object",
-            "reference": {
-                "name": "root",
-                "type": "object"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "implHandler": [
-                    " ",
-                    "{expanded: true,",
-                    "        id: -1,",
-                    "        name: 'All Lists'",
-                    "    }"
-                ],
-                "designer|displayName": "root",
-                "designer|userClassName": "root"
-            },
-            "customConfigs": []
-        }
-    ]
+    "id": "ExtBox1-ext-gen85543",
+    "designerId": "5a2f6f03-5c6e-4451-8641-235a35f1ebec"
 }

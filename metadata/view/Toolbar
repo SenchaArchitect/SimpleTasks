@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen75382",
     "type": "toolbar",
     "reference": {
         "name": "items",
@@ -7,16 +6,14 @@
     },
     "codeClass": null,
     "userConfig": {
-        "width": 400,
         "designer|userClassName": "Toolbar",
-        "designer|userAlias": "tasksToolbar"
+        "designer|userAlias": "tasksToolbar",
+        "width": 400
     },
-    "customConfigs": [],
+    "id": "ExtBox1-ext-gen75382",
     "designerId": "3f506d76-0c98-4bef-aa44-59101df23411",
-    "$viewOrder": 9,
     "cn": [
         {
-            "id": "ExtBox1-ext-gen75726",
             "type": "button",
             "reference": {
                 "name": "items",
@@ -24,15 +21,14 @@
             },
             "codeClass": null,
             "userConfig": {
-                "iconCls": "tasks-new",
-                "text": "New",
+                "layout|flex": null,
                 "designer|userClassName": "MyButton12",
-                "layout|flex": null
+                "iconCls": "tasks-new",
+                "text": "New"
             },
-            "customConfigs": [],
+            "designerId": "78b2d12b-4a6f-494c-a2ec-27ec5da37bb0",
             "cn": [
                 {
-                    "id": "ExtBox1-ext-gen75964",
                     "type": "menu",
                     "reference": {
                         "name": "menu",
@@ -40,14 +36,13 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "designer|userClassName": "MyMenu2",
                         "designer|displayName": "New Menu",
-                        "width": null,
-                        "designer|userClassName": "MyMenu2"
+                        "width": null
                     },
-                    "customConfigs": [],
+                    "designerId": "034a4b02-7f1b-4395-811b-3a87450d0ed4",
                     "cn": [
                         {
-                            "id": "ExtBox1-ext-gen75973",
                             "type": "menuitem",
                             "reference": {
                                 "name": "items",
@@ -55,14 +50,13 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "designer|userClassName": "MyMenuItem9",
                                 "iconCls": "tasks-new",
-                                "text": "New Task",
-                                "designer|userClassName": "MyMenuItem9"
+                                "text": "New Task"
                             },
-                            "customConfigs": []
+                            "designerId": "ddff4f10-0e86-435a-a513-4a776e1218a0"
                         },
                         {
-                            "id": "ExtBox1-ext-gen75992",
                             "type": "menuitem",
                             "reference": {
                                 "name": "items",
@@ -70,14 +64,13 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "designer|userClassName": "MyMenuItem10",
                                 "iconCls": "tasks-new-list",
-                                "text": "New List",
-                                "designer|userClassName": "MyMenuItem10"
+                                "text": "New List"
                             },
-                            "customConfigs": []
+                            "designerId": "2ad19027-c93f-4edd-a51b-037d8ed810c5"
                         },
                         {
-                            "id": "ExtBox1-ext-gen76011",
                             "type": "menuitem",
                             "reference": {
                                 "name": "items",
@@ -85,18 +78,17 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "designer|userClassName": "MyMenuItem11",
                                 "iconCls": "tasks-new-folder",
-                                "text": "New Folder",
-                                "designer|userClassName": "MyMenuItem11"
+                                "text": "New Folder"
                             },
-                            "customConfigs": []
+                            "designerId": "e328094d-61d0-4b50-80fc-7c0ba252d9cc"
                         }
                     ]
                 }
             ]
         },
         {
-            "id": "ExtBox1-ext-gen77890",
             "type": "button",
             "reference": {
                 "name": "items",
@@ -104,36 +96,16 @@
             },
             "codeClass": null,
             "userConfig": {
+                "layout|flex": null,
+                "designer|userClassName": "MyButton13",
                 "disabled": true,
                 "id": "delete-task-btn",
                 "iconCls": "tasks-delete-task",
-                "text": null,
-                "designer|userClassName": "MyButton13",
-                "layout|flex": null
+                "text": null
             },
-            "customConfigs": [],
-            "cn": [
-                {
-                    "id": "ExtBox1-ext-gen80865",
-                    "type": "object",
-                    "reference": {
-                        "name": "tooltip",
-                        "type": "object"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "implHandler": [
-                            "'Delete Task'"
-                        ],
-                        "designer|displayName": "tooltip",
-                        "designer|userClassName": "tooltip"
-                    },
-                    "customConfigs": []
-                }
-            ]
+            "designerId": "9dd74ebf-4a9e-4cc7-a830-2b76f699a0ad"
         },
         {
-            "id": "ExtBox1-ext-gen78144",
             "type": "button",
             "reference": {
                 "name": "items",
@@ -141,37 +113,17 @@
             },
             "codeClass": null,
             "userConfig": {
+                "layout|flex": null,
+                "designer|userClassName": "MyButton14",
                 "disabled": true,
                 "id": "mark-complete-btn",
                 "icon": null,
                 "iconCls": "tasks-mark-complete",
-                "text": null,
-                "designer|userClassName": "MyButton14",
-                "layout|flex": null
+                "text": null
             },
-            "customConfigs": [],
-            "cn": [
-                {
-                    "id": "ExtBox1-ext-gen81828",
-                    "type": "object",
-                    "reference": {
-                        "name": "tooltip",
-                        "type": "object"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "implHandler": [
-                            "'Mark Complete'"
-                        ],
-                        "designer|displayName": "tooltip",
-                        "designer|userClassName": "tooltip"
-                    },
-                    "customConfigs": []
-                }
-            ]
+            "designerId": "fec4de43-1df7-44af-be15-e4d01dda6e03"
         },
         {
-            "id": "ExtBox1-ext-gen78392",
             "type": "button",
             "reference": {
                 "name": "items",
@@ -179,36 +131,16 @@
             },
             "codeClass": null,
             "userConfig": {
+                "layout|flex": null,
+                "designer|userClassName": "MyButton15",
                 "disabled": true,
                 "id": "mark-active-btn",
                 "iconCls": "tasks-mark-active",
-                "text": null,
-                "designer|userClassName": "MyButton15",
-                "layout|flex": null
+                "text": null
             },
-            "customConfigs": [],
-            "cn": [
-                {
-                    "id": "ExtBox1-ext-gen82589",
-                    "type": "object",
-                    "reference": {
-                        "name": "tooltip",
-                        "type": "object"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "implHandler": [
-                            "'Mark Active'"
-                        ],
-                        "designer|displayName": "tooltip",
-                        "designer|userClassName": "tooltip"
-                    },
-                    "customConfigs": []
-                }
-            ]
+            "designerId": "5af6f59a-2d3c-4ea7-b37c-416b998c18c2"
         },
         {
-            "id": "ExtBox1-ext-gen100296",
             "type": "tbspacer",
             "reference": {
                 "name": "items",
@@ -216,13 +148,12 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MySpacer3",
-                "layout|flex": 1
+                "layout|flex": 1,
+                "designer|userClassName": "MySpacer3"
             },
-            "customConfigs": []
+            "designerId": "1eda6f27-ef64-4da0-9e57-cc24e297b361"
         },
         {
-            "id": "ExtBox1-ext-gen78644",
             "type": "button",
             "reference": {
                 "name": "items",
@@ -230,37 +161,17 @@
             },
             "codeClass": null,
             "userConfig": {
+                "layout|flex": null,
+                "designer|userClassName": "MyButton16",
                 "id": "show-all-btn",
                 "enableToggle": true,
                 "iconCls": "tasks-show-all",
                 "text": null,
-                "toggleGroup": "status",
-                "designer|userClassName": "MyButton16",
-                "layout|flex": null
+                "toggleGroup": "status"
             },
-            "customConfigs": [],
-            "cn": [
-                {
-                    "id": "ExtBox1-ext-gen83069",
-                    "type": "object",
-                    "reference": {
-                        "name": "tooltip",
-                        "type": "object"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "implHandler": [
-                            "'All Tasks'"
-                        ],
-                        "designer|displayName": "tooltip",
-                        "designer|userClassName": "tooltip"
-                    },
-                    "customConfigs": []
-                }
-            ]
+            "designerId": "5ac8dafb-65b9-4f21-89b0-454787bdddd1"
         },
         {
-            "id": "ExtBox1-ext-gen78893",
             "type": "button",
             "reference": {
                 "name": "items",
@@ -268,37 +179,17 @@
             },
             "codeClass": null,
             "userConfig": {
+                "layout|flex": null,
+                "designer|userClassName": "MyButton17",
                 "id": "show-active-btn",
                 "enableToggle": true,
                 "iconCls": "tasks-show-active",
                 "text": null,
-                "toggleGroup": "status",
-                "designer|userClassName": "MyButton17",
-                "layout|flex": null
+                "toggleGroup": "status"
             },
-            "customConfigs": [],
-            "cn": [
-                {
-                    "id": "ExtBox1-ext-gen83975",
-                    "type": "object",
-                    "reference": {
-                        "name": "tooltip",
-                        "type": "object"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "implHandler": [
-                            "'Active Tasks'"
-                        ],
-                        "designer|displayName": "tooltip",
-                        "designer|userClassName": "tooltip"
-                    },
-                    "customConfigs": []
-                }
-            ]
+            "designerId": "fd2258fa-f8eb-448c-bbae-df5bac292351"
         },
         {
-            "id": "ExtBox1-ext-gen79144",
             "type": "button",
             "reference": {
                 "name": "items",
@@ -306,34 +197,15 @@
             },
             "codeClass": null,
             "userConfig": {
+                "layout|flex": null,
+                "designer|userClassName": "MyButton18",
                 "id": "show-complete-btn",
                 "enableToggle": true,
                 "iconCls": "tasks-show-complete",
                 "text": null,
-                "toggleGroup": "status",
-                "designer|userClassName": "MyButton18",
-                "layout|flex": null
+                "toggleGroup": "status"
             },
-            "customConfigs": [],
-            "cn": [
-                {
-                    "id": "ExtBox1-ext-gen84548",
-                    "type": "object",
-                    "reference": {
-                        "name": "tooltip",
-                        "type": "object"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "implHandler": [
-                            "'Completed Tasks'"
-                        ],
-                        "designer|displayName": "tooltip",
-                        "designer|userClassName": "tooltip"
-                    },
-                    "customConfigs": []
-                }
-            ]
+            "designerId": "ef595feb-a77c-497f-b7d7-9d5518aff3b5"
         }
     ]
 }

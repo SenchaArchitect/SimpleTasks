@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen48774",
     "type": "gridpanel",
     "reference": {
         "name": "items",
@@ -7,23 +6,21 @@
     },
     "codeClass": null,
     "userConfig": {
+        "designer|userClassName": "tasks.Grid",
+        "designer|userAlias": "taskGrid",
         "height": 250,
         "width": 400,
         "title": null,
+        "columnLines": null,
         "enableColumnHide": false,
         "enableColumnMove": false,
         "enableColumnResize": false,
-        "store": "Tasks",
-        "columnLines": null,
-        "designer|userClassName": "tasks.Grid",
-        "designer|userAlias": "taskGrid"
+        "store": "Tasks"
     },
-    "customConfigs": [],
+    "id": "ExtBox1-ext-gen48774",
     "designerId": "6c7b6150-311c-4b87-86ac-d21066952ddd",
-    "$viewOrder": 6,
     "cn": [
         {
-            "id": "ExtBox1-ext-gen62379",
             "type": "datecolumn",
             "reference": {
                 "name": "columns",
@@ -31,10 +28,10 @@
             },
             "codeClass": null,
             "userConfig": {
-                "text": "SomeColumns",
-                "designer|userClassName": "MyDateColumn"
+                "designer|userClassName": "MyDateColumn",
+                "text": "SomeColumns"
             },
-            "customConfigs": []
+            "designerId": "2fa03829-07c4-4ea2-b210-7cd2cec0af93"
         }
     ]
 }

@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen44731",
     "type": "controller",
     "reference": {
         "name": "items",
@@ -7,6 +6,7 @@
     },
     "codeClass": null,
     "userConfig": {
+        "designer|userClassName": "Tasks",
         "models": [
             "Task"
         ],
@@ -20,15 +20,12 @@
             "tasks.DefaultTimeWindow",
             "tasks.ReminderWindow",
             "tasks.ContextMenu"
-        ],
-        "designer|userClassName": "Tasks"
+        ]
     },
-    "customConfigs": [],
+    "id": "ExtBox1-ext-gen44731",
     "designerId": "b94139bd-3865-464a-a8d8-dc7150599f22",
-    "$viewOrder": 1,
     "cn": [
         {
-            "id": "ExtBox1-ext-gen45244",
             "type": "fixedfunction",
             "reference": {
                 "name": "items",
@@ -36,6 +33,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "init",
                 "fn": "init",
                 "designer|params": [
                     "application"
@@ -89,14 +87,11 @@
                     "/* End workaround */",
                     "",
                     "    this.initReminderInterval();"
-                ],
-                "designer|userClassName": "init"
+                ]
             },
-            "customConfigs": [],
-            "iconCls": "icon-basic-function"
+            "designerId": "808e9941-d352-4002-b37e-7734074eee49"
         },
         {
-            "id": "ExtBox1-ext-gen46247",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -104,6 +99,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "handleSpecialKey",
                 "fn": "handleSpecialKey",
                 "implHandler": [
                     " if(e.getKey() === e.ENTER) {",
@@ -113,13 +109,11 @@
                 "name": "specialkey",
                 "scope": "me",
                 "designer|targetType": "Ext.form.field.Text",
-                "designer|controlQuery": "taskForm textfield",
-                "designer|userClassName": "handleSpecialKey"
+                "designer|controlQuery": "taskForm textfield"
             },
-            "customConfigs": []
+            "designerId": "fb1ae15f-9f7a-4fb3-a83a-5a56b7622df3"
         },
         {
-            "id": "ExtBox1-ext-gen46618",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -127,6 +121,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "focusTaskForm",
                 "fn": "focusTaskForm",
                 "designer|params": [
                     "component",
@@ -138,13 +133,11 @@
                 "name": "click",
                 "scope": "me",
                 "designer|targetType": "Ext.Component",
-                "designer|controlQuery": "[iconCls=tasks-new]",
-                "designer|userClassName": "focusTaskForm"
+                "designer|controlQuery": "[iconCls=tasks-new]"
             },
-            "customConfigs": []
+            "designerId": "869280bb-5d8b-4f5a-885d-6f4619b3780b"
         },
         {
-            "id": "ExtBox1-ext-gen47336",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -152,6 +145,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "handleDeleteClick",
                 "fn": "handleDeleteClick",
                 "implHandler": [
                     "        this.deleteTask(this.getTaskGrid().getSelectionModel().getSelection()[0]);",
@@ -160,13 +154,11 @@
                 "name": "click",
                 "scope": "me",
                 "designer|targetType": "Ext.button.Button",
-                "designer|controlQuery": "#delete-task-btn",
-                "designer|userClassName": "handleDeleteClick"
+                "designer|controlQuery": "#delete-task-btn"
             },
-            "customConfigs": []
+            "designerId": "3007f463-275e-4ab8-9fa2-2c216f88f105"
         },
         {
-            "id": "ExtBox1-ext-gen48151",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -174,6 +166,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "handleDeleteTaskItemClick",
                 "fn": "handleDeleteTaskItemClick",
                 "implHandler": [
                     "this.handleDeleteClick(button, e, options);"
@@ -181,13 +174,11 @@
                 "name": "click",
                 "scope": "me",
                 "designer|targetType": "Ext.button.Button",
-                "designer|controlQuery": "#delete-task-item",
-                "designer|userClassName": "handleDeleteTaskItemClick"
+                "designer|controlQuery": "#delete-task-item"
             },
-            "customConfigs": []
+            "designerId": "02e58766-0a1b-4491-9391-13c8564e439f"
         },
         {
-            "id": "ExtBox1-ext-gen48799",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -195,6 +186,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "markComplete",
                 "fn": "markComplete",
                 "implHandler": [
                     "   var contextMenu = this.getContextMenu(),",
@@ -220,13 +212,11 @@
                 "name": "click",
                 "scope": "me",
                 "designer|targetType": "Ext.button.Button",
-                "designer|controlQuery": "#mark-complete-item",
-                "designer|userClassName": "markComplete"
+                "designer|controlQuery": "#mark-complete-item"
             },
-            "customConfigs": []
+            "designerId": "ed38cfbb-9dd6-4fad-99b3-74e2c2d811c6"
         },
         {
-            "id": "ExtBox1-ext-gen49534",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -234,6 +224,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "markCompleteButton",
                 "fn": "markCompleteButton",
                 "implHandler": [
                     "this.markComplete(button, e, options);"
@@ -241,13 +232,11 @@
                 "name": "click",
                 "scope": "me",
                 "designer|targetType": "Ext.button.Button",
-                "designer|controlQuery": "#mark-complete-btn",
-                "designer|userClassName": "markCompleteButton"
+                "designer|controlQuery": "#mark-complete-btn"
             },
-            "customConfigs": []
+            "designerId": "1a6de13c-2c81-4878-aa39-861b44f12b37"
         },
         {
-            "id": "ExtBox1-ext-gen50213",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -255,6 +244,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "markActive",
                 "fn": "markActive",
                 "implHandler": [
                     "    var contextMenu = this.getContextMenu(),",
@@ -279,13 +269,11 @@
                 "name": "click",
                 "scope": "me",
                 "designer|targetType": "Ext.button.Button",
-                "designer|controlQuery": "#mark-active-item",
-                "designer|userClassName": "markActive"
+                "designer|controlQuery": "#mark-active-item"
             },
-            "customConfigs": []
+            "designerId": "006d0e3e-3b87-419c-a54e-6c774a68d807"
         },
         {
-            "id": "ExtBox1-ext-gen50790",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -293,6 +281,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "markActiveButton",
                 "fn": "markActiveButton",
                 "implHandler": [
                     "this.markActive(button, e, options);"
@@ -300,13 +289,11 @@
                 "name": "click",
                 "scope": "me",
                 "designer|targetType": "Ext.button.Button",
-                "designer|controlQuery": "#mark-active-btn",
-                "designer|userClassName": "markActiveButton"
+                "designer|controlQuery": "#mark-active-btn"
             },
-            "customConfigs": []
+            "designerId": "6bddb6c3-7003-46c8-9662-03e24381b97e"
         },
         {
-            "id": "ExtBox1-ext-gen51365",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -314,6 +301,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "filterAll",
                 "fn": "filterAll",
                 "implHandler": [
                     "var tasksStore = this.getTasksStore(),",
@@ -337,13 +325,11 @@
                 "name": "click",
                 "scope": "me",
                 "designer|targetType": "Ext.button.Button",
-                "designer|controlQuery": "#show-all-btn",
-                "designer|userClassName": "filterAll"
+                "designer|controlQuery": "#show-all-btn"
             },
-            "customConfigs": []
+            "designerId": "cee4863e-b089-4323-9970-3648a041580f"
         },
         {
-            "id": "ExtBox1-ext-gen52023",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -351,6 +337,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "filterActive",
                 "fn": "filterActive",
                 "implHandler": [
                     "var tasksStore = this.getTasksStore(),",
@@ -375,13 +362,11 @@
                 "name": "click",
                 "scope": "me",
                 "designer|targetType": "Ext.button.Button",
-                "designer|controlQuery": "#show-active-btn",
-                "designer|userClassName": "filterActive"
+                "designer|controlQuery": "#show-active-btn"
             },
-            "customConfigs": []
+            "designerId": "36f38cfe-aaf6-420c-a575-36a373df4c43"
         },
         {
-            "id": "ExtBox1-ext-gen52574",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -389,6 +374,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "filterComplete",
                 "fn": "filterComplete",
                 "implHandler": [
                     "   var tasksStore = this.getTasksStore(),",
@@ -413,13 +399,11 @@
                 "name": "click",
                 "scope": "me",
                 "designer|targetType": "Ext.button.Button",
-                "designer|controlQuery": "#show-complete-btn",
-                "designer|userClassName": "filterComplete"
+                "designer|controlQuery": "#show-complete-btn"
             },
-            "customConfigs": []
+            "designerId": "c9fb61f5-9a1a-49d6-b910-1ccab32274c7"
         },
         {
-            "id": "ExtBox1-ext-gen53216",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -427,6 +411,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "handleEditItemClick",
                 "fn": "handleEditItemClick",
                 "implHandler": [
                     "this.showEditWindow(this.getContextMenu().getTask());"
@@ -434,13 +419,11 @@
                 "name": "click",
                 "scope": "me",
                 "designer|targetType": "Ext.button.Button",
-                "designer|controlQuery": "#edit-task-item",
-                "designer|userClassName": "handleEditItemClick"
+                "designer|controlQuery": "#edit-task-item"
             },
-            "customConfigs": []
+            "designerId": "5cf261d7-9311-4110-b711-02638ae08b65"
         },
         {
-            "id": "ExtBox1-ext-gen54451",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -448,6 +431,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "updateTask",
                 "fn": "updateTask",
                 "designer|params": [
                     "task"
@@ -479,13 +463,11 @@
                 "name": "recordedit",
                 "scope": "me",
                 "designer|targetType": null,
-                "designer|controlQuery": "taskGrid",
-                "designer|userClassName": "updateTask"
+                "designer|controlQuery": "taskGrid"
             },
-            "customConfigs": []
+            "designerId": "2874ce3f-477c-418e-b459-3b3ff4717c12"
         },
         {
-            "id": "ExtBox1-ext-gen55061",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -493,6 +475,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "handleDeleteIconClick",
                 "fn": "handleDeleteIconClick",
                 "designer|params": [
                     "view",
@@ -507,13 +490,11 @@
                 "name": "deleteclick",
                 "scope": "me",
                 "designer|targetType": "tasks.Grid",
-                "designer|controlQuery": "taskGrid",
-                "designer|userClassName": "handleDeleteIconClick"
+                "designer|controlQuery": "taskGrid"
             },
-            "customConfigs": []
+            "designerId": "18c779a6-013e-4ac7-a362-fda47658bf05"
         },
         {
-            "id": "ExtBox1-ext-gen55214",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -521,6 +502,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "handleEditIconClick",
                 "fn": "handleEditIconClick",
                 "designer|params": [
                     "view",
@@ -534,13 +516,11 @@
                 ],
                 "name": "editclick",
                 "scope": "me",
-                "designer|controlQuery": "taskGrid",
-                "designer|userClassName": "handleEditIconClick"
+                "designer|controlQuery": "taskGrid"
             },
-            "customConfigs": []
+            "designerId": "e8c0a787-2810-4167-8fdb-ee446f8ce069"
         },
         {
-            "id": "ExtBox1-ext-gen55279",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -548,6 +528,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "setReminder",
                 "fn": "setReminder",
                 "designer|params": [
                     "task",
@@ -592,13 +573,11 @@
                 ],
                 "name": "reminderselect",
                 "scope": "me",
-                "designer|controlQuery": "taskGrid",
-                "designer|userClassName": "setReminder"
+                "designer|controlQuery": "taskGrid"
             },
-            "customConfigs": []
+            "designerId": "1a762ff5-8266-4718-b9ed-a198b473918e"
         },
         {
-            "id": "ExtBox1-ext-gen55344",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -606,6 +585,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "showActions",
                 "fn": "showActions",
                 "designer|params": [
                     "view",
@@ -622,13 +602,11 @@
                 ],
                 "name": "itemmouseenter",
                 "scope": "me",
-                "designer|controlQuery": "taskGrid",
-                "designer|userClassName": "showActions"
+                "designer|controlQuery": "taskGrid"
             },
-            "customConfigs": []
+            "designerId": "6f59ca6b-3729-420a-b1ea-6eee6fc59b04"
         },
         {
-            "id": "ExtBox1-ext-gen55409",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -636,6 +614,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "hideActions",
                 "fn": "hideActions",
                 "designer|params": [
                     "view",
@@ -652,13 +631,11 @@
                 ],
                 "name": "itemmouseleave",
                 "scope": "me",
-                "designer|controlQuery": "taskGrid",
-                "designer|userClassName": "hideActions"
+                "designer|controlQuery": "taskGrid"
             },
-            "customConfigs": []
+            "designerId": "13217641-35b8-4ad1-9f2d-fe46e9296272"
         },
         {
-            "id": "ExtBox1-ext-gen55476",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -666,6 +643,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "toggleButtons",
                 "fn": "toggleButtons",
                 "designer|params": [
                     "selModel",
@@ -688,13 +666,11 @@
                 ],
                 "name": "selectionchange",
                 "scope": "me",
-                "designer|controlQuery": "taskGrid",
-                "designer|userClassName": "toggleButtons"
+                "designer|controlQuery": "taskGrid"
             },
-            "customConfigs": []
+            "designerId": "5049b96d-d850-4cd3-8725-1985c9c334bb"
         },
         {
-            "id": "ExtBox1-ext-gen55547",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -702,6 +678,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "syncTaskFormFieldWidth",
                 "fn": "syncTaskFormFieldWidth",
                 "designer|params": [
                     "headerContainer",
@@ -716,13 +693,11 @@
                 ],
                 "name": "columnresize",
                 "scope": "me",
-                "designer|controlQuery": "taskGrid",
-                "designer|userClassName": "syncTaskFormFieldWidth"
+                "designer|controlQuery": "taskGrid"
             },
-            "customConfigs": []
+            "designerId": "657c7f3e-8bd2-40a2-acb4-1d5c6b514075"
         },
         {
-            "id": "ExtBox1-ext-gen59381",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -730,6 +705,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "showContextMenu",
                 "fn": "showContextMenu",
                 "designer|params": [
                     "view",
@@ -757,13 +733,11 @@
                 "name": "itemcontextmenu",
                 "scope": "me",
                 "designer|targetType": "Ext.Component",
-                "designer|controlQuery": "taskGrid",
-                "designer|userClassName": "showContextMenu"
+                "designer|controlQuery": "taskGrid"
             },
-            "customConfigs": []
+            "designerId": "f019eb10-373f-4727-92b4-0ea2c6aeae6a"
         },
         {
-            "id": "ExtBox1-ext-gen61553",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -771,6 +745,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "initShowAll",
                 "fn": "initShowAll",
                 "designer|params": [
                     "toolbar"
@@ -781,13 +756,11 @@
                 "name": "afterrender",
                 "scope": "me",
                 "designer|targetType": null,
-                "designer|controlQuery": "tasksToolbar",
-                "designer|userClassName": "initShowAll"
+                "designer|controlQuery": "tasksToolbar"
             },
-            "customConfigs": []
+            "designerId": "2e2524f2-4fbb-4e10-8ca1-703d2d40ede2"
         },
         {
-            "id": "ExtBox1-ext-gen61833",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -795,6 +768,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "toggleReminderFields",
                 "fn": "toggleReminderFields",
                 "implHandler": [
                     " var checkbox = field,",
@@ -835,13 +809,11 @@
                 "name": "change",
                 "scope": "me",
                 "designer|targetType": "Ext.form.field.Checkbox",
-                "designer|controlQuery": "taskEditWindow [name=has_reminder]",
-                "designer|userClassName": "toggleReminderFields"
+                "designer|controlQuery": "taskEditWindow [name=has_reminder]"
             },
-            "customConfigs": []
+            "designerId": "368948b4-1c0c-476b-b60c-9511f9621957"
         },
         {
-            "id": "ExtBox1-ext-gen62152",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -849,6 +821,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "hideEditWindow",
                 "fn": "hideEditWindow",
                 "implHandler": [
                     "  this.getTaskEditWindow().close();"
@@ -856,13 +829,11 @@
                 "name": "click",
                 "scope": "me",
                 "designer|targetType": "Ext.button.Button",
-                "designer|controlQuery": "#cancel-task-edit-btn",
-                "designer|userClassName": "hideEditWindow"
+                "designer|controlQuery": "#cancel-task-edit-btn"
             },
-            "customConfigs": []
+            "designerId": "b85a52b4-0041-4600-af50-6d650f9c5d4d"
         },
         {
-            "id": "ExtBox1-ext-gen62473",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -870,6 +841,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "handleSaveTaskClick",
                 "fn": "handleSaveTaskClick",
                 "implHandler": [
                     " this.saveEditWindow();"
@@ -877,13 +849,11 @@
                 "name": "click",
                 "scope": "me",
                 "designer|targetType": "Ext.button.Button",
-                "designer|controlQuery": "#save-task-edit-btn",
-                "designer|userClassName": "handleSaveTaskClick"
+                "designer|controlQuery": "#save-task-edit-btn"
             },
-            "customConfigs": []
+            "designerId": "11c75929-11ec-4659-9455-1f310667f0b5"
         },
         {
-            "id": "ExtBox1-ext-gen63911",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -891,6 +861,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "syncReminderField",
                 "fn": "syncReminderField",
                 "designer|params": [
                     "field",
@@ -912,13 +883,11 @@
                 ],
                 "name": "change",
                 "scope": "me",
-                "designer|controlQuery": "taskEditWindow [name=reminder_date]",
-                "designer|userClassName": "syncReminderField"
+                "designer|controlQuery": "taskEditWindow [name=reminder_date]"
             },
-            "customConfigs": []
+            "designerId": "e4658aad-d2f9-419f-bda3-bcf6d10763c4"
         },
         {
-            "id": "ExtBox1-ext-gen63979",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -926,6 +895,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "syncReminderFieldAgain",
                 "fn": "syncReminderFieldAgain",
                 "designer|params": [
                     "field",
@@ -937,13 +907,11 @@
                 ],
                 "name": "change",
                 "scope": "me",
-                "designer|controlQuery": "taskEditWindow [name=reminder_time]",
-                "designer|userClassName": "syncReminderFieldAgain"
+                "designer|controlQuery": "taskEditWindow [name=reminder_time]"
             },
-            "customConfigs": []
+            "designerId": "93613f66-a8e1-4357-987f-f8b3c804a223"
         },
         {
-            "id": "ExtBox1-ext-gen64054",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -951,6 +919,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "toggleCompleteField",
                 "fn": "toggleCompleteField",
                 "implHandler": [
                     "   var taskEditWindow = this.getTaskEditWindow(),",
@@ -966,13 +935,11 @@
                 "name": "click",
                 "scope": "me",
                 "designer|targetType": "Ext.button.Button",
-                "designer|controlQuery": "#toggle-complete-btn",
-                "designer|userClassName": "toggleCompleteField"
+                "designer|controlQuery": "#toggle-complete-btn"
             },
-            "customConfigs": []
+            "designerId": "c47cbfb1-099a-4c7c-a2df-b91f387c0512"
         },
         {
-            "id": "ExtBox1-ext-gen64124",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -980,6 +947,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "deleteTaskAndCloseEditWindow",
                 "fn": "deleteTaskAndCloseEditWindow",
                 "implHandler": [
                     "    var me = this,",
@@ -993,13 +961,11 @@
                 "name": "click",
                 "scope": "me",
                 "designer|targetType": "Ext.button.Button",
-                "designer|controlQuery": "#delete-task-window-btn",
-                "designer|userClassName": "deleteTaskAndCloseEditWindow"
+                "designer|controlQuery": "#delete-task-window-btn"
             },
-            "customConfigs": []
+            "designerId": "8ef00e72-777b-41b8-ab80-e115f9f6aff2"
         },
         {
-            "id": "ExtBox1-ext-gen64193",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -1007,6 +973,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "hideDefaultTimeWindow",
                 "fn": "hideDefaultTimeWindow",
                 "implHandler": [
                     "   this.getDefaultTimeWindow().close();"
@@ -1014,13 +981,11 @@
                 "name": "click",
                 "scope": "me",
                 "designer|targetType": "Ext.button.Button",
-                "designer|controlQuery": "#cancel-default-time-edit-btn",
-                "designer|userClassName": "hideDefaultTimeWindow"
+                "designer|controlQuery": "#cancel-default-time-edit-btn"
             },
-            "customConfigs": []
+            "designerId": "8bc24f8a-6a94-44c7-9a59-058a59877d95"
         },
         {
-            "id": "ExtBox1-ext-gen64263",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -1028,6 +993,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "saveDefaultTime",
                 "fn": "saveDefaultTime",
                 "implHandler": [
                     "  var me = this,",
@@ -1078,13 +1044,11 @@
                 "name": "click",
                 "scope": "me",
                 "designer|targetType": "Ext.button.Button",
-                "designer|controlQuery": "#save-default-time-btn",
-                "designer|userClassName": "saveDefaultTime"
+                "designer|controlQuery": "#save-default-time-btn"
             },
-            "customConfigs": []
+            "designerId": "63ba697d-467e-4a76-a26e-e4f34e3aa02e"
         },
         {
-            "id": "ExtBox1-ext-gen64333",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -1092,6 +1056,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "snooze",
                 "fn": "snooze",
                 "implHandler": [
                     "var reminderWindow = button.findParentByType('window'),",
@@ -1118,13 +1083,11 @@
                 "name": "click",
                 "scope": "me",
                 "designer|targetType": "Ext.button.Button",
-                "designer|controlQuery": "[cls=snooze-btn]",
-                "designer|userClassName": "snooze"
+                "designer|controlQuery": "[cls=snooze-btn]"
             },
-            "customConfigs": []
+            "designerId": "9771ab4b-2dce-4a2b-8245-381bbf6e5b70"
         },
         {
-            "id": "ExtBox1-ext-gen67099",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -1132,6 +1095,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "dismissReminder",
                 "fn": "dismissReminder",
                 "implHandler": [
                     "  button.findParentByType('window').close();"
@@ -1139,13 +1103,11 @@
                 "name": "click",
                 "scope": "me",
                 "designer|targetType": "Ext.button.Button",
-                "designer|controlQuery": "[cls=dismiss-reminder-btn]",
-                "designer|userClassName": "dismissReminder"
+                "designer|controlQuery": "[cls=dismiss-reminder-btn]"
             },
-            "customConfigs": []
+            "designerId": "646102e3-a649-47f9-909c-5feb7ed4376f"
         },
         {
-            "id": "ExtBox1-ext-gen69344",
             "type": "basicfunction",
             "reference": {
                 "name": "items",
@@ -1153,6 +1115,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "deleteTask",
                 "fn": "deleteTask",
                 "designer|params": [
                     "task",
@@ -1190,13 +1153,11 @@
                     "                }",
                     "            }",
                     "        });"
-                ],
-                "designer|userClassName": "deleteTask"
+                ]
             },
-            "customConfigs": []
+            "designerId": "42f179ee-2cc6-4c22-bd52-e5ac78ed193c"
         },
         {
-            "id": "ExtBox1-ext-gen69736",
             "type": "basicfunction",
             "reference": {
                 "name": "items",
@@ -1204,6 +1165,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "newTask",
                 "fn": "newTask",
                 "implHandler": [
                     "      var me = this,",
@@ -1254,13 +1216,11 @@
                     "                formEl.unmask();",
                     "            }",
                     "        });"
-                ],
-                "designer|userClassName": "newTask"
+                ]
             },
-            "customConfigs": []
+            "designerId": "3a8ad222-b386-42ac-8ac6-3b4d5f83b174"
         },
         {
-            "id": "ExtBox1-ext-gen70070",
             "type": "basicfunction",
             "reference": {
                 "name": "items",
@@ -1268,19 +1228,18 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "refreshFiltersAndCount",
                 "fn": "refreshFiltersAndCount",
                 "implHandler": [
                     "  // refresh the task filters",
                     "        this.getTaskGrid().refreshFilters();",
                     "        // refresh the lists list view so that the task counts will be correct",
                     "        this.getListTree().refreshView();"
-                ],
-                "designer|userClassName": "refreshFiltersAndCount"
+                ]
             },
-            "customConfigs": []
+            "designerId": "045cb1d9-50d0-4ed8-b8de-9858aee44233"
         },
         {
-            "id": "ExtBox1-ext-gen71026",
             "type": "basicfunction",
             "reference": {
                 "name": "items",
@@ -1288,6 +1247,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "showEditWindow",
                 "fn": "showEditWindow",
                 "designer|params": [
                     "task"
@@ -1328,13 +1288,11 @@
                     "            reminderCheckbox.enable();",
                     "        }",
                     ""
-                ],
-                "designer|userClassName": "showEditWindow"
+                ]
             },
-            "customConfigs": []
+            "designerId": "2666dbf4-989d-43bf-95d2-98dacf03c466"
         },
         {
-            "id": "ExtBox1-ext-gen71595",
             "type": "basicfunction",
             "reference": {
                 "name": "items",
@@ -1342,6 +1300,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "saveEditWindow",
                 "fn": "saveEditWindow",
                 "implHandler": [
                     "  var taskEditWindow = this.getTaskEditWindow(),",
@@ -1376,13 +1335,11 @@
                     "        } else {",
                     "            Ext.Msg.alert('Invalid Data', 'Please correct form errors');",
                     "        }"
-                ],
-                "designer|userClassName": "saveEditWindow"
+                ]
             },
-            "customConfigs": []
+            "designerId": "c2f4a209-9ab4-435c-8620-fda2ff5bd74c"
         },
         {
-            "id": "ExtBox1-ext-gen72631",
             "type": "basicfunction",
             "reference": {
                 "name": "items",
@@ -1390,6 +1347,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "getDefaultReminderTime",
                 "fn": "getDefaultReminderTime",
                 "designer|params": [
                     "callback"
@@ -1428,13 +1386,11 @@
                     "        });",
                     "    }",
                     "}"
-                ],
-                "designer|userClassName": "getDefaultReminderTime"
+                ]
             },
-            "customConfigs": []
+            "designerId": "11a6a3a1-9f7f-43e6-8489-dd096a4edd38"
         },
         {
-            "id": "ExtBox1-ext-gen73072",
             "type": "basicfunction",
             "reference": {
                 "name": "items",
@@ -1442,6 +1398,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "initReminderInterval",
                 "fn": "initReminderInterval",
                 "implHandler": [
                     "  var me = this,",
@@ -1456,13 +1413,11 @@
                     "                }",
                     "            });",
                     "        }, 10000);"
-                ],
-                "designer|userClassName": "initReminderInterval"
+                ]
             },
-            "customConfigs": []
+            "designerId": "d58ce96f-548a-49c7-bb9b-b4336b85b8db"
         },
         {
-            "id": "ExtBox1-ext-gen73406",
             "type": "basicfunction",
             "reference": {
                 "name": "items",
@@ -1470,6 +1425,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "showReminderWindow",
                 "fn": "showReminderWindow",
                 "designer|params": [
                     "task"
@@ -1500,10 +1456,9 @@
                     "    due: task.get('due')",
                     "});",
                     "reminderWindow.show();"
-                ],
-                "designer|userClassName": "showReminderWindow"
+                ]
             },
-            "customConfigs": []
+            "designerId": "6f2d3117-b56b-49b1-8185-83f83889e3ac"
         }
     ]
 }

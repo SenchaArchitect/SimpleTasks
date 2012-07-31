@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen30644",
     "type": "window",
     "reference": {
         "name": "items",
@@ -7,21 +6,19 @@
     },
     "codeClass": null,
     "userConfig": {
+        "designer|userClassName": "tasks.EditWindow",
+        "designer|userAlias": "taskEditWindow",
         "height": 350,
         "width": 500,
         "layout": "fit",
         "closeAction": "hide",
         "title": null,
-        "modal": true,
-        "designer|userClassName": "tasks.EditWindow",
-        "designer|userAlias": "taskEditWindow"
+        "modal": true
     },
-    "customConfigs": [],
+    "id": "ExtBox1-ext-gen30644",
     "designerId": "eaacfb24-106c-4e6d-9dc4-476d5b955fa6",
-    "$viewOrder": 4,
     "cn": [
         {
-            "id": "ExtBox1-ext-gen31319",
             "type": "toolbar",
             "reference": {
                 "name": "dockedItems",
@@ -29,13 +26,12 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyToolbar2",
-                "dock": "top"
+                "dock": "top",
+                "designer|userClassName": "MyToolbar2"
             },
-            "customConfigs": [],
+            "designerId": "9ae1f642-0543-4468-80dc-14006d234d6a",
             "cn": [
                 {
-                    "id": "ExtBox1-ext-gen31602",
                     "type": "button",
                     "reference": {
                         "name": "items",
@@ -43,16 +39,15 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyButton6",
                         "id": "toggle-complete-btn",
                         "iconCls": "tasks-mark-complete",
-                        "text": null,
-                        "designer|userClassName": "MyButton6",
-                        "layout|flex": null
+                        "text": null
                     },
-                    "customConfigs": []
+                    "designerId": "edd79434-5784-40a7-88df-7ef25f620aac"
                 },
                 {
-                    "id": "ExtBox1-ext-gen31856",
                     "type": "button",
                     "reference": {
                         "name": "items",
@@ -60,18 +55,17 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyButton7",
                         "id": "delete-task-window-btn",
                         "iconCls": "tasks-delete-task",
-                        "text": "Delete Task",
-                        "designer|userClassName": "MyButton7",
-                        "layout|flex": null
+                        "text": "Delete Task"
                     },
-                    "customConfigs": []
+                    "designerId": "d613b5bd-2f79-4321-9246-af6ca6997411"
                 }
             ]
         },
         {
-            "id": "ExtBox1-ext-gen32501",
             "type": "form",
             "reference": {
                 "name": "items",
@@ -79,16 +73,15 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "MyForm1",
                 "border": false,
                 "frame": true,
                 "bodyPadding": 10,
-                "title": null,
-                "designer|userClassName": "MyForm1"
+                "title": null
             },
-            "customConfigs": [],
+            "designerId": "3ad08ec5-f171-4d25-b69a-701024d15e39",
             "cn": [
                 {
-                    "id": "ExtBox1-ext-gen32971",
                     "type": "textfield",
                     "reference": {
                         "name": "items",
@@ -96,16 +89,15 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "layout|anchor": "100%",
+                        "designer|userClassName": "MyTextField",
                         "name": "title",
                         "fieldLabel": "Task Subject",
-                        "labelWidth": 80,
-                        "designer|userClassName": "MyTextField",
-                        "layout|anchor": "100%"
+                        "labelWidth": 80
                     },
-                    "customConfigs": []
+                    "designerId": "138d9fcf-1f67-4d02-9a5c-4bc337af2a0e"
                 },
                 {
-                    "id": "ExtBox1-ext-gen11079",
                     "type": "linkedinstance",
                     "reference": {
                         "name": "items",
@@ -116,12 +108,10 @@
                         "designer|displayName": "tasksfield",
                         "layout|anchor": "100%"
                     },
-                    "customConfigs": [],
-                    "iconCls": "icon-linkedinstance",
+                    "designerId": "505bec89-1424-42d8-bd96-a28b80a5df41",
                     "masterInstanceId": "ExtBox1-ext-gen33212"
                 },
                 {
-                    "id": "ExtBox1-ext-gen33833",
                     "type": "component",
                     "reference": {
                         "name": "items",
@@ -129,15 +119,14 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "designer|userClassName": "MyComponent",
                         "designer|displayName": "box",
                         "autoRender": null,
-                        "cls": "divider",
-                        "designer|userClassName": "MyComponent"
+                        "cls": "divider"
                     },
-                    "customConfigs": []
+                    "designerId": "433b22ea-c725-4c44-9b53-86eaa5ec975b"
                 },
                 {
-                    "id": "ExtBox1-ext-gen34122",
                     "type": "fieldset",
                     "reference": {
                         "name": "items",
@@ -145,19 +134,18 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "layout|anchor": "100%",
+                        "container|align": "stretch",
+                        "designer|userClassName": "MyFieldSet1",
                         "designer|displayName": "checkboxes",
                         "border": false,
                         "margin": "0 0 5",
                         "layout": "hbox",
-                        "title": null,
-                        "designer|userClassName": "MyFieldSet1",
-                        "layout|anchor": "100%",
-                        "container|align": "stretch"
+                        "title": null
                     },
-                    "customConfigs": [],
+                    "designerId": "787049d3-476c-46ba-95e8-eacd8c9ed1be",
                     "cn": [
                         {
-                            "id": "ExtBox1-ext-gen37650",
                             "type": "checkboxfield",
                             "reference": {
                                 "name": "items",
@@ -165,17 +153,16 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "layout|flex": null,
+                                "designer|userClassName": "MyCheckbox",
                                 "margin": "0 5 0 0",
                                 "name": "has_reminder",
                                 "fieldLabel": null,
-                                "boxLabel": "Reminder",
-                                "designer|userClassName": "MyCheckbox",
-                                "layout|flex": null
+                                "boxLabel": "Reminder"
                             },
-                            "customConfigs": []
+                            "designerId": "ebea6637-a472-43e0-b3fc-143d2fd1fd4a"
                         },
                         {
-                            "id": "ExtBox1-ext-gen38076",
                             "type": "datefield",
                             "reference": {
                                 "name": "items",
@@ -183,18 +170,17 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "layout|flex": null,
+                                "designer|userClassName": "MyDateField1",
                                 "disabled": true,
                                 "margin": "0 5 0 0",
                                 "name": "reminder_date",
                                 "fieldLabel": null,
-                                "editable": false,
-                                "designer|userClassName": "MyDateField1",
-                                "layout|flex": null
+                                "editable": false
                             },
-                            "customConfigs": []
+                            "designerId": "0900ef44-5e4f-49d0-8c30-09592bab976c"
                         },
                         {
-                            "id": "ExtBox1-ext-gen38329",
                             "type": "timefield",
                             "reference": {
                                 "name": "items",
@@ -202,19 +188,18 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "layout|flex": null,
+                                "designer|userClassName": "MyTimeField1",
                                 "disabled": true,
                                 "name": "reminder_time",
                                 "fieldLabel": null,
-                                "editable": false,
-                                "designer|userClassName": "MyTimeField1",
-                                "layout|flex": null
+                                "editable": false
                             },
-                            "customConfigs": []
+                            "designerId": "75bba2fd-e5d4-4c12-beb0-32c4908664d1"
                         }
                     ]
                 },
                 {
-                    "id": "ExtBox1-ext-gen34348",
                     "type": "htmleditor",
                     "reference": {
                         "name": "items",
@@ -222,16 +207,15 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "layout|anchor": "100% -90",
+                        "designer|userClassName": "MyHTMLEditor",
                         "height": 150,
                         "name": "note",
-                        "fieldLabel": null,
-                        "designer|userClassName": "MyHTMLEditor",
-                        "layout|anchor": "100% -90"
+                        "fieldLabel": null
                     },
-                    "customConfigs": []
+                    "designerId": "8822b9e9-4128-4d5f-9a35-426e5f866620"
                 },
                 {
-                    "id": "ExtBox1-ext-gen34627",
                     "type": "hiddenfield",
                     "reference": {
                         "name": "items",
@@ -239,15 +223,14 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "name": "reminder",
-                        "fieldLabel": "Label",
+                        "layout|anchor": "100%",
                         "designer|userClassName": "MyHiddenField",
-                        "layout|anchor": "100%"
+                        "name": "reminder",
+                        "fieldLabel": "Label"
                     },
-                    "customConfigs": []
+                    "designerId": "169e0b8d-7de0-43c5-8a33-60dcac7e6af2"
                 },
                 {
-                    "id": "ExtBox1-ext-gen34859",
                     "type": "hiddenfield",
                     "reference": {
                         "name": "items",
@@ -255,15 +238,14 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "name": "done",
-                        "fieldLabel": "Label",
+                        "layout|anchor": "100%",
                         "designer|userClassName": "MyHiddenField1",
-                        "layout|anchor": "100%"
+                        "name": "done",
+                        "fieldLabel": "Label"
                     },
-                    "customConfigs": []
+                    "designerId": "d950c12d-9799-4605-9973-555cb5f2bd02"
                 },
                 {
-                    "id": "ExtBox1-ext-gen35105",
                     "type": "toolbar",
                     "reference": {
                         "name": "dockedItems",
@@ -271,14 +253,13 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|displayName": "buttons(workaround)",
+                        "dock": "bottom",
                         "designer|userClassName": "MyToolbar3",
-                        "dock": "bottom"
+                        "designer|displayName": "buttons(workaround)"
                     },
-                    "customConfigs": [],
+                    "designerId": "a1e3a36d-68b3-4f74-875c-f3c46437f607",
                     "cn": [
                         {
-                            "id": "ExtBox1-ext-gen43662",
                             "type": "tbspacer",
                             "reference": {
                                 "name": "items",
@@ -286,13 +267,12 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "MySpacer1",
-                                "layout|flex": 1
+                                "layout|flex": 1,
+                                "designer|userClassName": "MySpacer1"
                             },
-                            "customConfigs": []
+                            "designerId": "c01093f1-a93c-4d44-9e4f-9cb280ff5a9a"
                         },
                         {
-                            "id": "ExtBox1-ext-gen40278",
                             "type": "button",
                             "reference": {
                                 "name": "items",
@@ -300,15 +280,14 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "id": "save-task-edit-btn",
-                                "text": "Save",
+                                "layout|flex": null,
                                 "designer|userClassName": "MyButton8",
-                                "layout|flex": null
+                                "id": "save-task-edit-btn",
+                                "text": "Save"
                             },
-                            "customConfigs": []
+                            "designerId": "b825a9dc-1d6c-4648-9ae7-094b122a0f90"
                         },
                         {
-                            "id": "ExtBox1-ext-gen40817",
                             "type": "button",
                             "reference": {
                                 "name": "items",
@@ -316,29 +295,12 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "id": "cancel-task-edit-btn",
-                                "text": "Cancel",
+                                "layout|flex": null,
                                 "designer|userClassName": "MyButton9",
-                                "layout|flex": null
+                                "id": "cancel-task-edit-btn",
+                                "text": "Cancel"
                             },
-                            "customConfigs": []
-                        },
-                        {
-                            "id": "ExtBox1-ext-gen44852",
-                            "type": "object",
-                            "reference": {
-                                "name": "ui",
-                                "type": "object"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "implHandler": [
-                                    "'footer'"
-                                ],
-                                "designer|displayName": "ui",
-                                "designer|userClassName": "ui"
-                            },
-                            "customConfigs": []
+                            "designerId": "9e47d14a-5fd6-457e-b92f-1bb8ba02049b"
                         }
                     ]
                 }

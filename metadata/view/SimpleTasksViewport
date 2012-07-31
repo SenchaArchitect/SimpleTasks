@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen93056",
     "type": "viewport",
     "reference": {
         "name": "items",
@@ -7,16 +6,14 @@
     },
     "codeClass": null,
     "userConfig": {
+        "designer|userClassName": "SimpleTasksViewport",
         "designer|initialView": true,
-        "layout": "border",
-        "designer|userClassName": "SimpleTasksViewport"
+        "layout": "border"
     },
-    "customConfigs": [],
+    "id": "ExtBox1-ext-gen93056",
     "designerId": "148fad30-5bda-401d-9a6b-64d5a6a7cb79",
-    "$viewOrder": 10,
     "cn": [
         {
-            "id": "ExtBox1-ext-gen93302",
             "type": "linkedinstance",
             "reference": {
                 "name": "items",
@@ -27,12 +24,10 @@
                 "designer|displayName": "tasksToolbar",
                 "layout|region": "north"
             },
-            "customConfigs": [],
-            "iconCls": "icon-linkedinstance",
+            "designerId": "d771c7c5-e6f1-4885-9c67-8cfd603b8ae5",
             "masterInstanceId": "ExtBox1-ext-gen75382"
         },
         {
-            "id": "ExtBox1-ext-gen94315",
             "type": "linkedinstance",
             "reference": {
                 "name": "items",
@@ -46,12 +41,10 @@
                 "layout|region": "west",
                 "layout|split": true
             },
-            "customConfigs": [],
-            "iconCls": "icon-linkedinstance",
+            "designerId": "bad2a2f6-1519-49ab-abf8-57b47118180d",
             "masterInstanceId": "ExtBox1-ext-gen6130"
         },
         {
-            "id": "ExtBox1-ext-gen95890",
             "type": "linkedinstance",
             "reference": {
                 "name": "items",
@@ -63,8 +56,7 @@
                 "title": "All Lists",
                 "layout|region": "center"
             },
-            "customConfigs": [],
-            "iconCls": "icon-linkedinstance",
+            "designerId": "2cd84a83-28da-43a7-8de6-78d4d8e95501",
             "masterInstanceId": "ExtBox1-ext-gen48774"
         }
     ]

@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen45172",
     "type": "form",
     "reference": {
         "name": "items",
@@ -7,17 +6,16 @@
     },
     "codeClass": null,
     "userConfig": {
+        "container|align": "stretch",
+        "designer|userClassName": "tasks.Form",
+        "designer|userAlias": "taskForm",
         "cls": "tasks-new-form",
         "height": null,
         "width": null,
         "layout": "hbox",
         "bodyPadding": null,
-        "title": null,
-        "designer|userClassName": "tasks.Form",
-        "designer|userAlias": "taskForm",
-        "container|align": "stretch"
+        "title": null
     },
-    "customConfigs": [],
-    "designerId": "96f66c2f-4993-423a-b807-960265efe582",
-    "$viewOrder": 5
+    "id": "ExtBox1-ext-gen45172",
+    "designerId": "96f66c2f-4993-423a-b807-960265efe582"
 }

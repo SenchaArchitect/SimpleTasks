@@ -41,7 +41,6 @@ Ext.define('SimpleTasks.view.tasks.ReminderWindow', {
                     border: false,
                     margin: '10 0 10 20',
                     name: 'snooze_time',
-                    value: '5',
                     fieldLabel: 'Remind me again in',
                     labelSeparator: '',
                     labelWidth: 115,
@@ -54,13 +53,12 @@ Ext.define('SimpleTasks.view.tasks.ReminderWindow', {
                     dockedItems: [
                         {
                             xtype: 'toolbar',
-                            ui: 'footer',
                             dock: 'bottom',
                             items: [
                                 {
                                     xtype: 'tbspacer',
-                                    border: false,
-                                    flex: 1
+                                    flex: 1,
+                                    border: false
                                 },
                                 {
                                     xtype: 'button',
