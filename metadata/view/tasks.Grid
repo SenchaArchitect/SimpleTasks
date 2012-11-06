@@ -27,9 +27,13 @@
             },
             "codeClass": null,
             "userConfig": {
+                "bodyStyle": [
+                    "{",
+                    "                'background-color': '#E4E5E7'",
+                    "            }"
+                ],
                 "dock": "top",
-                "weight": 101,
-                "bodyStyle": "{\n                'background-color': '#E4E5E7'\n            }"
+                "weight": 101
             },
             "designerId": "8bfeaa09-ba44-4b21-9606-85e16cc0aa65",
             "masterInstanceId": "ExtBox1-ext-gen45172"

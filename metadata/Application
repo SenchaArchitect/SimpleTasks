@@ -48,7 +48,12 @@
             "userConfig": {
                 "designer|userClassName": "Loader",
                 "enabled": true,
-                "paths": "{\n        'SimpleTasks.ux': 'app/ux',\n        'Ext.ux': 'ux'\n}"
+                "paths": [
+                    "{",
+                    "    \"SimpleTasks.ux\": \"app/ux\",",
+                    "    \"Ext.ux\": \"ux\"",
+                    "}"
+                ]
             },
             "designerId": "b0be3ae2-ed3c-4ace-9d72-1c0b62094594"
         },

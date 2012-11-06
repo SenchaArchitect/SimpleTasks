@@ -1,9 +1,10 @@
 {
     "name": "SimpleTasks",
     "settings": {
-        "urlPrefix": "",
+        "urlPrefix": "http://localhost/sandbox/SimpleTasks",
         "spacesToIndent": 4,
         "exportPath": "",
+        "sdkPath": "",
         "lineEnding": "LF",
         "genTimestamps": false,
         "cacheBust": false,
@@ -14,10 +15,10 @@
         "saveOnDeploy": false,
         "appName": "MyApp"
     },
-    "xdsVersion": "2.0.0",
-    "xdsBuild": 550,
+    "xdsVersion": "2.1.0",
+    "xdsBuild": 670,
     "schemaVersion": 1,
-    "upgradeVersion": 210000000495,
+    "upgradeVersion": 210000000498,
     "framework": "ext41",
     "topInstanceFileMap": {
         "aa2cebcc-67b8-46f8-810b-3e7944997036": {
@@ -180,10 +181,10 @@
     },
     "viewOrderMap": {
         "view": [
+            "148fad30-5bda-401d-9a6b-64d5a6a7cb79",
             "3f506d76-0c98-4bef-aa44-59101df23411",
             "b7026768-4497-4e3f-8ac7-e6a1a4bcf87e",
             "6c7b6150-311c-4b87-86ac-d21066952ddd",
-            "148fad30-5bda-401d-9a6b-64d5a6a7cb79",
             "aa2cebcc-67b8-46f8-810b-3e7944997036",
             "baecf4a8-8952-4ef2-b576-c481fb6afd7f",
             "420cfca1-e935-4701-9851-4ae3f22706d8",
