@@ -182,7 +182,6 @@
                 "designer|userClassName": "MyTreeColumn",
                 "designer|displayName": "name",
                 "dataIndex": "name",
-                "editor": "{\n                        xtype: 'textfield',\n                        selectOnFocus: true\n                    }",
                 "flex": 1,
                 "text": null
             },
@@ -212,6 +211,19 @@
                         ]
                     },
                     "designerId": "3e7e8957-2167-4962-8661-f20ef5cfbbb3"
+                },
+                {
+                    "type": "textfield",
+                    "reference": {
+                        "name": "editor",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyTextField1",
+                        "selectOnFocus": true
+                    },
+                    "designerId": "1e5851c9-12fe-45f0-8838-ca7d6cb7a909"
                 }
             ]
         },
