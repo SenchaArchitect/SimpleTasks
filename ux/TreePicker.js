@@ -70,7 +70,7 @@ Ext.define('Ext.ux.TreePicker', {
 
     /**
      * Creates and returns the tree panel to be used as this field's picker.
-     * @private
+     * @public
      */
     createPicker: function() {
         var me = this,
@@ -133,7 +133,7 @@ Ext.define('Ext.ux.TreePicker', {
 
     /**
      * Aligns the picker to the input element
-     * @private
+     * @public
      */
     alignPicker: function() {
         var me = this,
