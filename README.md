@@ -4,7 +4,7 @@ SimpleTasks
 
 
 ##### Latest Archive
-[SimpleTasks.xda (build: 670)](https://github.com/downloads/SenchaArchitect/SimpleTasks/SimpleTasks.xda) - Architect archive
+[SimpleTasks.xda (build: 670)](http://cdn.sencha.com/architect/examples/simpletasks/SimpleTasks.xda) - Architect archive
 
 ##### Previous versions of Architect
 
