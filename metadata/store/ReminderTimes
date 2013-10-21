@@ -6,65 +6,127 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "ReminderTimes",
         "autoLoad": true,
+        "data": [
+            "[",
+            "                    [",
+            "                        5,",
+            "                        '5 minutes'",
+            "                    ],",
+            "                    [",
+            "                        10,",
+            "                        '10 minutes'",
+            "                    ],",
+            "                    [",
+            "                        15,",
+            "                        '15 minutes'",
+            "                    ],",
+            "                    [",
+            "                        30,",
+            "                        '30 minutes'",
+            "                    ],",
+            "                    [",
+            "                        60,",
+            "                        '1 hour'",
+            "                    ],",
+            "                    [",
+            "                        120,",
+            "                        '2 hours'",
+            "                    ],",
+            "                    [",
+            "                        240,",
+            "                        '4 hours'",
+            "                    ],",
+            "                    [",
+            "                        480,",
+            "                        '8 hours'",
+            "                    ],",
+            "                    [",
+            "                        720,",
+            "                        '12 hours'",
+            "                    ],",
+            "                    [",
+            "                        1440,",
+            "                        '1 day'",
+            "                    ],",
+            "                    [",
+            "                        2880,",
+            "                        '2 days'",
+            "                    ],",
+            "                    [",
+            "                        4320,",
+            "                        '3 days'",
+            "                    ],",
+            "                    [",
+            "                        5760,",
+            "                        '4 days'",
+            "                    ],",
+            "                    [",
+            "                        10080,",
+            "                        '1 week'",
+            "                    ],",
+            "                    [",
+            "                        20160,",
+            "                        '2 weeks'",
+            "                    ],",
+            "                    [",
+            "                        30240,",
+            "                        '3 weeeks'",
+            "                    ],",
+            "                    [",
+            "                        40320,",
+            "                        '4 weeks'",
+            "                    ]",
+            "                ]"
+        ],
+        "designer|userClassName": "ReminderTimes",
         "filterOnLoad": null,
-        "sortOnLoad": null,
-        "storeId": "ReminderTimes",
         "model": null,
-        "data": "[\n                    [\n                        5,\n                        '5 minutes'\n                    ],\n                    [\n                        10,\n                        '10 minutes'\n                    ],\n                    [\n                        15,\n                        '15 minutes'\n                    ],\n                    [\n                        30,\n                        '30 minutes'\n                    ],\n                    [\n                        60,\n                        '1 hour'\n                    ],\n                    [\n                        120,\n                        '2 hours'\n                    ],\n                    [\n                        240,\n                        '4 hours'\n                    ],\n                    [\n                        480,\n                        '8 hours'\n                    ],\n                    [\n                        720,\n                        '12 hours'\n                    ],\n                    [\n                        1440,\n                        '1 day'\n                    ],\n                    [\n                        2880,\n                        '2 days'\n                    ],\n                    [\n                        4320,\n                        '3 days'\n                    ],\n                    [\n                        5760,\n                        '4 days'\n                    ],\n                    [\n                        10080,\n                        '1 week'\n                    ],\n                    [\n                        20160,\n                        '2 weeks'\n                    ],\n                    [\n                        30240,\n                        '3 weeeks'\n                    ],\n                    [\n                        40320,\n                        '4 weeks'\n                    ]\n                ]"
+        "sortOnLoad": null,
+        "storeId": "ReminderTimes"
     },
-    "id": "ExtBox1-ext-gen73062",
     "designerId": "2936ff37-446d-4e58-a13f-1273612bcae1",
     "cn": [
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyField10",
                 "name": "num"
             },
             "designerId": "84738b57-cc38-4b6a-9463-e6b4ec9897b9"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyField11",
                 "name": "timeInWords"
             },
             "designerId": "f10a4015-3bb8-4b9e-a57e-7999d10df5d3"
         },
         {
-            "type": "memoryproxy",
+            "type": "Ext.data.proxy.Memory",
             "reference": {
                 "name": "proxy",
                 "type": "object"
             },
             "codeClass": null,
-            "userConfig": {
-                "designer|userClassName": "MyMemoryProxy"
-            },
             "designerId": "95fe8f66-3cf8-4ed8-896f-a5f814cad139",
             "cn": [
                 {
-                    "type": "arrayreader",
+                    "type": "Ext.data.reader.Array",
                     "reference": {
                         "name": "reader",
                         "type": "object"
                     },
                     "codeClass": null,
-                    "userConfig": {
-                        "designer|userClassName": "MyArrayReader"
-                    },
                     "designerId": "8cabf306-141b-401d-9a85-385835ff5eb6"
                 }
             ]

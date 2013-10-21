@@ -1,20 +1,18 @@
 {
-    "type": "fieldset",
+    "type": "Ext.form.FieldSet",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "container|align": "stretch",
-        "designer|userClassName": "tasks.Fields",
-        "designer|userAlias": "tasksfields",
-        "designer|displayName": "date",
         "border": false,
-        "margin": "0 0 5",
+        "container|align": "stretch",
+        "designer|userAlias": "tasksfields",
+        "designer|userClassName": "tasks.Fields",
         "layout": "hbox",
+        "margin": "0 0 5",
         "title": null
     },
-    "id": "ExtBox1-ext-gen33212",
     "designerId": "478a2143-be66-47c2-a102-4d3d54af9692"
 }

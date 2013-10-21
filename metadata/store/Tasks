@@ -7,10 +7,9 @@
     "codeClass": null,
     "userConfig": {
         "designer|userClassName": "Tasks",
-        "storeId": "MyArrayStore1",
+        "groupField": "due",
         "model": "Task",
-        "groupField": "due"
+        "storeId": "MyArrayStore1"
     },
-    "id": "ExtBox1-ext-gen92440",
     "designerId": "a53b0e54-48ee-4018-b38e-48d4c13676ad"
 }

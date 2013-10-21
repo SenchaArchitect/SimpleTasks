@@ -1,5 +1,5 @@
 {
-    "type": "controller",
+    "type": "Ext.app.Controller",
     "reference": {
         "name": "items",
         "type": "array"
@@ -22,7 +22,6 @@
             "tasks.ContextMenu"
         ]
     },
-    "id": "ExtBox1-ext-gen44731",
     "designerId": "b94139bd-3865-464a-a8d8-dc7150599f22",
     "cn": [
         {
@@ -33,11 +32,10 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "init",
-                "fn": "init",
                 "designer|params": [
                     "application"
                 ],
+                "fn": "init",
                 "implHandler": [
                     " /* Workaround for inablity to add xtype */",
                     "    var refs = [",
@@ -99,7 +97,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "handleSpecialKey",
+                "designer|controlQuery": "taskForm textfield",
+                "designer|targetType": "Ext.form.field.Text",
                 "fn": "handleSpecialKey",
                 "implHandler": [
                     " if(e.getKey() === e.ENTER) {",
@@ -107,9 +106,7 @@
                     "        }"
                 ],
                 "name": "specialkey",
-                "scope": "me",
-                "designer|targetType": "Ext.form.field.Text",
-                "designer|controlQuery": "taskForm textfield"
+                "scope": "me"
             },
             "designerId": "fb1ae15f-9f7a-4fb3-a83a-5a56b7622df3"
         },
@@ -121,19 +118,18 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "focusTaskForm",
-                "fn": "focusTaskForm",
+                "designer|controlQuery": "[iconCls=tasks-new]",
                 "designer|params": [
                     "component",
                     "e"
                 ],
+                "designer|targetType": "Ext.Component",
+                "fn": "focusTaskForm",
                 "implHandler": [
                     "this.getTaskForm().query('[name=title]')[0].focus();"
                 ],
                 "name": "click",
-                "scope": "me",
-                "designer|targetType": "Ext.Component",
-                "designer|controlQuery": "[iconCls=tasks-new]"
+                "scope": "me"
             },
             "designerId": "869280bb-5d8b-4f5a-885d-6f4619b3780b"
         },
@@ -145,16 +141,15 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "handleDeleteClick",
+                "designer|controlQuery": "#delete-task-btn",
+                "designer|targetType": "Ext.button.Button",
                 "fn": "handleDeleteClick",
                 "implHandler": [
                     "        this.deleteTask(this.getTaskGrid().getSelectionModel().getSelection()[0]);",
                     ""
                 ],
                 "name": "click",
-                "scope": "me",
-                "designer|targetType": "Ext.button.Button",
-                "designer|controlQuery": "#delete-task-btn"
+                "scope": "me"
             },
             "designerId": "3007f463-275e-4ab8-9fa2-2c216f88f105"
         },
@@ -166,15 +161,14 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "handleDeleteTaskItemClick",
+                "designer|controlQuery": "#delete-task-item",
+                "designer|targetType": "Ext.button.Button",
                 "fn": "handleDeleteTaskItemClick",
                 "implHandler": [
-                    "this.handleDeleteClick(button, e, options);"
+                    "this.handleDeleteClick(button, e, eOpts);"
                 ],
                 "name": "click",
-                "scope": "me",
-                "designer|targetType": "Ext.button.Button",
-                "designer|controlQuery": "#delete-task-item"
+                "scope": "me"
             },
             "designerId": "02e58766-0a1b-4491-9391-13c8564e439f"
         },
@@ -186,7 +180,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "markComplete",
+                "designer|controlQuery": "#mark-complete-item",
+                "designer|targetType": "Ext.button.Button",
                 "fn": "markComplete",
                 "implHandler": [
                     "   var contextMenu = this.getContextMenu(),",
@@ -210,9 +205,7 @@
                     "        this.refreshFiltersAndCount();"
                 ],
                 "name": "click",
-                "scope": "me",
-                "designer|targetType": "Ext.button.Button",
-                "designer|controlQuery": "#mark-complete-item"
+                "scope": "me"
             },
             "designerId": "ed38cfbb-9dd6-4fad-99b3-74e2c2d811c6"
         },
@@ -224,15 +217,14 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "markCompleteButton",
+                "designer|controlQuery": "#mark-complete-btn",
+                "designer|targetType": "Ext.button.Button",
                 "fn": "markCompleteButton",
                 "implHandler": [
-                    "this.markComplete(button, e, options);"
+                    "this.markComplete(button, e, eOpts);"
                 ],
                 "name": "click",
-                "scope": "me",
-                "designer|targetType": "Ext.button.Button",
-                "designer|controlQuery": "#mark-complete-btn"
+                "scope": "me"
             },
             "designerId": "1a6de13c-2c81-4878-aa39-861b44f12b37"
         },
@@ -244,7 +236,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "markActive",
+                "designer|controlQuery": "#mark-active-item",
+                "designer|targetType": "Ext.button.Button",
                 "fn": "markActive",
                 "implHandler": [
                     "    var contextMenu = this.getContextMenu(),",
@@ -267,9 +260,7 @@
                     "        this.refreshFiltersAndCount();"
                 ],
                 "name": "click",
-                "scope": "me",
-                "designer|targetType": "Ext.button.Button",
-                "designer|controlQuery": "#mark-active-item"
+                "scope": "me"
             },
             "designerId": "006d0e3e-3b87-419c-a54e-6c774a68d807"
         },
@@ -281,15 +272,14 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "markActiveButton",
+                "designer|controlQuery": "#mark-active-btn",
+                "designer|targetType": "Ext.button.Button",
                 "fn": "markActiveButton",
                 "implHandler": [
-                    "this.markActive(button, e, options);"
+                    "this.markActive(button, e, eOpts);"
                 ],
                 "name": "click",
-                "scope": "me",
-                "designer|targetType": "Ext.button.Button",
-                "designer|controlQuery": "#mark-active-btn"
+                "scope": "me"
             },
             "designerId": "6bddb6c3-7003-46c8-9662-03e24381b97e"
         },
@@ -301,7 +291,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "filterAll",
+                "designer|controlQuery": "#show-all-btn",
+                "designer|targetType": "Ext.button.Button",
                 "fn": "filterAll",
                 "implHandler": [
                     "var tasksStore = this.getTasksStore(),",
@@ -323,9 +314,7 @@
                     "        } "
                 ],
                 "name": "click",
-                "scope": "me",
-                "designer|targetType": "Ext.button.Button",
-                "designer|controlQuery": "#show-all-btn"
+                "scope": "me"
             },
             "designerId": "cee4863e-b089-4323-9970-3648a041580f"
         },
@@ -337,7 +326,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "filterActive",
+                "designer|controlQuery": "#show-active-btn",
+                "designer|targetType": "Ext.button.Button",
                 "fn": "filterActive",
                 "implHandler": [
                     "var tasksStore = this.getTasksStore(),",
@@ -360,9 +350,7 @@
                     "        } "
                 ],
                 "name": "click",
-                "scope": "me",
-                "designer|targetType": "Ext.button.Button",
-                "designer|controlQuery": "#show-active-btn"
+                "scope": "me"
             },
             "designerId": "36f38cfe-aaf6-420c-a575-36a373df4c43"
         },
@@ -374,7 +362,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "filterComplete",
+                "designer|controlQuery": "#show-complete-btn",
+                "designer|targetType": "Ext.button.Button",
                 "fn": "filterComplete",
                 "implHandler": [
                     "   var tasksStore = this.getTasksStore(),",
@@ -397,9 +386,7 @@
                     "        } "
                 ],
                 "name": "click",
-                "scope": "me",
-                "designer|targetType": "Ext.button.Button",
-                "designer|controlQuery": "#show-complete-btn"
+                "scope": "me"
             },
             "designerId": "c9fb61f5-9a1a-49d6-b910-1ccab32274c7"
         },
@@ -411,15 +398,14 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "handleEditItemClick",
+                "designer|controlQuery": "#edit-task-item",
+                "designer|targetType": "Ext.button.Button",
                 "fn": "handleEditItemClick",
                 "implHandler": [
                     "this.showEditWindow(this.getContextMenu().getTask());"
                 ],
                 "name": "click",
-                "scope": "me",
-                "designer|targetType": "Ext.button.Button",
-                "designer|controlQuery": "#edit-task-item"
+                "scope": "me"
             },
             "designerId": "5cf261d7-9311-4110-b711-02638ae08b65"
         },
@@ -431,11 +417,12 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "updateTask",
-                "fn": "updateTask",
+                "designer|controlQuery": "taskGrid",
                 "designer|params": [
                     "task"
                 ],
+                "designer|targetType": null,
+                "fn": "updateTask",
                 "implHandler": [
                     "var me = this;",
                     "",
@@ -461,9 +448,7 @@
                     "});"
                 ],
                 "name": "recordedit",
-                "scope": "me",
-                "designer|targetType": null,
-                "designer|controlQuery": "taskGrid"
+                "scope": "me"
             },
             "designerId": "2874ce3f-477c-418e-b459-3b3ff4717c12"
         },
@@ -475,8 +460,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "handleDeleteIconClick",
-                "fn": "handleDeleteIconClick",
+                "designer|controlQuery": "taskGrid",
                 "designer|params": [
                     "gridView",
                     "rowIndex",
@@ -484,13 +468,13 @@
                     "column",
                     "e"
                 ],
+                "designer|targetType": null,
+                "fn": "handleDeleteIconClick",
                 "implHandler": [
                     "this.deleteTask(this.getTasksStore().getAt(rowIndex));"
                 ],
                 "name": "deleteclick",
-                "scope": "me",
-                "designer|targetType": null,
-                "designer|controlQuery": "taskGrid"
+                "scope": "me"
             },
             "designerId": "18c779a6-013e-4ac7-a362-fda47658bf05"
         },
@@ -502,8 +486,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "handleEditIconClick",
-                "fn": "handleEditIconClick",
+                "designer|controlQuery": "taskGrid",
                 "designer|params": [
                     "view",
                     "rowIndex",
@@ -511,12 +494,12 @@
                     "column",
                     "e"
                 ],
+                "fn": "handleEditIconClick",
                 "implHandler": [
                     "this.showEditWindow(view.getRecord(view.findTargetByEvent(e)));"
                 ],
                 "name": "editclick",
-                "scope": "me",
-                "designer|controlQuery": "taskGrid"
+                "scope": "me"
             },
             "designerId": "e8c0a787-2810-4167-8fdb-ee446f8ce069"
         },
@@ -528,12 +511,12 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "setReminder",
-                "fn": "setReminder",
+                "designer|controlQuery": "taskGrid",
                 "designer|params": [
                     "task",
                     "value"
                 ],
+                "fn": "setReminder",
                 "implHandler": [
                     "var me = this,",
                     "    defaultTimeWindow = me.getDefaultTimeWindow(),",
@@ -572,8 +555,7 @@
                     "});"
                 ],
                 "name": "reminderselect",
-                "scope": "me",
-                "designer|controlQuery": "taskGrid"
+                "scope": "me"
             },
             "designerId": "1a762ff5-8266-4718-b9ed-a198b473918e"
         },
@@ -585,8 +567,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "showActions",
-                "fn": "showActions",
+                "designer|controlQuery": "taskGrid",
                 "designer|params": [
                     "view",
                     "task",
@@ -594,6 +575,7 @@
                     "rowIndex",
                     "e"
                 ],
+                "fn": "showActions",
                 "implHandler": [
                     "        var icons = Ext.DomQuery.select('.x-action-col-icon', node);",
                     "        Ext.each(icons, function(icon){",
@@ -601,8 +583,7 @@
                     "        });"
                 ],
                 "name": "itemmouseenter",
-                "scope": "me",
-                "designer|controlQuery": "taskGrid"
+                "scope": "me"
             },
             "designerId": "6f59ca6b-3729-420a-b1ea-6eee6fc59b04"
         },
@@ -614,8 +595,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "hideActions",
-                "fn": "hideActions",
+                "designer|controlQuery": "taskGrid",
                 "designer|params": [
                     "view",
                     "task",
@@ -623,6 +603,7 @@
                     "rowIndex",
                     "e"
                 ],
+                "fn": "hideActions",
                 "implHandler": [
                     "   var icons = Ext.DomQuery.select('.x-action-col-icon', node);",
                     "        Ext.each(icons, function(icon){",
@@ -630,8 +611,7 @@
                     "        });"
                 ],
                 "name": "itemmouseleave",
-                "scope": "me",
-                "designer|controlQuery": "taskGrid"
+                "scope": "me"
             },
             "designerId": "13217641-35b8-4ad1-9f2d-fe46e9296272"
         },
@@ -643,12 +623,12 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "toggleButtons",
-                "fn": "toggleButtons",
+                "designer|controlQuery": "taskGrid",
                 "designer|params": [
                     "selModel",
                     "tasks"
                 ],
+                "fn": "toggleButtons",
                 "implHandler": [
                     "       var deleteTaskBtn = Ext.getCmp('delete-task-btn'),",
                     "            markCompleteBtn = Ext.getCmp('mark-complete-btn'),",
@@ -665,8 +645,7 @@
                     "        }"
                 ],
                 "name": "selectionchange",
-                "scope": "me",
-                "designer|controlQuery": "taskGrid"
+                "scope": "me"
             },
             "designerId": "5049b96d-d850-4cd3-8725-1985c9c334bb"
         },
@@ -678,13 +657,13 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "syncTaskFormFieldWidth",
-                "fn": "syncTaskFormFieldWidth",
+                "designer|controlQuery": "taskGrid",
                 "designer|params": [
                     "headerContainer",
                     "column",
                     "width"
                 ],
+                "fn": "syncTaskFormFieldWidth",
                 "implHandler": [
                     "        var field = this.getTaskForm().query('[name=' + column.dataIndex + ']')[0];",
                     "        if (field) {",
@@ -692,8 +671,7 @@
                     "        }"
                 ],
                 "name": "columnresize",
-                "scope": "me",
-                "designer|controlQuery": "taskGrid"
+                "scope": "me"
             },
             "designerId": "657c7f3e-8bd2-40a2-acb4-1d5c6b514075"
         },
@@ -705,8 +683,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "showContextMenu",
-                "fn": "showContextMenu",
+                "designer|controlQuery": "taskGrid",
                 "designer|params": [
                     "view",
                     "task",
@@ -714,6 +691,8 @@
                     "rowIndex",
                     "e"
                 ],
+                "designer|targetType": "Ext.Component",
+                "fn": "showContextMenu",
                 "implHandler": [
                     "     var contextMenu = this.getContextMenu(),",
                     "            markCompleteItem = Ext.getCmp('mark-complete-item'),",
@@ -731,9 +710,7 @@
                     "        e.preventDefault();"
                 ],
                 "name": "itemcontextmenu",
-                "scope": "me",
-                "designer|targetType": "Ext.Component",
-                "designer|controlQuery": "taskGrid"
+                "scope": "me"
             },
             "designerId": "f019eb10-373f-4727-92b4-0ea2c6aeae6a"
         },
@@ -745,18 +722,17 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "initShowAll",
-                "fn": "initShowAll",
+                "designer|controlQuery": "tasksToolbar",
                 "designer|params": [
                     "toolbar"
                 ],
+                "designer|targetType": null,
+                "fn": "initShowAll",
                 "implHandler": [
                     "  toolbar.getComponent('show-all-btn').toggle();"
                 ],
                 "name": "afterrender",
-                "scope": "me",
-                "designer|targetType": null,
-                "designer|controlQuery": "tasksToolbar"
+                "scope": "me"
             },
             "designerId": "2e2524f2-4fbb-4e10-8ca1-703d2d40ede2"
         },
@@ -768,7 +744,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "toggleReminderFields",
+                "designer|controlQuery": "taskEditWindow [name=has_reminder]",
+                "designer|targetType": "Ext.form.field.Checkbox",
                 "fn": "toggleReminderFields",
                 "implHandler": [
                     " var checkbox = field,",
@@ -807,9 +784,7 @@
                     "        }"
                 ],
                 "name": "change",
-                "scope": "me",
-                "designer|targetType": "Ext.form.field.Checkbox",
-                "designer|controlQuery": "taskEditWindow [name=has_reminder]"
+                "scope": "me"
             },
             "designerId": "368948b4-1c0c-476b-b60c-9511f9621957"
         },
@@ -821,15 +796,14 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "hideEditWindow",
+                "designer|controlQuery": "#cancel-task-edit-btn",
+                "designer|targetType": "Ext.button.Button",
                 "fn": "hideEditWindow",
                 "implHandler": [
                     "  this.getTaskEditWindow().close();"
                 ],
                 "name": "click",
-                "scope": "me",
-                "designer|targetType": "Ext.button.Button",
-                "designer|controlQuery": "#cancel-task-edit-btn"
+                "scope": "me"
             },
             "designerId": "b85a52b4-0041-4600-af50-6d650f9c5d4d"
         },
@@ -841,15 +815,14 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "handleSaveTaskClick",
+                "designer|controlQuery": "#save-task-edit-btn",
+                "designer|targetType": "Ext.button.Button",
                 "fn": "handleSaveTaskClick",
                 "implHandler": [
                     " this.saveEditWindow();"
                 ],
                 "name": "click",
-                "scope": "me",
-                "designer|targetType": "Ext.button.Button",
-                "designer|controlQuery": "#save-task-edit-btn"
+                "scope": "me"
             },
             "designerId": "11c75929-11ec-4659-9455-1f310667f0b5"
         },
@@ -861,13 +834,13 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "syncReminderField",
-                "fn": "syncReminderField",
+                "designer|controlQuery": "taskEditWindow [name=reminder_date]",
                 "designer|params": [
                     "field",
                     "oldValue",
                     "newValue"
                 ],
+                "fn": "syncReminderField",
                 "implHandler": [
                     "var form = this.getTaskEditWindow().down('form').getForm(),",
                     "    reminderField = form.findField('reminder'),",
@@ -882,8 +855,7 @@
                     "}"
                 ],
                 "name": "change",
-                "scope": "me",
-                "designer|controlQuery": "taskEditWindow [name=reminder_date]"
+                "scope": "me"
             },
             "designerId": "e4658aad-d2f9-419f-bda3-bcf6d10763c4"
         },
@@ -895,19 +867,18 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "syncReminderFieldAgain",
-                "fn": "syncReminderFieldAgain",
+                "designer|controlQuery": "taskEditWindow [name=reminder_time]",
                 "designer|params": [
                     "field",
                     "oldValue",
                     "newValue"
                 ],
+                "fn": "syncReminderFieldAgain",
                 "implHandler": [
                     "this.syncReminderField(field, oldValue, newValue);"
                 ],
                 "name": "change",
-                "scope": "me",
-                "designer|controlQuery": "taskEditWindow [name=reminder_time]"
+                "scope": "me"
             },
             "designerId": "93613f66-a8e1-4357-987f-f8b3c804a223"
         },
@@ -919,7 +890,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "toggleCompleteField",
+                "designer|controlQuery": "#toggle-complete-btn",
+                "designer|targetType": "Ext.button.Button",
                 "fn": "toggleCompleteField",
                 "implHandler": [
                     "   var taskEditWindow = this.getTaskEditWindow(),",
@@ -933,9 +905,7 @@
                     "        this.saveEditWindow();"
                 ],
                 "name": "click",
-                "scope": "me",
-                "designer|targetType": "Ext.button.Button",
-                "designer|controlQuery": "#toggle-complete-btn"
+                "scope": "me"
             },
             "designerId": "c47cbfb1-099a-4c7c-a2df-b91f387c0512"
         },
@@ -947,7 +917,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "deleteTaskAndCloseEditWindow",
+                "designer|controlQuery": "#delete-task-window-btn",
+                "designer|targetType": "Ext.button.Button",
                 "fn": "deleteTaskAndCloseEditWindow",
                 "implHandler": [
                     "    var me = this,",
@@ -959,9 +930,7 @@
                     "        });"
                 ],
                 "name": "click",
-                "scope": "me",
-                "designer|targetType": "Ext.button.Button",
-                "designer|controlQuery": "#delete-task-window-btn"
+                "scope": "me"
             },
             "designerId": "8ef00e72-777b-41b8-ab80-e115f9f6aff2"
         },
@@ -973,15 +942,14 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "hideDefaultTimeWindow",
+                "designer|controlQuery": "#cancel-default-time-edit-btn",
+                "designer|targetType": "Ext.button.Button",
                 "fn": "hideDefaultTimeWindow",
                 "implHandler": [
                     "   this.getDefaultTimeWindow().close();"
                 ],
                 "name": "click",
-                "scope": "me",
-                "designer|targetType": "Ext.button.Button",
-                "designer|controlQuery": "#cancel-default-time-edit-btn"
+                "scope": "me"
             },
             "designerId": "8bc24f8a-6a94-44c7-9a59-058a59877d95"
         },
@@ -993,7 +961,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "saveDefaultTime",
+                "designer|controlQuery": "#save-default-time-btn",
+                "designer|targetType": "Ext.button.Button",
                 "fn": "saveDefaultTime",
                 "implHandler": [
                     "  var me = this,",
@@ -1013,7 +982,7 @@
                     "                    key: 'default.reminder.time',",
                     "                    value: time",
                     "                },",
-                    "                success: function(response, options) {",
+                    "                success: function(response, eOpts) {",
                     "                    var responseData = Ext.decode(response.responseText);",
                     "",
                     "                    if(responseData.success) {",
@@ -1029,7 +998,7 @@
                     "                    }",
                     "                    windowEl.unmask();",
                     "                },",
-                    "                failure: function(response, options) {",
+                    "                failure: function(response, eOpts) {",
                     "                    Ext.MessageBox.show({",
                     "                        title: 'Set Default Time Failed',",
                     "                        msg: response.status + ' ' + response.statusText,",
@@ -1042,9 +1011,7 @@
                     "        }"
                 ],
                 "name": "click",
-                "scope": "me",
-                "designer|targetType": "Ext.button.Button",
-                "designer|controlQuery": "#save-default-time-btn"
+                "scope": "me"
             },
             "designerId": "63ba697d-467e-4a76-a26e-e4f34e3aa02e"
         },
@@ -1056,7 +1023,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "snooze",
+                "designer|controlQuery": "[cls=snooze-btn]",
+                "designer|targetType": "Ext.button.Button",
                 "fn": "snooze",
                 "implHandler": [
                     "var reminderWindow = button.findParentByType('window'),",
@@ -1081,9 +1049,7 @@
                     "reminderWindow.close();"
                 ],
                 "name": "click",
-                "scope": "me",
-                "designer|targetType": "Ext.button.Button",
-                "designer|controlQuery": "[cls=snooze-btn]"
+                "scope": "me"
             },
             "designerId": "9771ab4b-2dce-4a2b-8245-381bbf6e5b70"
         },
@@ -1095,15 +1061,14 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "dismissReminder",
+                "designer|controlQuery": "[cls=dismiss-reminder-btn]",
+                "designer|targetType": "Ext.button.Button",
                 "fn": "dismissReminder",
                 "implHandler": [
                     "  button.findParentByType('window').close();"
                 ],
                 "name": "click",
-                "scope": "me",
-                "designer|targetType": "Ext.button.Button",
-                "designer|controlQuery": "[cls=dismiss-reminder-btn]"
+                "scope": "me"
             },
             "designerId": "646102e3-a649-47f9-909c-5feb7ed4376f"
         },
@@ -1115,12 +1080,11 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "deleteTask",
-                "fn": "deleteTask",
                 "designer|params": [
                     "task",
                     "successCallback"
                 ],
+                "fn": "deleteTask",
                 "implHandler": [
                     "   var me = this;",
                     "        ",
@@ -1165,7 +1129,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "newTask",
                 "fn": "newTask",
                 "implHandler": [
                     "      var me = this,",
@@ -1228,7 +1191,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "refreshFiltersAndCount",
                 "fn": "refreshFiltersAndCount",
                 "implHandler": [
                     "  // refresh the task filters",
@@ -1247,11 +1209,10 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "showEditWindow",
-                "fn": "showEditWindow",
                 "designer|params": [
                     "task"
                 ],
+                "fn": "showEditWindow",
                 "implHandler": [
                     " var me = this,",
                     "            taskEditWindow = me.getTaskEditWindow(),",
@@ -1300,7 +1261,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "saveEditWindow",
                 "fn": "saveEditWindow",
                 "implHandler": [
                     "  var taskEditWindow = this.getTaskEditWindow(),",
@@ -1347,11 +1307,10 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "getDefaultReminderTime",
-                "fn": "getDefaultReminderTime",
                 "designer|params": [
                     "callback"
                 ],
+                "fn": "getDefaultReminderTime",
                 "implHandler": [
                     "var me = this,",
                     "    defaultReminderTime;",
@@ -1398,7 +1357,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "initReminderInterval",
                 "fn": "initReminderInterval",
                 "implHandler": [
                     "  var me = this,",
@@ -1425,11 +1383,10 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "showReminderWindow",
-                "fn": "showReminderWindow",
                 "designer|params": [
                     "task"
                 ],
+                "fn": "showReminderWindow",
                 "implHandler": [
                     "var reminderWindow = this.getReminderWindow(),",
                     "    reminderDetailsBox = reminderWindow.down('[cls=tasks-reminder-details]'),",

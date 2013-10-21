@@ -6,8 +6,8 @@
     },
     "codeClass": null,
     "userConfig": {
+        "designer|userClassName": "css",
         "url": "resources/css/tasks.css"
     },
-    "id": "ExtBox1-ext-gen97661",
     "designerId": "b5f0332b-2575-4858-aeab-85fcd8090dfe"
 }

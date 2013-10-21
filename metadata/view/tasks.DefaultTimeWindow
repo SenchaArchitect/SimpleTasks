@@ -1,107 +1,100 @@
 {
-    "type": "window",
+    "type": "Ext.window.Window",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "tasks.DefaultTimeWindow",
-        "designer|userAlias": "defaultTimeWindow",
-        "height": null,
-        "width": 300,
-        "layout": "fit",
         "closeAction": "hide",
-        "title": "Set Default Reminder Time"
+        "designer|userAlias": "defaultTimeWindow",
+        "designer|userClassName": "tasks.DefaultTimeWindow",
+        "height": null,
+        "layout": "fit",
+        "title": "Set Default Reminder Time",
+        "width": 300
     },
-    "id": "ExtBox1-ext-gen26426",
     "designerId": "420cfca1-e935-4701-9851-4ae3f22706d8",
     "cn": [
         {
-            "type": "form",
+            "type": "Ext.form.Panel",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyForm",
+                "bodyPadding": 10,
                 "border": false,
                 "frame": true,
-                "bodyPadding": 10,
                 "title": null
             },
             "designerId": "76cf29e5-a71f-4488-b5f7-542749c4ec9b",
             "cn": [
                 {
-                    "type": "timefield",
+                    "type": "Ext.form.field.Time",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "layout|anchor": "100%",
-                        "designer|userClassName": "MyTimeField",
-                        "name": "default_time",
                         "fieldLabel": "When setting quick reminders, default the time to",
-                        "labelAlign": "top"
+                        "labelAlign": "top",
+                        "layout|anchor": "100%",
+                        "name": "default_time"
                     },
                     "designerId": "60e7a557-e091-44cb-b733-7200fda30ee0"
                 },
                 {
-                    "type": "toolbar",
+                    "type": "Ext.toolbar.Toolbar",
                     "reference": {
                         "name": "dockedItems",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "dock": "bottom",
-                        "designer|userClassName": "MyToolbar1",
-                        "designer|displayName": "buttons(workaround)"
+                        "designer|displayName": "buttons(workaround)",
+                        "dock": "bottom"
                     },
                     "designerId": "96a27822-8ef3-4b33-a44a-0d55aa80f600",
                     "cn": [
                         {
-                            "type": "tbspacer",
+                            "type": "Ext.toolbar.Spacer",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "layout|flex": null,
-                                "designer|userClassName": "MySpacer"
+                                "layout|flex": null
                             },
                             "designerId": "30a161c1-3134-48e8-9ac7-92bbe37180bf"
                         },
                         {
-                            "type": "button",
+                            "type": "Ext.button.Button",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "layout|flex": null,
-                                "designer|userClassName": "MyButton4",
                                 "id": "save-default-time-btn",
+                                "layout|flex": null,
                                 "text": "OK"
                             },
                             "designerId": "246755ce-eda0-4730-aaba-eb9fa4c0ca0b"
                         },
                         {
-                            "type": "button",
+                            "type": "Ext.button.Button",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "layout|flex": null,
-                                "designer|userClassName": "MyButton5",
                                 "id": "cancel-default-time-edit-btn",
+                                "layout|flex": null,
                                 "text": "Cancel"
                             },
                             "designerId": "3544d6af-04d4-4251-b0d7-c4810445e674"

@@ -1,15 +1,14 @@
 {
-    "type": "treestore",
+    "type": "Ext.data.TreeStore",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Lists",
-        "designer|userAlias": "lists",
         "autoLoad": false,
-        "storeId": "Lists",
+        "designer|userAlias": "lists",
+        "designer|userClassName": "Lists",
         "model": "List",
         "root": [
             "{",
@@ -17,8 +16,8 @@
             "        id: -1,",
             "        name: 'All Lists'",
             "    }"
-        ]
+        ],
+        "storeId": "Lists"
     },
-    "id": "ExtBox1-ext-gen85543",
     "designerId": "5a2f6f03-5c6e-4451-8641-235a35f1ebec"
 }

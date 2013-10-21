@@ -1,22 +1,21 @@
 {
-    "type": "gridpanel",
+    "type": "Ext.grid.Panel",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "tasks.Grid",
-        "designer|userAlias": "taskGrid",
-        "draggable": null,
-        "height": null,
-        "width": null,
-        "title": null,
         "columnLines": null,
+        "designer|userAlias": "taskGrid",
+        "designer|userClassName": "tasks.Grid",
+        "draggable": null,
         "enableColumnMove": false,
-        "store": "Tasks"
+        "height": null,
+        "store": "Tasks",
+        "title": null,
+        "width": null
     },
-    "id": "ExtBox1-ext-gen48774",
     "designerId": "6c7b6150-311c-4b87-86ac-d21066952ddd",
     "cn": [
         {
@@ -36,18 +35,15 @@
                 "weight": 101
             },
             "designerId": "8bfeaa09-ba44-4b21-9606-85e16cc0aa65",
-            "masterInstanceId": "ExtBox1-ext-gen45172"
+            "masterInstanceId": "96f66c2f-4993-423a-b807-960265efe582"
         },
         {
-            "type": "gridcelleditingplugin",
+            "type": "Ext.grid.plugin.CellEditing",
             "reference": {
                 "name": "plugins",
                 "type": "array"
             },
             "codeClass": "Ext.grid.plugin.CellEditing",
-            "userConfig": {
-                "designer|userClassName": "MyCellEditingPlugin"
-            },
             "designerId": "1d5ef501-8058-47a9-b0ca-5b7afd99e7ae",
             "cn": [
                 {
@@ -58,7 +54,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "onGridcelleditingpluginEdit",
                         "fn": "onGridcelleditingpluginEdit",
                         "implHandler": [
                             "this.fireEvent('recordedit', e.record);"
@@ -71,30 +66,26 @@
             ]
         },
         {
-            "type": "groupinggridfeature",
+            "type": "Ext.grid.feature.Grouping",
             "reference": {
                 "name": "features",
                 "type": "array"
             },
             "codeClass": null,
-            "userConfig": {
-                "designer|userClassName": "MyGroupingFeature"
-            },
             "designerId": "898e3be0-4c05-4228-8502-93ee0d5aff0f",
             "cn": [
                 {
-                    "type": "template",
+                    "type": "Ext.XTemplate",
                     "reference": {
                         "name": "groupHeaderTpl",
                         "type": "object"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "groupHeaderTpl",
+                        "designer|displayName": "groupHeaderTpl",
                         "implHandler": [
                             "{groupValue:this.renderDueDate}"
-                        ],
-                        "designer|displayName": "groupHeaderTpl"
+                        ]
                     },
                     "designerId": "5f05bc36-55cf-4136-9a8d-6cb51cf8c638",
                     "cn": [
@@ -106,11 +97,10 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "renderDueDate",
-                                "fn": "renderDueDate",
                                 "designer|params": [
                                     "date"
                                 ],
+                                "fn": "renderDueDate",
                                 "implHandler": [
                                     "var today = Ext.Date.clearTime(new Date()),",
                                     "            todayTime = today.getTime(),",
@@ -152,20 +142,19 @@
             ]
         },
         {
-            "type": "gridcolumn",
+            "type": "Ext.grid.column.Column",
             "reference": {
                 "name": "columns",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyColumn",
                 "cls": null,
-                "width": null,
-                "sortable": null,
                 "dataIndex": "done",
                 "menuDisabled": null,
-                "text": null
+                "sortable": null,
+                "text": null,
+                "width": null
             },
             "designerId": "09859fed-63dd-4ead-8342-028d76e69b2c"
         },
@@ -177,7 +166,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "CustomEvent",
                 "name": "editclick"
             },
             "designerId": "675a0ff6-d5df-4cdb-bb75-929f8178f620"
@@ -190,7 +178,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "CustomEvent1",
                 "name": "deleteclick"
             },
             "designerId": "d0d5b028-31d1-4ea9-b9c7-0cd958da55c2"
@@ -203,7 +190,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "CustomEvent2",
                 "name": "recordedit"
             },
             "designerId": "136b71cd-407e-4620-8f8f-1345f91e24fb"
@@ -216,7 +202,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "CustomEvent3",
                 "name": "reminderselect"
             },
             "designerId": "5dc05935-d83e-4a09-91d0-1dece5e8bd1f"
@@ -229,8 +214,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "handleEditClick",
-                "fn": "handleEditClick",
                 "designer|params": [
                     "gridView",
                     "rowIndex",
@@ -238,6 +221,7 @@
                     "column",
                     "e"
                 ],
+                "fn": "handleEditClick",
                 "implHandler": [
                     "this.fireEvent('editclick', gridView, rowIndex, colIndex, column, e);"
                 ]
@@ -252,13 +236,12 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "handleCheckChange",
-                "fn": "handleCheckChange",
                 "designer|params": [
                     "column",
                     "rowIndex",
                     "checked"
                 ],
+                "fn": "handleCheckChange",
                 "implHandler": [
                     "this.fireEvent('recordedit', this.store.getAt(rowIndex));"
                 ]
@@ -273,12 +256,11 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "handleReminderSelect",
-                "fn": "handleReminderSelect",
                 "designer|params": [
                     "task",
                     "value"
                 ],
+                "fn": "handleReminderSelect",
                 "implHandler": [
                     "this.fireEvent('reminderselect', task, value);"
                 ]
@@ -293,12 +275,11 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "handleCellEdit",
-                "fn": "handleCellEdit",
                 "designer|params": [
                     "editor",
                     "e"
                 ],
+                "fn": "handleCellEdit",
                 "implHandler": [
                     "this.fireEvent('recordedit', e.record);"
                 ]
@@ -313,7 +294,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "refreshFilters",
                 "fn": "refreshFilters",
                 "implHandler": [
                     "        var store = this.store,",
@@ -337,8 +317,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "renderList",
-                "fn": "renderList",
                 "designer|params": [
                     "value",
                     "metaData",
@@ -348,6 +326,7 @@
                     "store",
                     "view"
                 ],
+                "fn": "renderList",
                 "implHandler": [
                     "        var listsStore = Ext.getStore('Lists'),",
                     "            node = value ? listsStore.getNodeById(value) : listsStore.getRootNode();",
@@ -369,8 +348,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "handleDeleteClick",
-                "fn": "handleDeleteClick",
                 "designer|params": [
                     "gridView",
                     "rowIndex",
@@ -378,6 +355,7 @@
                     "column",
                     "e"
                 ],
+                "fn": "handleDeleteClick",
                 "implHandler": [
                     "this.fireEvent('deleteclick', gridView, rowIndex, colIndex, column, e);"
                 ]

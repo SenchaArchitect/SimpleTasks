@@ -6,8 +6,9 @@
     },
     "codeClass": null,
     "userConfig": {
-        "debug": true
+        "basePath": "ext/",
+        "debug": true,
+        "designer|userClassName": "Library"
     },
-    "id": "ExtBox1-ext-gen1677",
     "designerId": "d9deec53-5953-4d8a-8e66-26bd889a3628"
 }

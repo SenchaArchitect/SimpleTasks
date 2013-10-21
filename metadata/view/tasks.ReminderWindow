@@ -1,20 +1,18 @@
 {
-    "type": "window",
+    "type": "Ext.window.Window",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "tasks.ReminderWindow",
-        "designer|userAlias": "reminderWindow",
         "border": false,
-        "frame": false,
+        "designer|userAlias": "reminderWindow",
+        "designer|userClassName": "tasks.ReminderWindow",
         "height": null,
-        "width": 400,
-        "title": null
+        "title": null,
+        "width": 400
     },
-    "id": "ExtBox1-ext-gen68264",
     "designerId": "59a865a6-5399-46da-9f01-4bdc52e32417",
     "cn": [
         {
@@ -25,11 +23,10 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "setTask",
-                "fn": "setTask",
                 "designer|params": [
                     "task"
                 ],
+                "fn": "setTask",
                 "implHandler": [
                     "this.task = task;"
                 ]
@@ -44,7 +41,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "getTask",
                 "fn": "getTask",
                 "implHandler": [
                     "return this.task;"
@@ -53,129 +49,121 @@
             "designerId": "98ac934e-ea7e-4e95-8ef6-667326229164"
         },
         {
-            "type": "component",
+            "type": "Ext.Component",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyComponent2",
-                "designer|displayName": "box",
                 "border": false,
-                "cls": "tasks-reminder-details"
+                "cls": "tasks-reminder-details",
+                "designer|displayName": "box"
             },
             "designerId": "9327b6a7-a654-4e97-8586-c5cd2dd6a849",
             "cn": [
                 {
-                    "type": "template",
+                    "type": "Ext.XTemplate",
                     "reference": {
                         "name": "tpl",
                         "type": "object"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "tpl",
+                        "designer|displayName": "tpl",
                         "implHandler": [
                             "<div class=\"tasks-reminder-icon\"></div>",
                             "<p class=\"tasks-reminder-title\">{title}</p>",
                             "<p class=\"tasks-reminder-due\">Due: {due:date(\"F j, Y\")}</p>"
-                        ],
-                        "designer|displayName": "tpl"
+                        ]
                     },
                     "designerId": "7adf57ce-c4b5-4555-a7c1-fa6a0282d104"
                 }
             ]
         },
         {
-            "type": "combobox",
+            "type": "Ext.form.field.ComboBox",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyComboBox2",
                 "border": false,
-                "margin": "10 0 10 20",
-                "name": "snooze_time",
+                "displayField": "timeInWords",
                 "fieldLabel": "Remind me again in",
                 "labelSeparator": "",
                 "labelWidth": 115,
-                "displayField": "timeInWords",
+                "margin": "10 0 10 20",
+                "name": "snooze_time",
                 "store": "ReminderTimes",
                 "valueField": "num"
             },
             "designerId": "18e6f33b-a4e4-4768-8349-6564a67ae233"
         },
         {
-            "type": "form",
+            "type": "Ext.form.Panel",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyForm3",
                 "bodyPadding": null,
                 "title": null
             },
             "designerId": "b090244d-302e-42bd-84dd-e9f01df373f5",
             "cn": [
                 {
-                    "type": "toolbar",
+                    "type": "Ext.toolbar.Toolbar",
                     "reference": {
                         "name": "dockedItems",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "dock": "bottom",
-                        "designer|userClassName": "MyToolbar4",
-                        "designer|displayName": "buttons(workaround)"
+                        "designer|displayName": "buttons(workaround)",
+                        "dock": "bottom"
                     },
                     "designerId": "98b5b00c-a38e-4243-8e2b-22e84d4a70b6",
                     "cn": [
                         {
-                            "type": "tbspacer",
+                            "type": "Ext.toolbar.Spacer",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "layout|flex": 1,
-                                "designer|userClassName": "MySpacer3",
-                                "border": false
+                                "border": false,
+                                "layout|flex": 1
                             },
                             "designerId": "f3fb6b13-a4c6-4485-970d-d8ca284db203"
                         },
                         {
-                            "type": "button",
+                            "type": "Ext.button.Button",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "layout|flex": null,
-                                "designer|userClassName": "MyButton11",
                                 "cls": "snooze-btn",
+                                "layout|flex": null,
                                 "text": "Snooze"
                             },
                             "designerId": "203b7343-15fe-4388-8a1b-6f40da5c9fb9"
                         },
                         {
-                            "type": "button",
+                            "type": "Ext.button.Button",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "layout|flex": null,
-                                "designer|userClassName": "MyButton10",
                                 "cls": "dismiss-reminder-btn",
+                                "layout|flex": null,
                                 "text": "Dismiss"
                             },
                             "designerId": "e54dee48-6302-48bf-abfc-a33b510ffec6"

@@ -1,5 +1,5 @@
 {
-    "type": "datamodel",
+    "type": "Ext.data.Model",
     "reference": {
         "name": "items",
         "type": "array"
@@ -8,58 +8,53 @@
     "userConfig": {
         "designer|userClassName": "List"
     },
-    "id": "ExtBox1-ext-gen86848",
     "designerId": "ad7f587a-779d-4124-a9aa-b2cec1d6aed9",
     "cn": [
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyField",
                 "name": "id",
                 "type": "int"
             },
             "designerId": "fb8d6ca5-1cfb-4784-8994-9d9173dcc3d0"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyField1",
                 "name": "name"
             },
             "designerId": "ca1ede51-5449-453e-b1cf-4c010b93cfa6"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyField2",
                 "name": "index"
             },
             "designerId": "6e7ac39e-2efb-44f8-a8be-e2a3aaeb77cb"
         },
         {
-            "type": "localstorageproxy",
+            "type": "Ext.data.proxy.LocalStorage",
             "reference": {
                 "name": "proxy",
                 "type": "object"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyLocalStorageProxy",
                 "id": "SimpleTasks-List"
             },
             "designerId": "0c6eefbf-e3e0-4f28-9636-f8d2e2662988"

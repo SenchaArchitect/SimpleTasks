@@ -1,5 +1,5 @@
 {
-    "type": "controller",
+    "type": "Ext.app.Controller",
     "reference": {
         "name": "items",
         "type": "array"
@@ -20,7 +20,6 @@
             "Toolbar"
         ]
     },
-    "id": "ExtBox1-ext-gen19208",
     "designerId": "220264b4-d632-42f5-be7b-0c200a8072cc",
     "cn": [
         {
@@ -31,11 +30,10 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "init",
-                "fn": "init",
                 "designer|params": [
                     "application"
                 ],
+                "fn": "init",
                 "implHandler": [
                     "var me = this,",
                     "    listsStore = me.getListsStore(),",
@@ -59,19 +57,18 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "handleNewListCLick",
-                "fn": "handleNewListCLick",
+                "designer|controlQuery": "[iconCls=tasks-new-list]",
                 "designer|params": [
                     "component",
                     "e"
                 ],
+                "designer|targetType": "Ext.Component",
+                "fn": "handleNewListCLick",
                 "implHandler": [
                     "this.addList(true);"
                 ],
                 "name": "click",
-                "scope": "me",
-                "designer|targetType": "Ext.Component",
-                "designer|controlQuery": "[iconCls=tasks-new-list]"
+                "scope": "me"
             },
             "designerId": "eed4b305-6d6a-4040-8595-d982bd59876b"
         },
@@ -83,19 +80,18 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "handleNewFolderClick",
-                "fn": "handleNewFolderClick",
+                "designer|controlQuery": "[iconCls=tasks-new-folder]",
                 "designer|params": [
                     "component",
                     "e"
                 ],
+                "designer|targetType": "Ext.Component",
+                "fn": "handleNewFolderClick",
                 "implHandler": [
                     "this.addList();"
                 ],
                 "name": "click",
-                "scope": "me",
-                "designer|targetType": "Ext.Component",
-                "designer|controlQuery": "[iconCls=tasks-new-folder]"
+                "scope": "me"
             },
             "designerId": "46e8d5ce-7df5-44f7-91e2-9373c9ff8c9e"
         },
@@ -107,19 +103,18 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "handleDeleteClick",
-                "fn": "handleDeleteClick",
+                "designer|controlQuery": "[iconCls=tasks-delete-list]",
                 "designer|params": [
                     "component",
                     "e"
                 ],
+                "designer|targetType": "Ext.Component",
+                "fn": "handleDeleteClick",
                 "implHandler": [
                     "this.deleteList(this.getListTree().getSelectionModel().getSelection()[0]);"
                 ],
                 "name": "click",
-                "scope": "me",
-                "designer|targetType": "Ext.Component",
-                "designer|controlQuery": "[iconCls=tasks-delete-list]"
+                "scope": "me"
             },
             "designerId": "0e435109-46ba-4e7b-ba07-aea159a5ab0f"
         },
@@ -131,20 +126,19 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "handleDeleteFolderClick",
-                "fn": "handleDeleteFolderClick",
+                "designer|controlQuery": "[iconCls=tasks-delete-folder]",
                 "designer|params": [
                     "component",
                     "e"
                 ],
+                "designer|targetType": "Ext.Component",
+                "fn": "handleDeleteFolderClick",
                 "implHandler": [
                     "// workaround. one handler should be able to used by multiple selectors",
                     "this.handleDeleteClick();"
                 ],
                 "name": "click",
-                "scope": "me",
-                "designer|targetType": "Ext.Component",
-                "designer|controlQuery": "[iconCls=tasks-delete-folder]"
+                "scope": "me"
             },
             "designerId": "e7374b67-493f-4323-b0e0-2a3ab0ec005c"
         },
@@ -156,19 +150,18 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "handleAfterListTreeRender",
+                "designer|controlQuery": "listTree",
+                "designer|targetType": "Ext.tree.Panel",
                 "fn": "handleAfterListTreeRender",
                 "implHandler": [
-                    "var selModel = abstractcomponent.getSelectionModel();",
+                    "var selModel = component.getSelectionModel();",
                     "",
                     "if (selModel.getCount() > 0){",
                     "    selModel.select(0);",
                     "}"
                 ],
                 "name": "afterrender",
-                "scope": "me",
-                "designer|targetType": "Ext.tree.Panel",
-                "designer|controlQuery": "listTree"
+                "scope": "me"
             },
             "designerId": "3ea4a57c-a952-4096-b797-3bfa8e969beb"
         },
@@ -180,12 +173,13 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "updateList",
-                "fn": "updateList",
+                "designer|controlQuery": "listTree",
                 "designer|params": [
                     "editor",
                     "e"
                 ],
+                "designer|targetType": "Ext.tree.Panel",
+                "fn": "updateList",
                 "implHandler": [
                     "var me = this,",
                     "    list = e.record;",
@@ -211,9 +205,7 @@
                     "});"
                 ],
                 "name": "edit",
-                "scope": "me",
-                "designer|targetType": "Ext.tree.Panel",
-                "designer|controlQuery": "listTree"
+                "scope": "me"
             },
             "designerId": "546d0d08-3070-4e7a-a843-85995eebe790"
         },
@@ -225,12 +217,13 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "handleCancelEdit",
-                "fn": "handleCancelEdit",
+                "designer|controlQuery": "listTree",
                 "designer|params": [
                     "editor",
                     "e"
                 ],
+                "designer|targetType": "Ext.tree.Panel",
+                "fn": "handleCancelEdit",
                 "implHandler": [
                     "        var list = e.record,",
                     "            parent = list.parentNode;",
@@ -239,9 +232,7 @@
                     "        this.getListTree().getSelectionModel().select([parent]);"
                 ],
                 "name": "canceledit",
-                "scope": "me",
-                "designer|targetType": "Ext.tree.Panel",
-                "designer|controlQuery": "listTree"
+                "scope": "me"
             },
             "designerId": "301d2fca-a1c2-4bda-81b5-20bc3089ff4d"
         },
@@ -253,8 +244,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "handleDeleteIconClick",
-                "fn": "handleDeleteIconClick",
+                "designer|controlQuery": "listTree",
                 "designer|params": [
                     "view",
                     "rowIndex",
@@ -262,14 +252,14 @@
                     "column",
                     "e"
                 ],
+                "designer|targetType": "Ext.tree.Panel",
+                "fn": "handleDeleteIconClick",
                 "implHandler": [
                     "console.log('listTree delete icon fired');",
                     "this.deleteList(view.getRecord(view.findTargetByEvent(e)));"
                 ],
                 "name": "deleteclick",
-                "scope": "me",
-                "designer|targetType": "Ext.tree.Panel",
-                "designer|controlQuery": "listTree"
+                "scope": "me"
             },
             "designerId": "93824dad-000b-4e55-950e-20f7e72b7eff"
         },
@@ -281,12 +271,13 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "updateTaskList",
-                "fn": "updateTaskList",
+                "designer|controlQuery": "listTree",
                 "designer|params": [
                     "task",
                     "list"
                 ],
+                "designer|targetType": "Ext.tree.Panel",
+                "fn": "updateTaskList",
                 "implHandler": [
                     "    var me = this,",
                     "            listId = list.get('id');",
@@ -315,9 +306,7 @@
                     "        });"
                 ],
                 "name": "taskdrop",
-                "scope": "me",
-                "designer|targetType": "Ext.tree.Panel",
-                "designer|controlQuery": "listTree"
+                "scope": "me"
             },
             "designerId": "96dd9af8-7f8c-40d0-9a60-0aec0ae3d978"
         },
@@ -329,13 +318,14 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "reorderList",
-                "fn": "reorderList",
+                "designer|controlQuery": "listTree",
                 "designer|params": [
                     "list",
                     "overList",
                     "position"
                 ],
+                "designer|targetType": "Ext.Component",
+                "fn": "reorderList",
                 "implHandler": [
                     "var listsStore = this.getListsStore();",
                     "",
@@ -347,9 +337,7 @@
                     "this.getListTree().refreshView();"
                 ],
                 "name": "listdrop",
-                "scope": "me",
-                "designer|targetType": "Ext.Component",
-                "designer|controlQuery": "listTree"
+                "scope": "me"
             },
             "designerId": "6ad0aa3c-ba59-4c67-a0be-025dff81f614"
         },
@@ -361,8 +349,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "showActions",
-                "fn": "showActions",
+                "designer|controlQuery": "listTree",
                 "designer|params": [
                     "view",
                     "list",
@@ -370,6 +357,8 @@
                     "rowIndex",
                     "e"
                 ],
+                "designer|targetType": "Ext.Component",
+                "fn": "showActions",
                 "implHandler": [
                     "        var icons = Ext.DomQuery.select('.x-action-col-icon', node);",
                     "        if(view.getRecord(node).get('id') > 0) {",
@@ -379,9 +368,7 @@
                     "        }"
                 ],
                 "name": "itemmouseenter",
-                "scope": "me",
-                "designer|targetType": "Ext.Component",
-                "designer|controlQuery": "listTree"
+                "scope": "me"
             },
             "designerId": "2e9deb15-a1a8-4842-9e7b-f97f4d146ac8"
         },
@@ -393,8 +380,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "hideActions",
-                "fn": "hideActions",
+                "designer|controlQuery": "listTree",
                 "designer|params": [
                     "view",
                     "list",
@@ -402,6 +388,8 @@
                     "rowIndex",
                     "e"
                 ],
+                "designer|targetType": "Ext.Component",
+                "fn": "hideActions",
                 "implHandler": [
                     "    var icons = Ext.DomQuery.select('.x-action-col-icon', node);",
                     "        Ext.each(icons, function(icon){",
@@ -409,9 +397,7 @@
                     "        });"
                 ],
                 "name": "itemmouseleave",
-                "scope": "me",
-                "designer|targetType": "Ext.Component",
-                "designer|controlQuery": "listTree"
+                "scope": "me"
             },
             "designerId": "1ee4b19d-4572-4c00-9eec-4c819deda075"
         },
@@ -423,8 +409,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "showContextMenu",
-                "fn": "showContextMenu",
+                "designer|controlQuery": "listTree",
                 "designer|params": [
                     "view",
                     "list",
@@ -432,6 +417,8 @@
                     "rowIndex",
                     "e"
                 ],
+                "designer|targetType": "Ext.Component",
+                "fn": "showContextMenu",
                 "implHandler": [
                     "    var contextMenu = this.getContextMenu(),",
                     "            newListItem = Ext.getCmp('new-list-item'),",
@@ -459,9 +446,7 @@
                     "        e.preventDefault();"
                 ],
                 "name": "itemcontextmenu",
-                "scope": "me",
-                "designer|targetType": "Ext.Component",
-                "designer|controlQuery": "listTree"
+                "scope": "me"
             },
             "designerId": "7f33d589-f36a-4f1a-934e-7e9c18d77369"
         },
@@ -473,12 +458,13 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "filterTaskGrid",
-                "fn": "filterTaskGrid",
+                "designer|controlQuery": "listTree",
                 "designer|params": [
                     "selModel",
                     "lists"
                 ],
+                "designer|targetType": "Ext.Component",
+                "fn": "filterTaskGrid",
                 "implHandler": [
                     "var list = lists[0],",
                     "    tasksStore = this.getTasksStore(),",
@@ -530,9 +516,7 @@
                     "this.getTaskForm().query('[name=list_id]')[0].setValue(list.get('id'));"
                 ],
                 "name": "selectionchange",
-                "scope": "me",
-                "designer|targetType": "Ext.Component",
-                "designer|controlQuery": "listTree"
+                "scope": "me"
             },
             "designerId": "37654e7d-786d-49a9-b771-043284884b93"
         },
@@ -544,14 +528,13 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "handleListsLoad",
-                "fn": "handleListsLoad",
                 "designer|params": [
                     "listsStore",
                     "lists",
                     "success",
                     "operation"
                 ],
+                "fn": "handleListsLoad",
                 "implHandler": [
                     "var me = this,",
                     "    listTree = me.getListTree(),",
@@ -585,11 +568,10 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "addList",
-                "fn": "addList",
                 "designer|params": [
                     "leaf"
                 ],
+                "fn": "addList",
                 "implHandler": [
                     "var listTree = this.getListTree(),",
                     "    cellEditingPlugin = listTree.cellEditingPlugin,",
@@ -649,11 +631,10 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "deleteList",
-                "fn": "deleteList",
                 "designer|params": [
                     "list"
                 ],
+                "fn": "deleteList",
                 "implHandler": [
                     "if (!list) {",
                     "    return;",
@@ -737,14 +718,13 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "handleTasksLoad",
-                "fn": "handleTasksLoad",
                 "designer|params": [
                     "tasksStore",
                     "tasks",
                     "success",
                     "operation"
                 ],
+                "fn": "handleTasksLoad",
                 "implHandler": [
                     "var me = this,",
                     "    listTree = me.getListTree(),",
@@ -768,12 +748,11 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "syncListsStores",
-                "fn": "syncListsStores",
                 "designer|params": [
                     "listsStore",
                     "operation"
                 ],
+                "fn": "syncListsStores",
                 "implHandler": [
                     "var me = this,",
                     "    stores = [",
@@ -817,7 +796,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "listTree",
                 "ref": "listTree",
                 "selector": "listTree"
             },
@@ -831,7 +809,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "taskGrid",
                 "ref": "taskGrid",
                 "selector": "taskGrid"
             },
@@ -845,7 +822,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "taskForm",
                 "ref": "taskForm",
                 "selector": "taskForm"
             },
@@ -859,7 +835,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "contextMenu",
                 "autoCreate": true,
                 "ref": "contextMenu",
                 "selector": "listsContextMenu",

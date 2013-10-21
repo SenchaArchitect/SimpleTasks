@@ -1,16 +1,15 @@
 {
-    "type": "viewport",
+    "type": "Ext.container.Viewport",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "SimpleTasksViewport",
         "designer|initialView": true,
+        "designer|userClassName": "SimpleTasksViewport",
         "layout": "border"
     },
-    "id": "ExtBox1-ext-gen93056",
     "designerId": "148fad30-5bda-401d-9a6b-64d5a6a7cb79",
     "cn": [
         {
@@ -25,7 +24,7 @@
                 "layout|region": "north"
             },
             "designerId": "d771c7c5-e6f1-4885-9c67-8cfd603b8ae5",
-            "masterInstanceId": "ExtBox1-ext-gen75382"
+            "masterInstanceId": "3f506d76-0c98-4bef-aa44-59101df23411"
         },
         {
             "type": "linkedinstance",
@@ -35,14 +34,14 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|displayName": "listTree",
-                "width": 300,
                 "collapsible": true,
+                "designer|displayName": "listTree",
                 "layout|region": "west",
-                "layout|split": true
+                "layout|split": true,
+                "width": 300
             },
             "designerId": "bad2a2f6-1519-49ab-abf8-57b47118180d",
-            "masterInstanceId": "ExtBox1-ext-gen6130"
+            "masterInstanceId": "b7026768-4497-4e3f-8ac7-e6a1a4bcf87e"
         },
         {
             "type": "linkedinstance",
@@ -53,11 +52,11 @@
             "codeClass": null,
             "userConfig": {
                 "designer|displayName": "taskGrids",
-                "title": "All Lists",
-                "layout|region": "center"
+                "layout|region": "center",
+                "title": "All Lists"
             },
             "designerId": "2cd84a83-28da-43a7-8de6-78d4d8e95501",
-            "masterInstanceId": "ExtBox1-ext-gen48774"
+            "masterInstanceId": "6c7b6150-311c-4b87-86ac-d21066952ddd"
         }
     ]
 }

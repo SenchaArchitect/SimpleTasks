@@ -1,15 +1,20 @@
 {
-    "type": "application",
+    "type": "Ext.app.Application",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
+        "controllers": [
+            "Lists",
+            "Tasks"
+        ],
         "models": [
             "List",
             "Task"
         ],
+        "name": "SimpleTasks",
         "stores": [
             "ReminderTimes",
             "Lists",
@@ -25,28 +30,19 @@
             "tasks.ReminderWindow",
             "Toolbar",
             "SimpleTasksViewport",
-            "tasks.Fields",
-            "MyForm3"
-        ],
-        "autoCreateViewport": true,
-        "name": "SimpleTasks",
-        "controllers": [
-            "Lists",
-            "Tasks"
+            "tasks.Fields"
         ]
     },
-    "id": "ExtBox1-ext-gen1669",
     "designerId": "application",
     "cn": [
         {
-            "type": "loader",
+            "type": "Ext.Loader",
             "reference": {
                 "name": "loader",
                 "type": "object"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "Loader",
                 "enabled": true,
                 "paths": [
                     "{",
@@ -65,7 +61,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "launch",
                 "fn": "launch",
                 "implHandler": [
                     "SimpleTasksSettings = {",
