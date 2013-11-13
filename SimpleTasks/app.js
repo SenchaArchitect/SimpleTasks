@@ -56,12 +56,12 @@ Ext.application({
     name: 'SimpleTasks',
 
     launch: function() {
+        Ext.create('SimpleTasks.view.SimpleTasksViewport');
         SimpleTasksSettings = {
             // This property is used to turn on local storage.  If set to false the php backend will be used.
             // For the purpose of this sample app, only local storage is used.
             useLocalStorage: true
         };
-                Ext.create('SimpleTasks.view.SimpleTasksViewport');
     }
 
 });

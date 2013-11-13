@@ -412,7 +412,6 @@ Ext.ClassManager.addNameAlternateMappings({
   ],
   "Ext.grid.RowEditor": [],
   "Ext.grid.RowEditorButtons": [],
-  "Ext.grid.Scroller": [],
   "Ext.grid.View": [],
   "Ext.grid.ViewDropZone": [],
   "Ext.grid.column.Action": [
@@ -828,6 +827,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.window.Window": [
     "Ext.Window"
   ],
+  "SimpleTasks.Application": [],
   "SimpleTasks.controller.Lists": [],
   "SimpleTasks.controller.Main": [],
   "SimpleTasks.controller.Tasks": [],
@@ -840,6 +840,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "SimpleTasks.ux.DragDrop": [],
   "SimpleTasks.ux.DropZone": [],
   "SimpleTasks.ux.ReminderColumn": [],
+  "SimpleTasks.view.Main": [],
   "SimpleTasks.view.SimpleTasksViewport": [],
   "SimpleTasks.view.Toolbar": [],
   "SimpleTasks.view.Viewport": [],
@@ -1293,7 +1294,6 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.grid.RowEditorButtons": [
     "widget.roweditorbuttons"
   ],
-  "Ext.grid.Scroller": [],
   "Ext.grid.View": [
     "widget.gridview"
   ],
@@ -1843,6 +1843,7 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.window.Window": [
     "widget.window"
   ],
+  "SimpleTasks.Application": [],
   "SimpleTasks.controller.Lists": [],
   "SimpleTasks.controller.Main": [],
   "SimpleTasks.controller.Tasks": [],
@@ -1864,6 +1865,9 @@ Ext.ClassManager.addNameAliasMappings({
   "SimpleTasks.ux.DropZone": [],
   "SimpleTasks.ux.ReminderColumn": [
     "widget.remindercolumn"
+  ],
+  "SimpleTasks.view.Main": [
+    "widget.app-main"
   ],
   "SimpleTasks.view.SimpleTasksViewport": [],
   "SimpleTasks.view.Toolbar": [

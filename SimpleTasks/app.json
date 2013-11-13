@@ -1,7 +1,7 @@
 {
    "name": "SimpleTasks",
    "requires": [],
-   "id": "85c421c0-9bad-4ac0-9ab7-c7c5e0de1fe9",
+   "id": "e63c3e2f-6101-43cb-8231-cf0c6a8229b1",
    "resources": [
       "resources/css/tasks.css"
    ],
@@ -9,6 +9,7 @@
       "_comment": "Please don't edit. This is Architect data.",
       "resources": [
          "resources/css/tasks.css"
-      ]
+      ],
+      "requires": []
    }
 }
